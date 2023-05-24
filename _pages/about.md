@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. PhD candidate, Institute for Risk and Unceratinty; <a href='#'>ESR</a> ESR, MSCA-ITN project URBASIS.
+subtitle: PhD candidate, <a href='https://riskinstitute.uk'>Institute for Risk and Unceratinty, University of Liverpool</a>;  ESR, MSCA-ITN project <a href="https://urbasis-eu.osug.fr">URBASIS</a>.
 
 profile:
   align: right
@@ -21,7 +21,10 @@ social: true  # includes social icons at the bottom of the page
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+During my PhD, I am dedicated to Developing a computational framework to deal with bad data (limited, sparse or corrupted data), and propagate those uncertainty through different models in an efficient way, using probabilistic Deep Learning and imprecise probability.
 
-Research interests
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+### Research interests
+- {**Bayesian, physics-informed, generative**} Deep Learning
+- Stochastic modeling of uncertainties in engineering
+- Imprecise probability
+- Risk-based optimal decision making and cost-benefit analysis
