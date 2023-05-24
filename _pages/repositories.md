@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /repositories/
-title: open-source programs
+title: programs
 description: A few open-source programs supporting the research projects
 nav: true
 nav_order: 3
