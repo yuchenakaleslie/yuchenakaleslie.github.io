@@ -24,7 +24,9 @@ Write your biography here. Tell the world about yourself. Link to your favorite 
 During my PhD, I am dedicated to Developing a computational framework to deal with bad data (limited, sparse or corrupted data), and propagate those uncertainty through different models in an efficient way, using probabilistic Deep Learning and imprecise probability.
 
 #### Research interests
-- {**Bayesian, physics-informed, generative**} Deep Learning
+```
+- **{Bayesian, physics-informed, generative}** Deep Learning
 - Stochastic modeling of uncertainties in engineering
 - Imprecise probability
 - Risk-based optimal decision making and cost-benefit analysis
+```
