@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 4
-description: another without an image
+title: Concurrent seismic events identification
+description: A collaboration with GFZ
 img:
 importance: 3
 category: collaboration
