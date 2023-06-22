@@ -1,7 +1,7 @@
 ---
 layout: page
 title: missing data imputation
-description: a project with a background image
+description: spectral density estimation of stochastic processes in the presence of missing data
 img: assets/img/12.jpg
 importance: 1
 category: work
