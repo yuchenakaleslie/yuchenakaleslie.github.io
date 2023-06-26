@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: PhD candidate, <a href='https://riskinstitute.uk'>Institute for Risk and Unceratinty, University of Liverpool</a>;  ESR, MSCA-ITN project <a href="https://urbasis-eu.osug.fr">URBASIS</a>.
+subtitle: PhD candidate, <a href='https://riskinstitute.uk'>Institute for Risk and Unceratinty, University of Liverpool</a>; \n  ESR, MSCA-ITN project <a href="https://urbasis-eu.osug.fr">URBASIS</a>.
 
 profile:
   align: right
@@ -25,15 +25,8 @@ During my PhD, I am dedicated to Developing a computational framework to deal wi
 
 #### Research interests
 ```markdown
-- **{Bayesian, physics-informed, generative}** Deep Learning
+- **{Bayesian, knowledge-informed, generative}** Deep Learning
 - Stochastic modeling of uncertainties in engineering
 - Imprecise probability
 - Risk-based optimal decision making and cost-benefit analysis
 ```
-
-<blockquote>
-  - **{Bayesian, physics-informed, generative}** Deep Learning
-  - Stochastic modeling of uncertainties in engineering
-  - Imprecise probability
-  - Risk-based optimal decision making and cost-benefit analysis
-</blockquote>
