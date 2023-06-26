@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: PhD candidate, <a href='https://riskinstitute.uk'>Institute for Risk and Unceratinty, University of Liverpool</a>; \n  ESR, MSCA-ITN project <a href="https://urbasis-eu.osug.fr">URBASIS</a>.
+subtitle: 
 
 profile:
   align: right
@@ -19,7 +19,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+PhD candidate, <a href='https://riskinstitute.uk'>Institute for Risk and Unceratinty, University of Liverpool</a>;
+
+ESR, MSCA-ITN project <a href="https://urbasis-eu.osug.fr">URBASIS</a>.
+
+
 
 During my PhD, I am dedicated to Developing a computational framework to deal with bad data (limited, sparse or corrupted data), and propagate those uncertainty through different models in an efficient way, using probabilistic Deep Learning and imprecise probability.
 
