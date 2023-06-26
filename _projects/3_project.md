@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SiteAmp
-description: Uncertainty-aware deep recurrent models for single site amplification prediction
+title:  Imprecise classifier
+description: Probabilistic classification with imprecise data
 img: assets/img/7.jpg
 redirect:
 importance: 3
