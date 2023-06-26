@@ -2,16 +2,15 @@
 layout: about
 title: home
 permalink: /
-subtitle: PhD candidate and Early-stage-researcher
+subtitle: <p>PhD candidate</p> <p>and Early-stage-researcher</p>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: avatar_part.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Univ of Liverpool</p>
+    <p> Isterre, Université Grenoble Alpes</p>
 
 news: false  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
@@ -21,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 
 I'm currently a PhD candidate at <a href='https://riskinstitute.uk'>Institute for Risk and Unceratinty, University of Liverpool</a>; and also an ESR funded by the EU-Horizon 2020 & Marie Skłodowska-Curie Actions project <a href="https://urbasis-eu.osug.fr">URBASIS</a>.
 
-During my PhD, I am dedicated to Developing Deep Learning-based computational frameworks to deal with bad data (limited, sparse or imprecise data), and propagate associated uncertainty through computational probabilistic models in an efficient way. My contribution revolves around two aspects: (I) equiping DL models with uncertainty awareness, allowing for robustness; (II) incorporating DL with physical domain knowledge, allowing for fusion of knowledge.
+During my PhD, I am dedicated to Developing Deep Learning-based computational frameworks to deal with `bad data` (limited, sparse or imprecise data), and propagate associated uncertainty through computational probabilistic models in an efficient way. My contribution revolves around two aspects: (I) equiping DL models with uncertainty awareness, allowing for `robustness`; (II) incorporating DL with physical domain knowledge, allowing for `fusion of knowledge`.
 
 #### Research interests
 ```markdown
