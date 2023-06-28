@@ -1,34 +1,11 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
-
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
-
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
-
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
-
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
-
 "Edoardo":
-  - firstname: ["Edoardo", "Edoardo Patelli"]
+  - firstname: ["Edoardo", "Edoardo Patelli", "Patelli"]
     url: https://www.strath.ac.uk/staff/patelliedoardoprofessor/
 
 "Benjamin":
-  - firstname: ["Benjamin", "Ben", "Ben Edwards"]
+  - firstname: ["Benjamin", "Ben", "Ben Edwards", "Edwards"]
     url: https://www.liverpool.ac.uk/environmental-sciences/staff/ben-edwards/?
 
 "Michael":
-  - firstname: ["Michael", "Michael Beer"]
+  - firstname: ["Michael", "Michael Beer", "Beer", "M. Beer"]
     url: https://www.irz.uni-hannover.de/en/institute/people/beer/
-
-"Planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
