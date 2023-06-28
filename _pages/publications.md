@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: publications
 description: journal and conference publications
-years: [2020, 2023]
+years: [2020, 2023, 2022, 2022]
 nav: true
 nav_order: 1
 ---
