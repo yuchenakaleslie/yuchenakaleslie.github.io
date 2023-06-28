@@ -17,17 +17,17 @@
   - firstname: ["Carl Philipp Emanuel", "C. P. E."]
     url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
 
-"Przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Edoardo":
+  - firstname: ["Edoardo"]
+    url: https://www.strath.ac.uk/staff/patelliedoardoprofessor/
 
-"Schrödinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Benjamin":
+  - firstname: ["Benjamin", "Ben"]
+    url: https://www.liverpool.ac.uk/environmental-sciences/staff/ben-edwards/?
 
-"Lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Michael":
+  - firstname: ["Michael"]
+    url: https://www.irz.uni-hannover.de/en/institute/people/beer/
 
 "Planck":
   - firstname: ["Max"]
