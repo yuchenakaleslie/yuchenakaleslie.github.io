@@ -1,11 +1,11 @@
-"Edoardo":
-  - firstname: ["Edoardo", "Edoardo Patelli", "Patelli", "Patelli, Edoardo"]
+"Patelli":
+  - firstname: ["Edoardo", "Edoardo Patelli", "Patelli, Edoardo"]
     url: https://www.strath.ac.uk/staff/patelliedoardoprofessor/
 
-"Benjamin":
-  - firstname: ["Benjamin", "Ben", "Ben Edwards", "Edwards", "Edwards, Benjamin"]
+"Edwards":
+  - firstname: ["Benjamin", "Ben", "Ben Edwards"]
     url: https://www.liverpool.ac.uk/environmental-sciences/staff/ben-edwards/?
 
-"Michael":
-  - firstname: ["Michael", "Michael Beer", "Beer", "M. Beer", "Beer, Michael"]
+"Beer":
+  - firstname: ["Michael", "Michael Beer", "M. Beer", ]
     url: https://www.irz.uni-hannover.de/en/institute/people/beer/
