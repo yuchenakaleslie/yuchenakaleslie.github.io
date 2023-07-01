@@ -22,14 +22,25 @@ Importantly, a Bayesian Convnet, having considered model uncertainty, is trained
     An automated probabilistic procedure in detecting seismic events
 </div>
 
-We have reasoned about the uncertainty regarding the multi events detection as well as the decision in the dividing points throughout a probabilistic pipeline. 
+Test if the pic layout is justfied.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    This image can also have a caption. It's like magic.
+</div>
+
+We have reasoned about the uncertainty regarding the multi events detection as well as the decision in the dividing points throughout a probabilistic pipeline. However, we are more interested in complex situations where even human cannot easily differentiate between multiple events, such as overlapping events. This leads to imprecise labels. The account for uncertainty and the robustness of the proposed model plays an important role in the reliability of an automated preprocessing procedure.
 
 <div class="container">
   <div class="row">
     <div class="col">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/multi_event_combo.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/fancy_yarin_plot.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
   </div>
