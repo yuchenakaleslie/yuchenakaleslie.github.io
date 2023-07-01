@@ -8,12 +8,9 @@ category: work
 ---
 
 >
-> Part of the results herein are published, please refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](google.com) for additional details.
-> some other parts are under review, hopefully accepted and coming soon.
+> Part of the results herein are published. Pls refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](google.com) for additional details.
+> some other parts are currently under review.
 > A web-application is provided for uncertainty-informed prediction of squeezing intensity.
-
-```Part of the results herein are published, please refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](google.com) for additional details. some other parts are under review, hopefully accepted and coming soon. A web-application is provided for uncertainty-informed prediction of squeezing intensity.
-```
 
 Tunnel squeezing is a time-dependent process that typically occurs in weak or over-stressed rock masses, significantly influencing the budget and time of tunnel construction. Given that only limited databases of case histories are documented in literature, many supervised-learning based probabilistic models, naturally probabilistic or not, are prone to provide over confident (some even distorted) probability estimates of squeezing intensity, due to the ignorance of model uncertainties.
 
@@ -60,3 +57,5 @@ In addition, another challenge in terms of reliable predictions in underground s
 <div class="caption">
     Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
+
+In tunneling practices, it’s of great engineering importance to avoid overconfident yet incorrect predictions, as such biased predictions will lead to faulty construction strategies. To better understand the risks associated with squeezing and thus guiding construction strategies, for example designing support system schemes, adjusting the excavation rate, enhancing monitoring frequencies, etc, tunnel practitioners would desire that they can be confident about the probabilistic hazard prediction. This motivates the use of uncertainty measures to make uncertainty-informed engineering decision. 

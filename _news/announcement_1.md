@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2023-7-1 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Check out the vlog of [URBASIS Spring School](google.com)! :sparkles: :smile:
