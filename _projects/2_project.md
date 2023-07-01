@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tunnel squeezing uncertainty
+title: tunnel squeezing intensity
 description: Dynamic and Uncertainty-informed squeezing intensity prediction
 img: assets/img/3.jpg
 importance: 2
@@ -11,18 +11,18 @@ Tunnel squeezing is a time-dependent process that typically occurs in weak or ov
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/existing_methods.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     List of existing Machine Learning methods for tunnel squeezing intensity prediction
 </div>
 
-### Uncertainty informed ###
+### Uncertainty informed
 
 The absence of enough data has restricted Machine Learning models from effectively learning the true relationship between features and labels (i.e. the underlying data generating process). Significant uncertainties exist on the model configurations that may have explained such limited data. Consequently, such uncertainties further compromise the generalization power of learned models in that predictions from uncertain/unrepresentative models can still be unreliable and over confident, especially when doing extrapolation on unseen geologic conditions. These unreliable probabilistic predictions will propagate errors (e.g. misclassification costs) into risk analysis of the hazard, further leading to biased construction strategies.
 
-### Dynamically updated ###
+### Dynamically updated
 
 In addition, another challenge in terms of reliable predictions in underground space is that geologic conditions of surrounding rocks obtained in the investigation stage are often incomplete and unreliable. Therefore, such inconsistencies between investigation and construction significantly reduce the accuracy of those aforementioned methods. As such, a **dynamic** scheme based on excavated grounds to predict the squeezing hazard is vital as it can reasonably boost the reliability and practicality of the prediction of squeezing. Mathematically, a Markov process is used to simulate the random process in which the probability distribution of the representative geologic parameters are changing over locations. As such, probabilistic prediction of squeezing is **continuously updated** in light of newly excavated rockmass conditions during construction phase.
 
@@ -43,7 +43,7 @@ In addition, another challenge in terms of reliable predictions in underground s
 </div>
 
 
-
+### decision making under uncertainty
 
 
 
