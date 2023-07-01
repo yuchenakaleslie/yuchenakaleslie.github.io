@@ -1,7 +1,7 @@
 ---
 layout: page
 title: dbNets
-description: Concurrent seismic events identification - a collaboration with <a href="https://www.gfz-potsdam.de">GFZ</a>
+description: Concurrent seismic events identification - a collaboration with [GFZ](https://www.gfz-potsdam.de)
 img: assets/img/multi_event_combo.png
 importance: 3
 category: collaboration
@@ -26,7 +26,7 @@ Importantly, a Bayesian Convnet, having considered model uncertainty, is trained
 
 We have reasoned about the uncertainty regarding the multi events detection as well as the decision in the dividing points throughout a probabilistic pipeline. However, we are more interested in complex situations where even human cannot easily differentiate between multiple events, such as overlapping events. This leads to [imprecise labels](./3_project.md). The account for uncertainty and the robustness of the proposed model plays an important role in the reliability of an automated preprocessing procedure.
 
-<!-- Half-half layout, which isn't perfect -->
+<!-- Half-half layout, which isn't perfect
 <div class="container">
   <div class="row">
     <div class="col">
@@ -35,7 +35,7 @@ We have reasoned about the uncertainty regarding the multi events detection as w
     <div class="col">
         {% include figure.html path="assets/img/fancy_yarin_plot.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
-  </div>
+  </div> -->
 
 <!-- A test of 2/3 + 1/3 style -->
 <div class="row justify-content-sm-center">
@@ -47,5 +47,5 @@ We have reasoned about the uncertainty regarding the multi events detection as w
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Uncertainty aware detection for a few segments.
 </div>
