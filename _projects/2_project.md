@@ -7,6 +7,17 @@ importance: 2
 category: work
 ---
 
+> ##### publication
+>
+> Part of the results herein are published, please refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](google.com) for additional details.
+> some other parts are under review, hopefully accepted and coming soon.
+{: .block-tip }
+
+> ##### web-application
+>
+> A web-application is provided for uncertainty-informed prediction of squeezing intensity.
+{: .block-danger }
+
 Tunnel squeezing is a time-dependent process that typically occurs in weak or over-stressed rock masses, significantly influencing the budget and time of tunnel construction. Given that only limited databases of case histories are documented in literature, many supervised-learning based probabilistic models, naturally probabilistic or not, are prone to provide over confident (some even distorted) probability estimates of squeezing intensity, due to the ignorance of model uncertainties.
 
 <div class="row">
@@ -26,6 +37,17 @@ The absence of enough data has restricted Machine Learning models from effective
 
 In addition, another challenge in terms of reliable predictions in underground space is that geologic conditions of surrounding rocks obtained in the investigation stage are often incomplete and unreliable. Therefore, such inconsistencies between investigation and construction significantly reduce the accuracy of those aforementioned methods. As such, a **dynamic** scheme based on excavated grounds to predict the squeezing hazard is vital as it can reasonably boost the reliability and practicality of the prediction of squeezing. Mathematically, a Markov process is used to simulate the random process in which the probability distribution of the representative geologic parameters are changing over locations. As such, probabilistic prediction of squeezing is **continuously updated** in light of newly excavated rockmass conditions during construction phase.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/updating_scheme.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Updating of probabilistic predictions along excavation
+</div>
+
+
+### decision making under uncertainty
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -41,9 +63,3 @@ In addition, another challenge in terms of reliable predictions in underground s
 <div class="caption">
     Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
-
-
-### decision making under uncertainty
-
-
-
