@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Check out the vlog of [URBASIS Spring School](google.com)! :sparkles: :smile:
+Check out the vlog of URBASIS Spring School :sparkles: :smile:
