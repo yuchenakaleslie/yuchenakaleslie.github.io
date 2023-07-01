@@ -1,7 +1,7 @@
 ---
 layout: page
 title: dbNets
-description: Concurrent seismic events identification - a collaboration with GFZ
+description: Concurrent seismic events identification - a collaboration with <a href="https://www.gfz-potsdam.de">GFZ</a>
 img: assets/img/multi_event_combo.png
 importance: 3
 category: collaboration
@@ -13,6 +13,7 @@ category: collaboration
 
 Importantly, a Bayesian Convnet, having considered model uncertainty, is trained to probabilistically detect the seismic evnents in a typical segment from continuous streams. If multiple events are present, our model further yields the location estimates of each event and therefore separating them out.
 
+<!--The plot below is NOT justfied. Fix the layout-->
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/separation.png" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -22,19 +23,10 @@ Importantly, a Bayesian Convnet, having considered model uncertainty, is trained
     An automated probabilistic procedure in detecting seismic events
 </div>
 
-Test if the pic layout is justfied.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+We have reasoned about the uncertainty regarding the multi events detection as well as the decision in the dividing points throughout a probabilistic pipeline. However, we are more interested in complex situations where even human cannot easily differentiate between multiple events, such as overlapping events. This leads to [imprecise labels](./3_project.md). The account for uncertainty and the robustness of the proposed model plays an important role in the reliability of an automated preprocessing procedure.
 
-We have reasoned about the uncertainty regarding the multi events detection as well as the decision in the dividing points throughout a probabilistic pipeline. However, we are more interested in complex situations where even human cannot easily differentiate between multiple events, such as overlapping events. This leads to imprecise labels. The account for uncertainty and the robustness of the proposed model plays an important role in the reliability of an automated preprocessing procedure.
-
+<!-- Half-half layout, which isn't perfect -->
 <div class="container">
   <div class="row">
     <div class="col">
@@ -44,3 +36,16 @@ We have reasoned about the uncertainty regarding the multi events detection as w
         {% include figure.html path="assets/img/fancy_yarin_plot.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
   </div>
+
+<!-- A test of 2/3 + 1/3 style -->
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/fancy_yarin_plot.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/multi_event_combo.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    You can also have artistically styled 2/3 + 1/3 images, like these.
+</div>

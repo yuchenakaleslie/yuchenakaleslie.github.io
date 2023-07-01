@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SHM anomaly detection
-description: a collaboration with Isterre UGA
+title: SHM 
+description: Anomaly detection in SHM - a collaboration with Isterre UGA
 img: assets/img/earthquake_annotated.png
 importance: 3
 category: collaboration
