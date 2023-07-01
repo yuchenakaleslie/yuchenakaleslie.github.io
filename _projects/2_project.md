@@ -7,16 +7,13 @@ importance: 2
 category: work
 ---
 
-> ##### publication
 >
 > Part of the results herein are published, please refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](google.com) for additional details.
 > some other parts are under review, hopefully accepted and coming soon.
-{: .block-tip }
-
-> ##### web-application
->
 > A web-application is provided for uncertainty-informed prediction of squeezing intensity.
-{: .block-danger }
+
+```Part of the results herein are published, please refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](google.com) for additional details. some other parts are under review, hopefully accepted and coming soon. A web-application is provided for uncertainty-informed prediction of squeezing intensity.
+```
 
 Tunnel squeezing is a time-dependent process that typically occurs in weak or over-stressed rock masses, significantly influencing the budget and time of tunnel construction. Given that only limited databases of case histories are documented in literature, many supervised-learning based probabilistic models, naturally probabilistic or not, are prone to provide over confident (some even distorted) probability estimates of squeezing intensity, due to the ignorance of model uncertainties.
 
