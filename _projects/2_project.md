@@ -1,24 +1,31 @@
 ---
 layout: page
 title: Tunnel squeezing uncertainty
-description: a project with a background image
+description: Dynamic and Uncertainty-informed squeezing intensity prediction
 img: assets/img/3.jpg
 importance: 2
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Tunnel squeezing is a time-dependent process that typically occurs in weak or over-stressed rock masses, significantly influencing the budget and time of tunnel construction. Given that only limited databases of case histories are documented in literature, many supervised-learning based probabilistic models, naturally probabilistic or not, are prone to provide over confident (some even distorted) probability estimates of squeezing intensity, due to the ignorance of model uncertainties.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    List of existing Machine Learning methods for tunnel squeezing intensity prediction
+</div>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Uncertainty informed ###
+
+The absence of enough data has restricted Machine Learning models from effectively learning the true relationship between features and labels (i.e. the underlying data generating process). Significant uncertainties exist on the model configurations that may have explained such limited data. Consequently, such uncertainties further compromise the generalization power of learned models in that predictions from uncertain/unrepresentative models can still be unreliable and over confident, especially when doing extrapolation on unseen geologic conditions. These unreliable probabilistic predictions will propagate errors (e.g. misclassification costs) into risk analysis of the hazard, further leading to biased construction strategies.
+
+### Dynamically updated ###
+
+In addition, another challenge in terms of reliable predictions in underground space is that geologic conditions of surrounding rocks obtained in the investigation stage are often incomplete and unreliable. Therefore, such inconsistencies between investigation and construction significantly reduce the accuracy of those aforementioned methods. As such, a **dynamic** scheme based on excavated grounds to predict the squeezing hazard is vital as it can reasonably boost the reliability and practicality of the prediction of squeezing. Mathematically, a Markov process is used to simulate the random process in which the probability distribution of the representative geologic parameters are changing over locations. As such, probabilistic prediction of squeezing is **continuously updated** in light of newly excavated rockmass conditions during construction phase.
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -34,47 +41,9 @@ To give your project a background in the portfolio page, just add the img tag to
 <div class="caption">
     Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+
