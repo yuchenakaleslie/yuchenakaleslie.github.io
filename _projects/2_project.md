@@ -2,7 +2,7 @@
 layout: page
 title: tunnel squeezing intensity
 description: Dynamic and Uncertainty-informed squeezing intensity prediction
-img: assets/img/3.jpg
+img: assets/img/two_moon.png
 importance: 2
 category: work
 ---
@@ -58,3 +58,8 @@ In addition, another challenge in terms of reliable predictions in underground s
 </div>
 
 In tunneling practices, it’s of great engineering importance to avoid overconfident yet incorrect predictions, as such biased predictions will lead to faulty construction strategies. To better understand the risks associated with squeezing and thus guiding construction strategies, for example designing support system schemes, adjusting the excavation rate, enhancing monitoring frequencies, etc, tunnel practitioners would desire that they can be confident about the probabilistic hazard prediction. This motivates the use of uncertainty measures to make uncertainty-informed engineering decision. 
+
+
+<hr>
+
+> Footnote: thumbnail image credit: [Purvanshi Mehta](https://towardsdatascience.com/am-i-sure-or-unsure-talks-with-a-neural-network-fc0e14d31373)

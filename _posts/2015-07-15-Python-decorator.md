@@ -38,7 +38,7 @@ For Jupyter notebook users, you may be familiar with the `%%time` magic command,
 
 <hr>
 
-### 2. Run time style change
+### 2. Run time plot style change
 
 Customize the plotting styles when plotting with matplotlib at runtime. Note that this type of runtime changes takes precedance than stylesheets. I personally find it super useful when polishing your most fancy plot. It enables you to just focus on the style, without worrying about the data content part as it is all wrapped in the `plotting_function`.
 
@@ -49,6 +49,8 @@ def plotting_function():
 
 plotting_function()
 ```
+
+<hr>
 
 ### 3. Tensorflow Function
 
