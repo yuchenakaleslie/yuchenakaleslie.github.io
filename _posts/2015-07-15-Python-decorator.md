@@ -9,6 +9,8 @@ categories: sample-posts
 
 Decorator has always been my favorite feature of Python, not only because of the nice look of a color `@function` symbol, but more because of it is an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite uses. I will also mention some real-world uses and leave interested reader to dig more.
 
+<hr>
+
 ### 1. Timer
 
 Perhaps the most simple case. But it is a definitly a frequent go-to use case where you may need to know the run time of your function or code block. Just simply wrap up the code bloack into a function and add this simple `@function` symbol, quick and elegant.
@@ -25,6 +27,11 @@ def timer(func):
         print(f"Finished {func.__name__!r} in {run_time:.4f} secs")
         return value
     return wrapper_timer
+
+@timer
+def waste_some_time(num_times):
+    for _ in range(num_times):
+        sum([i**2 for i in range(10000)])
 ```
 
 For Jupyter notebook users, you may be familiar with the `%%time` magic command, then you get the idea.
