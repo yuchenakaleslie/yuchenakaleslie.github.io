@@ -2,7 +2,7 @@
 layout: page
 title: SiteAmp
 description: Uncertainty-aware deep recurrent models for single site amplification prediction
-img: assets/img/mixed_uncertainty.png
+img: assets/img/kde_example.png
 importance: 4
 category: collaboration
 ---

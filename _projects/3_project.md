@@ -8,7 +8,7 @@ importance: 3
 category: work
 ---
 
-Building on the universal approximator thoery, deep neural network models are trained to construct functional mappings through learning with abundant observed samples. However, in many situations, observations can be imprecise, noisy and even incomplete. These data problems raise challenges in learning the underlying data generating process and also conducting reliable generalisation at testing stage. 
+Building on the universal approximator theory, deep neural network models are trained to construct functional mappings through learning with abundant observed samples. However, in many situations, observations can be imprecise, noisy and even incomplete. These data problems raise challenges in learning the underlying data generating process and also conducting reliable generalisation at testing stage. 
 
 ### Interval-valued features
 
