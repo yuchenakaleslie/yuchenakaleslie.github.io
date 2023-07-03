@@ -2,7 +2,7 @@
 layout: page
 title: dbNets
 description: Automated robust data pipeline - a collaboration with <a href="https://www.gfz-potsdam.de">GFZ</a>
-img: assets/img/multi_event_combo.png
+img: assets/img/pixel_plot.png
 importance: 3
 category: collaboration
 ---
