@@ -8,8 +8,7 @@ categories: sample-posts
 ---
 
 <blockquote>
-    Check out the <a href="https://urbasis-eu.osug.fr">Vlog of URBASIS project Spring School</a> :sparkles: :smile:
-    
+    The <a href="https://urbasis-eu.osug.fr">Vlog of URBASIS project Spring School</a> is finally out :sparkles: :smile:
 </blockquote>
 
 

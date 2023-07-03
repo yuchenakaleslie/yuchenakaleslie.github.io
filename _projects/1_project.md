@@ -2,7 +2,7 @@
 layout: page
 title: Missing data imputation
 description: spectral density estimation of stochastic processes in the presence of missing data
-img: assets/img/12.jpg
+img: assets/img/incomplete_puzzle.jpg
 importance: 1
 category: work
 ---
