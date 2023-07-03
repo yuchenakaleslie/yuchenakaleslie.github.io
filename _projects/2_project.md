@@ -40,7 +40,7 @@ In addition, another challenge in terms of reliable predictions in underground s
 </div>
 
 
-### decision making under uncertainty
+### Decision making under uncertainty
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

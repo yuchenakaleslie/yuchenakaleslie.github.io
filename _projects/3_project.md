@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  Imprecise classifier
-description: Robost learning with imprecise data
+title:  Imprecise training
+description: Robust learning with imprecise data
 img: assets/img/mnist_c.png
 redirect:
 importance: 3
