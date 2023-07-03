@@ -7,7 +7,6 @@ importance: 2
 category: work
 ---
 
->
 > Part of the results herein are published. Pls refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](google.com) for additional details.
 > some other parts are currently under review.
 > A web-application is provided for uncertainty-informed prediction of squeezing intensity.
