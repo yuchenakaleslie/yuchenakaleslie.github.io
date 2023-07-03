@@ -155,6 +155,8 @@
     <div id="markdown-content">
       <p>Decorator has always been my favorite feature of Python, not only because of the nice look of a color <code class="language-plaintext highlighter-rouge">@function</code> symbol, but more because of it is an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite uses. I will also mention some real-world uses and leave interested reader to dig more.</p>
 
+<hr>
+
 <h3 id="1-timer">1. Timer</h3>
 
 <p>Perhaps the most simple case. But it is a definitly a frequent go-to use case where you may need to know the run time of your function or code block. Just simply wrap up the code bloack into a function and add this simple <code class="language-plaintext highlighter-rouge">@function</code> symbol, quick and elegant.</p>
@@ -171,6 +173,11 @@
 9
 10
 11
+12
+13
+14
+15
+16
 </pre></td>
 <td class="rouge-code"><pre><span class="k">def</span> <span class="nf">timer</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
     <span class="sh">"""</span><span class="s">Print the runtime of the decorated function</span><span class="sh">"""</span>
@@ -183,6 +190,11 @@
 </span>        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Finished </span><span class="si">{</span><span class="n">func</span><span class="p">.</span><span class="n">__name__</span><span class="si">!r}</span><span class="s"> in </span><span class="si">{</span><span class="n">run_time</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s"> secs</span><span class="sh">"</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">value</span>
     <span class="k">return</span> <span class="n">wrapper_timer</span>
+
+<span class="nd">@timer</span>
+<span class="k">def</span> <span class="nf">waste_some_time</span><span class="p">(</span><span class="n">num_times</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">num_times</span><span class="p">):</span>
+        <span class="nf">sum</span><span class="p">([</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)])</span>
 </pre></td>
 </tr></tbody></table></code></pre></div></div>
 
@@ -230,7 +242,7 @@
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/urbasis-Vlog/">Vlog of URBASIS project Spring School</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/2023-07-03-urbasis-Vlog/"></a>
   </li>
 
   

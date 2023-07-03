@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yuchenakaleslie.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yuchenakaleslie.github.io//" rel="alternate" type="text/html" hreflang="en" /><updated>2023-07-03T21:26:21+00:00</updated><id>https://yuchenakaleslie.github.io//feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">Vlog of URBASIS project Spring School</title><link href="https://yuchenakaleslie.github.io//blog/2023/urbasis-Vlog/" rel="alternate" type="text/html" title="Vlog of URBASIS project Spring School" /><published>2023-07-03T16:40:16+00:00</published><updated>2023-07-03T16:40:16+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/urbasis-Vlog</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/urbasis-Vlog/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yuchenakaleslie.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yuchenakaleslie.github.io//" rel="alternate" type="text/html" hreflang="en" /><updated>2023-07-03T21:32:31+00:00</updated><id>https://yuchenakaleslie.github.io//feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html"></title><link href="https://yuchenakaleslie.github.io//blog/2023/2023-07-03-urbasis-Vlog/" rel="alternate" type="text/html" title="" /><published>2023-07-03T21:32:31+00:00</published><updated>2023-07-03T21:32:31+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/2023-07-03-urbasis-Vlog</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/2023-07-03-urbasis-Vlog/"><![CDATA[<blockquote>
     The <a href="https://urbasis-eu.osug.fr">Vlog of URBASIS project Spring School</a> is finally out :sparkles: :smile:
-</blockquote>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="links" /><summary type="html"><![CDATA[march & april, looking forward to summer]]></summary></entry><entry><title type="html">uncertainty decomposition</title><link href="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/" rel="alternate" type="text/html" title="uncertainty decomposition" /><published>2023-06-26T15:12:00+00:00</published><updated>2023-06-26T15:12:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/"><![CDATA[<p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine. You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>. If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
+</blockquote>]]></content><author><name></name></author></entry><entry><title type="html">uncertainty decomposition</title><link href="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/" rel="alternate" type="text/html" title="uncertainty decomposition" /><published>2023-06-26T15:12:00+00:00</published><updated>2023-06-26T15:12:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/"><![CDATA[<p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine. You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>. If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
 
 <p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph. Here is an example:</p>
 
@@ -19,6 +19,8 @@ MathJax will automatically number equations:</p>
 
 <p>Note that MathJax 3 is <a href="https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html">a major re-write of MathJax</a> that brought a significant improvement to the loading and rendering speed, which is now <a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php">on par with KaTeX</a>.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="math" /><summary type="html"><![CDATA[an example of a blog post with some math]]></summary></entry><entry><title type="html">Python decorator</title><link href="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/" rel="alternate" type="text/html" title="Python decorator" /><published>2023-05-19T15:09:00+00:00</published><updated>2023-05-19T15:09:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/Python-decorator</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/"><![CDATA[<p>Decorator has always been my favorite feature of Python, not only because of the nice look of a color <code class="language-plaintext highlighter-rouge">@function</code> symbol, but more because of it is an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite uses. I will also mention some real-world uses and leave interested reader to dig more.</p>
 
+<hr />
+
 <h3 id="1-timer">1. Timer</h3>
 
 <p>Perhaps the most simple case. But it is a definitly a frequent go-to use case where you may need to know the run time of your function or code block. Just simply wrap up the code bloack into a function and add this simple <code class="language-plaintext highlighter-rouge">@function</code> symbol, quick and elegant.</p>
@@ -34,6 +36,11 @@ MathJax will automatically number equations:</p>
 9
 10
 11
+12
+13
+14
+15
+16
 </pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">timer</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
     <span class="sh">"""</span><span class="s">Print the runtime of the decorated function</span><span class="sh">"""</span>
     <span class="nd">@functools.wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
@@ -45,6 +52,11 @@ MathJax will automatically number equations:</p>
 </span>        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Finished </span><span class="si">{</span><span class="n">func</span><span class="p">.</span><span class="n">__name__</span><span class="si">!r}</span><span class="s"> in </span><span class="si">{</span><span class="n">run_time</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s"> secs</span><span class="sh">"</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">value</span>
     <span class="k">return</span> <span class="n">wrapper_timer</span>
+
+<span class="nd">@timer</span>
+<span class="k">def</span> <span class="nf">waste_some_time</span><span class="p">(</span><span class="n">num_times</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">num_times</span><span class="p">):</span>
+        <span class="nf">sum</span><span class="p">([</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)])</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>For Jupyter notebook users, you may be familiar with the <code class="language-plaintext highlighter-rouge">%%time</code> magic command, then you get the idea.</p>
