@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SHM 
-description: **Anomaly detection** in structural health monitoring - a collaboration with Isterre UGA
+description: Anomaly detection in structural health monitoring - a collaboration with Isterre UGA
 img: assets/img/earthquake_annotated.png
 importance: 3
 category: collaboration
