@@ -2,10 +2,10 @@
 layout: distill
 title: Imputation is no picnic
 description: an example of a distill-style blog post and main elements
-img: assets/img/two_moon.png
+img: assets/img/incomplete_puzzle.jpg
 giscus_comments: true
 date: 2021-05-22
-importance: 2
+importance: 1
 category: work
 
 authors:
