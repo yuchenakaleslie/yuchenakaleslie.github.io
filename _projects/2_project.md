@@ -7,7 +7,7 @@ importance: 2
 category: work
 ---
 
-> Part of the results herein are published. Pls refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](google.com) for additional details.
+> Part of the results herein are published. Pls refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](https://www.researchgate.net/publication/349715719_Decision_Making_for_Optimal_Primary-Support_Selection_to_Minimise_Tunnel-_Squeezing_Risk) for additional details.
 > some other parts are currently under review.
 > A web-application is provided for uncertainty-informed prediction of squeezing intensity.
 
