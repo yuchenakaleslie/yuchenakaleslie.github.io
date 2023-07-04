@@ -2,8 +2,8 @@
 layout: page
 title: tunnel squeezing intensity
 description: Dynamic and Uncertainty-informed squeezing intensity prediction
-img: assets/img/two_moon.png
-importance: 2
+img: assets/img/incomplete_puzzle.jpg
+importance: 1
 category: work
 ---
 
