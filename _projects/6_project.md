@@ -28,7 +28,7 @@ For uncertainty measures, Fig. 6 shows the width measure (i.e. width between upp
 the model’s uncertainty when predicting at high frequency ranges. Also, it can be seen that only very few times, mostly in the middle frequency range, that the PI has missed the ground truth value. 
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="text-center">
         {% include figure.html path="assets/img/PIwidthpercentage.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
