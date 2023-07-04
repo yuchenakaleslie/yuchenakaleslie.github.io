@@ -7,8 +7,7 @@ importance: 3
 category: collaboration
 ---
 
-This an ungoing collaboration work with Isterre UGA. 
-
+This an ungoing collaboration work with Isterre UGA, to propose an environment-informed approach to probabilistically detect the potential structural damage. Several environmental factors, shown below and three vibrational modes are considered in this anlysis. Each mode is associated with its natural frequancy $\omega$ and damping ratio. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -16,21 +15,24 @@ This an ungoing collaboration work with Isterre UGA.
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    A glimpse of Environmental factors.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
+We will detect the potential structural damage based on the 95% prediction interval. Three examples with respect to three modes are shown below:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/earthquake_annotated.png" title="example image" class="img-fluid rounded d-block m-auto z-depth-1" %}
+        {% include figure.html path="assets/img/PI95_fntran.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/PI95_fnt.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/PI95_fnlong.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Three examples with respect to three modes
 </div>
 
 
