@@ -27,10 +27,9 @@ Various frequency patterns have been learnt and reasonable uncertainty bounds ha
 For uncertainty measures, Fig. 6 shows the width measure (i.e. width between upper and lower bounds) of the 95% predictive interval with respect to each frequency, as an indication of the magnitude of uncertainty. Apparently, high frequency ranges have shown comparatively larger widths, suggesting
 the model’s uncertainty when predicting at high frequency ranges. Also, it can be seen that only very few times, mostly in the middle frequency range, that the PI has missed the ground truth value. 
 
-<div class="row">
-    <div class="text-center">
-        {% include figure.html path="assets/img/PIwidthpercentage.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+
+<div class="text-center">
+    {% include figure.html path="assets/img/PIwidthpercentage.png" title="example image" class="img-fluid rounded z-depth-1" %}
 </div>
 <div class="caption">
     The PI width metric for each frequency value for the test set. Blue points
