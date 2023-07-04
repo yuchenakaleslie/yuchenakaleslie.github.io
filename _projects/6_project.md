@@ -8,7 +8,7 @@ category: collaboration
 ---
 This in an ungoing collarboartion with Dr. Chuanbin Zhu from Univ of Canterbury, New Zealand. Stay tuned for more in-depth findings. 
 
-Currently Bayesian deep recurrent models are adopted for single-site amplification prediction. Specifically, both sources of uncertainties, aleatoric and epistemic, are considered and reflected in the predictive uncertainties. Refer to [a post]({% link _posts/2023-6-16-uncertainty-decomposition.md %}) for a discussion in differentiating aleatoric and epistemic uncertainty in constructing predictive intervals. Importanly, in this research, accurate predictions are obtained by the model and we show the frequency-dependent variances. 
+Currently Bayesian deep recurrent models are adopted for single-site amplification prediction. Specifically, both sources of uncertainties, aleatoric and epistemic, are considered and reflected in the predictive uncertainties. Refer to the post [uncertainty decomposition]({% link _posts/2023-6-16-uncertainty-decomposition.md %}) for a discussion in differentiating aleatoric and epistemic uncertainty in constructing predictive intervals. Importanly, in this research, accurate predictions are obtained by the model and we show the frequency-dependent variances. 
 
 Various frequency patterns have been learnt and reasonable uncertainty bounds have been estimated. The ground truth has been well captured.
 
