@@ -17,16 +17,14 @@ This study presents a novel approach to identify multiple seismic events using D
 Importantly, a Bayesian Convnet, having considered model uncertainty, is trained to probabilistically detect the seismic events in a typical segment from continuous streams. If multiple events are present, our model further yields the location estimates of each event and therefore separating them out.
 
 <!--The plot below is NOT justfied. Fix the layout-->
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/separation.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div class="text-center">
+    {% include figure.html path="assets/img/separation2.png" title="example image" class="img-fluid rounded z-depth-1" %}
 </div>
 <div class="caption">
     An automated probabilistic procedure in detecting seismic events
 </div>
 
-We have reasoned about the uncertainty regarding the multi events detection as well as the decision in the dividing points throughout a probabilistic pipeline. However, we are more interested in complex situations where even human cannot easily differentiate between multiple events, such as overlapping events. This leads to [uncertain labels](3_project.md). The account for uncertainty and the robustness of the proposed model plays an important role in the reliability of an automated preprocessing procedure.
+We have reasoned about the uncertainty regarding the multi events detection as well as the decision in the dividing points throughout a probabilistic pipeline. However, we are more interested in complex situations where even human cannot easily differentiate between multiple events, such as overlapping events. This leads to [uncertain labels]({% link _projects/3_project.md %}). The account for uncertainty and the robustness of the proposed model plays an important role in the reliability of an automated preprocessing procedure.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
