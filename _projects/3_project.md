@@ -12,7 +12,7 @@ Building on the universal approximator theory, deep neural network models are tr
 
 ### Interval-valued features
 
-training data may often include interval-valued data, which may be caused by imperfection of measurement tools or imprecision of expert information, or from [missing data](_projects/1_project.md). Interval training sets may also arise in situations of specific grouped representation such as such as daily interval stock prices.
+training data may often include interval-valued data, which may be caused by imperfection of measurement tools or imprecision of expert information, or from [missing data]({% link _projects/1_project.md %}). Interval training sets may also arise in situations of specific grouped representation such as such as daily interval stock prices.
 
 
 
