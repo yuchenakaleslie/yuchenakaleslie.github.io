@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Imputation is no picnic | Yu  Chen</title>
     <meta name="author" content="Yu  Chen">
-    <meta name="description" content="Uncertainty quantifition over spectral representation of stochastic processes in the presence of missing data">
+    <meta name="description" content="Uncertainty quantification over spectral representation of stochastic processes in the presence of missing data">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -89,7 +89,7 @@
 <d-front-matter>
     <script async type="text/json">{
       "title": "Imputation is no picnic",
-      "description": "Uncertainty quantifition over spectral representation of stochastic processes in the presence of missing data",
+      "description": "Uncertainty quantification over spectral representation of stochastic processes in the presence of missing data",
       "published": "June 26, 2023",
       "authors": [
         {
@@ -199,7 +199,7 @@
 
       <d-title>
         <h1>Imputation is no picnic</h1>
-        <p>Uncertainty quantifition over spectral representation of stochastic processes in the presence of missing data</p>
+        <p>Uncertainty quantification over spectral representation of stochastic processes in the presence of missing data</p>
       </d-title>
 
       <d-byline></d-byline>
@@ -209,8 +209,8 @@
           <nav class="l-text figcaption">
           <h3>Contents</h3>
             <div><a href="#introduction">Introduction</a></div>
-            <div><a href="#citations">Citations</a></div>
-            <div><a href="#footnotes">Footnotes</a></div>
+            <div><a href="#three-challenges">Three challenges</a></div>
+            <div><a href="#our-proposed-solution-and-two-frameworks">Our proposed solution and two frameworks</a></div>
             <div><a href="#code-blocks">Code Blocks</a></div>
             <div><a href="#interactive-plots">Interactive Plots</a></div>
             <div><a href="#layouts">Layouts</a></div>
@@ -221,25 +221,17 @@
 
         <h2 id="introduction">Introduction</h2>
 
-<p>Missing data is an ubiquitous problem of various engineering and physical fields, in which incompleness may present in the observational data records or engineering monitoring data. In fact, it is pervasive in virtually any discipline where <em>in situ</em> measurements are collected and transferred, as a result of abundant reasons causing intermittent failure, such as sensor failure or incompetence, temporary transmission loss for real-time data, plus numerous other reasons including sensor maintenance, usage, data acquisition restrictions and or data-corruption, see <d-cite key="chen4405534bayesian"></d-cite> for thorough discussion. <code class="language-plaintext highlighter-rouge">It is vital for safety-critical systems operated on decision-makings on the basis real-time data streams (e.g. autonomous driving) to be robust under unexpected sensor failure.</code></p>
+<p>Missing data is an ubiquitous problem of various engineering and physical fields, in which incompleness may present in the observational recordings or engineering monitoring data. In fact, it is pervasive in virtually any discipline where <em>in situ</em> measurements are collected and transferred, as a result of abundant practical reasons causing intermittent failure, such as sensor failure or incompetence, temporary transmission loss for real-time data, plus numerous other reasons including sensor maintenance, usage, data acquisition restrictions and or data-corruption, see <d-cite key="chen4405534bayesian"></d-cite> for a thorough discussion. <code class="language-plaintext highlighter-rouge">It is therefore vital for safety-critical systems operated by decision-makings on the basis of real-time data streams (e.g. autonomous driving) to be robust under unexpected sensor failure.</code></p>
 
-<h2 id="three-challenges">three challenges</h2>
+<h2 id="three-challenges">Three challenges</h2>
 
-<p>It’s practically impossible for the certain event/scenario/incident under recording to be reevaluated hence almost impossible to reconstruct the missing samples not measured with certainty.</p>
-
-<p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph.
-Here is an example:</p>
+<p>Stochastic processes are widely adopted to characterise time-dependent data which are random in nature and involve strong nonstationarity, as well as to model  system responses that involve highly nonstationarity and uncertain system parameters. We seek a probabilistic spectral representation of the underlying stochastic processes even in the presense of missing data, and investigate the propagation of uncertainties from imperfect observations all the way through the computational pipeline. However, we note there are three main challenges in this noble cause: <strong>(I)</strong> It’s practically impossible for the certain event/scenario/incident under recording to be reevaluated (let bygones be bygones <img class="emoji" title=":pensive:" alt=":pensive:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png" height="20" width="20">) hence almost impossible to reconstruct the missing samples not measured with certainty. Uncertainty quantification plays a key role in reflecting the inherent uncertainty of the missing data and the downstream models. <strong>(II)</strong> most of current approaches are developed on the stationary assumption hence inadequate to reflect the nonstationary properties of most real world processes. <strong>(III)</strong> most importantly, most of current approaches are still significantly bounded by a ceiling in performance since they are merely driven by the very limited information contained in the incomplete data.</p>
 
 \[\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\]
 
 <hr>
 
-<hr>
-
-<h2 id="footnotes">Footnotes</h2>
-
-<p>Just wrap the text you would like to show up in a footnote in a <code class="language-plaintext highlighter-rouge">&lt;d-footnote&gt;</code> tag.
-The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote></p>
+<h2 id="our-proposed-solution-and-two-frameworks">Our proposed solution and two frameworks</h2>
 
 <hr>
 
