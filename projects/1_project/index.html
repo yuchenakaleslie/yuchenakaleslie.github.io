@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Imputation is no picnic | Yu  Chen</title>
     <meta name="author" content="Yu  Chen">
-    <meta name="description" content="an example of a distill-style blog post and main elements">
+    <meta name="description" content="Uncertainty quantifition over spectral representation of stochastic processes in the presence of missing data">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -89,8 +89,8 @@
 <d-front-matter>
     <script async type="text/json">{
       "title": "Imputation is no picnic",
-      "description": "an example of a distill-style blog post and main elements",
-      "published": "May 22, 2021",
+      "description": "Uncertainty quantifition over spectral representation of stochastic processes in the presence of missing data",
+      "published": "June 26, 2023",
       "authors": [
         {
           "author": "Yu Chen",
@@ -199,7 +199,7 @@
 
       <d-title>
         <h1>Imputation is no picnic</h1>
-        <p>an example of a distill-style blog post and main elements</p>
+        <p>Uncertainty quantifition over spectral representation of stochastic processes in the presence of missing data</p>
       </d-title>
 
       <d-byline></d-byline>
@@ -208,7 +208,7 @@
         <d-contents>
           <nav class="l-text figcaption">
           <h3>Contents</h3>
-            <div><a href="#equations">Equations</a></div>
+            <div><a href="#introduction">Introduction</a></div>
             <div><a href="#citations">Citations</a></div>
             <div><a href="#footnotes">Footnotes</a></div>
             <div><a href="#code-blocks">Code Blocks</a></div>
@@ -219,32 +219,20 @@
           </nav>
         </d-contents>
 
-        <h2 id="equations">Equations</h2>
+        <h2 id="introduction">Introduction</h2>
 
-<p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/" rel="external nofollow noopener" target="_blank">MathJax 3</a> engine.
-You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>.
-If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
+<p>Missing data is an ubiquitous problem of various engineering and physical fields, in which incompleness may present in the observational data records or engineering monitoring data. In fact, it is pervasive in virtually any discipline where <em>in situ</em> measurements are collected and transferred, as a result of abundant reasons causing intermittent failure, such as sensor failure or incompetence, temporary transmission loss for real-time data, plus numerous other reasons including sensor maintenance, usage, data acquisition restrictions and or data-corruption, see <d-cite key="chen4405534bayesian"></d-cite> for thorough discussion. <code class="language-plaintext highlighter-rouge">It is vital for safety-critical systems operated on decision-makings on the basis real-time data streams (e.g. autonomous driving) to be robust under unexpected sensor failure.</code></p>
+
+<h2 id="three-challenges">three challenges</h2>
+
+<p>It’s practically impossible for the certain event/scenario/incident under recording to be reevaluated hence almost impossible to reconstruct the missing samples not measured with certainty.</p>
 
 <p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph.
 Here is an example:</p>
 
 \[\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\]
 
-<p>Note that MathJax 3 is <a href="https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html" rel="external nofollow noopener" target="_blank">a major re-write of MathJax</a> that brought a significant improvement to the loading and rendering speed, which is now <a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php" rel="external nofollow noopener" target="_blank">on par with KaTeX</a>.</p>
-
 <hr>
-
-<h2 id="citations">Citations</h2>
-
-<p>Citations are then used in the article body with the <code class="language-plaintext highlighter-rouge">&lt;d-cite&gt;</code> tag.
-The key attribute is a reference to the id provided in the bibliography.
-The key attribute can take multiple ids, separated by commas.</p>
-
-<p>The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).
-If you have an appendix, a bibliography is automatically created and populated in it.</p>
-
-<p>Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
-However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.</p>
 
 <hr>
 
@@ -309,15 +297,13 @@ To generate the plot that you see above, you can use the following code snippet:
 
 <hr>
 
-<h2 id="details-boxes">Details boxes</h2>
+<!-- ## Details boxes 
 
-<p>Details boxes are collapsible boxes which hide additional information from the user. They can be added with the <code class="language-plaintext highlighter-rouge">details</code> liquid tag:</p>
+Details boxes are collapsible boxes which hide additional information from the user. They can be added with the `details` liquid tag:
 
 <details><summary>Click here to know more</summary>
 <p>Additional details, where math \(2x - 1\) and <code class="language-plaintext highlighter-rouge">code</code> is rendered correctly.</p>
-</details>
-
-<hr>
+</details> -->
 
 <h2 id="layouts">Layouts</h2>
 
