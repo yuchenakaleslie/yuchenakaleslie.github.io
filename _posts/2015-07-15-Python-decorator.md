@@ -7,7 +7,7 @@ tags: formatting code
 categories: sample-posts
 ---
 
-Decorator has always been my favorite feature of Python, not only because of the nice look of a color `@function` symbol, but more because of it is an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite uses. I will also mention some real-world uses and leave interested reader to dig more.
+Decorator has always been my favorite feature of Python, not only because of the nice look of a colorful `@function` symbol, but more because of it as an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite use cases. I will also mention some real-world uses and leave interested reader to dig more.
 
 <hr>
 

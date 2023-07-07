@@ -1,10 +1,10 @@
 ---
 layout: distill
 title: Imputation is no picnic
-description: an example of a distill-style blog post and main elements
+description: Uncertainty quantifition over spectral representation of stochastic processes in the presence of missing data
 img: assets/img/incomplete_puzzle.jpg
 giscus_comments: true
-date: 2021-05-22
+date: 2023-06-26
 importance: 1
 category: work
 
@@ -25,7 +25,7 @@ bibliography: 2018-12-22-distill.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: Equations
+  - name: Introduction
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
@@ -57,11 +57,13 @@ _styles: >
 
 ---
 
-## Equations
+## Introduction
 
-This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
-You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
-If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
+Missing data is an ubiquitous problem of various engineering and physical fields, in which incompleness may present in the observational data records or engineering monitoring data. In fact, it is pervasive in virtually any discipline where *in situ* measurements are collected and transferred, as a result of abundant reasons causing intermittent failure, such as sensor failure or incompetence, temporary transmission loss for real-time data, plus numerous other reasons including sensor maintenance, usage, data acquisition restrictions and or data-corruption, see <d-cite key="chen4405534bayesian"></d-cite> for thorough discussion. `It is vital for safety-critical systems operated on decision-makings on the basis real-time data streams (e.g. autonomous driving) to be robust under unexpected sensor failure.` 
+
+## three challenges
+
+It's practically impossible for the certain event/scenario/incident under recording to be reevaluated hence almost impossible to reconstruct the missing samples not measured with certainty.
 
 To use display mode, again surround your expression with `$$` and place it as a separate paragraph.
 Here is an example:
@@ -70,21 +72,9 @@ $$
 \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
 $$
 
-Note that MathJax 3 is [a major re-write of MathJax](https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html) that brought a significant improvement to the loading and rendering speed, which is now [on par with KaTeX](http://www.intmath.com/cg5/katex-mathjax-comparison.php).
 
 ***
 
-## Citations
-
-Citations are then used in the article body with the `<d-cite>` tag.
-The key attribute is a reference to the id provided in the bibliography.
-The key attribute can take multiple ids, separated by commas.
-
-The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).
-If you have an appendix, a bibliography is automatically created and populated in it.
-
-Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
-However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.
 
 ***
 
@@ -153,15 +143,14 @@ fig.write_html('assets/plotly/demo.html')
 
 ***
 
-## Details boxes 
+<!-- ## Details boxes 
 
 Details boxes are collapsible boxes which hide additional information from the user. They can be added with the `details` liquid tag:
 
 {% details Click here to know more %}
 Additional details, where math $$ 2x - 1 $$ and `code` is rendered correctly.
-{% enddetails %}
+{% enddetails %} -->
 
-***
 
 ## Layouts
 
