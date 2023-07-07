@@ -10,7 +10,7 @@ horizontal: false
 ---
 
 <!-- pages/programs.md -->
-<div class="programs">
+<div class="projects">
 {%- if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized programs -->
   {%- for category in page.display_categories %}
