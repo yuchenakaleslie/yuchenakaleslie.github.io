@@ -32,7 +32,7 @@ toc:
     #   - name: Example Child Subsection 2
   - name: Three challenges
   - name: Our proposed solution and two frameworks 
-  - name: Code Blocks
+  - name: Conclusion
   - name: Interactive Plots
   - name: Layouts
   - name: Other Typography?
@@ -65,25 +65,31 @@ Missing data is an ubiquitous problem of various engineering and physical fields
 
 Stochastic processes are widely adopted to characterise time-dependent data which are random in nature and involve strong nonstationarity, as well as to model  system responses that involve highly nonstationarity and uncertain system parameters. We seek a probabilistic spectral representation of the underlying stochastic processes even in the presense of missing data, and investigate the propagation of uncertainties from imperfect observations all the way through the computational pipeline. 
 
-However, we note there are three main challenges in this noble cause: 
-**(I)** It's practically impossible for the certain event/scenario/incident under recording to be reevaluated (let bygones be bygones :pensive:) hence almost impossible to reconstruct the missing samples not measured with certainty. Uncertainty quantification plays a key role in reflecting the inherent uncertainty of the missing data and the downstream models. 
-**(II)** most of current approaches are developed on the stationary assumption hence inadequate to reflect the nonstationary properties of most real world processes. 
-**(III)** most importantly, most of current approaches are still significantly bounded by a ceiling in performance since they are merely driven by the very limited information contained in the incomplete data.
+However, we note there are *three main challenges* in this noble cause: 
+**(I)** It's practically impossible for the certain event/scenario/incident under recording to be reevaluated (let bygones be bygones :pensive:) hence almost impossible to reconstruct the missing samples not measured with certainty. **Uncertainty quantification** plays a key role in reflecting the inherent uncertainty of the missing data and the downstream models. 
+**(II)** most of current approaches are developed on the stationary assumption hence inadequate to reflect the **nonstationary properties** of most real world processes. 
+**(III)** most importantly, most of current approaches are still significantly bounded by a ceiling in performance since they are merely **driven by the very limited information** contained in the incomplete data.
 
-
-$$
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-$$
-
-
-***
 
 ## Our proposed solution and two frameworks 
 
+Due to the limit of data quality, fully data-driven methods are bounded to a ceiling performance. As such, our idea is rooted in the incorporation of prior domain knowledge to guide the learning/inference and mitigate the impacts of data problems, thereby producing robust and informed models. Particularly, in response to the three challenges, we propose knowledge-guided Bayesian frameworks that (i) takes advantage of a-priori knowledge of the underlying process, enabling to incorporate additional information (physics-based knowledge) into the modelling. (ii) accounts for uncertainty throughout the framework, allowing to provide a host of outputs in a probabilistic manner (e.g. reconstructions, spectral representations, and stochastic-process sample generations). (iii) applicable to nonstationary processes.
 
-***
+Depending on the level of information incorporated, two frameworks are proposed.
 
-## Code Blocks
+### Augmented-Learning 
+
+<div class="fake-img l-page">
+  {% include figure.html path="assets/img/Framework2_latest.png" class="img-fluid rounded z-depth-1" %}
+</div>
+
+
+
+
+
+
+
+## Conclusion
 
 Syntax highlighting is provided within `<d-code>` tags.
 An example of inline code snippets: `<d-code language="html">let x = 10;</d-code>`.
