@@ -109,30 +109,47 @@ $\mathcal{R}$ denotes the reconstructed process, practically through an ensemble
 
 ## Results
 
+<div class="fake-img l-page-outset">
+  <div class="row justify-content-sm-center">
+      <div class="col-sm-8 mt-3 mt-md-0">
+          {% include figure.html path="assets/img/waveletEPSD3D.png" title="example image" class="img-fluid rounded z-depth-1" zoomable=true %}
+      </div>
+      <div class="col-sm-4 mt-3 mt-md-0">
+          {% include figure.html path="assets/img/EPSD_uncertainty_plot.png" title="example image" class="img-fluid rounded z-depth-1" zoomable=true %}
+      </div>
+  </div>
+  <div class="caption">
+      Ensemble-averaged evolutionary spectrum (EPSD) by Morlet wavelet transform with 70% missing data (Left). Probability density of estimated EPSD shown at selected time instants for a certain frequency (Right). Zoom in for larger plots.
+  </div>
+</div>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/waveletEPSD3D.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/EPSD_uncertainty_plot.png" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/3modelscomp.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Probability distributions of power spectral density (PSD) for three Bayesian recurrent network models with respect to one scenario
 </div>
 
+Uncertainty metrics are computed below:
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/psd_WF.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/psd_WIDTH.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Uncertainty metrics across a range of missing percentages
+</div>
+
+
+
+
 ***
-
-
-
-
-
-
-
-
-
-
 
 
 ## Conclusion
