@@ -234,7 +234,9 @@
 
 <h2 id="our-proposed-solution-and-two-frameworks">Our proposed solution and two frameworks</h2>
 
-<p>Due to the limit of data quality, fully data-driven methods are bounded to a ceiling performance. As such, our idea is rooted in the incorporation of prior domain knowledge to guide the learning/inference and mitigate the impacts of data problems, thereby producing robust and informed models. Particularly, in response to the three challenges, we propose knowledge-guided Bayesian frameworks that (i) takes advantage of a-priori knowledge of the underlying process, enabling to incorporate additional information (physics-based knowledge) into the modelling. (ii) accounts for uncertainty throughout the framework, allowing to provide a host of outputs in a probabilistic manner (e.g. reconstructions, spectral representations, and stochastic-process sample generations). (iii) applicable to nonstationary processes.</p>
+<p>Due to the limit of data quality, fully data-driven methods are bounded to a ceiling performance. As such, our idea is rooted in the incorporation of prior domain knowledge to guide the learning/inference and mitigate the impacts of data problems, thereby producing robust and informed models.</p>
+
+<p>Particularly, in response to the three challenges, we propose knowledge-guided Bayesian frameworks that <code class="language-plaintext highlighter-rouge">(i)</code> takes advantage of a-priori knowledge of the underlying process, enabling to incorporate additional information (physics-based knowledge) into the modelling. <code class="language-plaintext highlighter-rouge">(ii)</code> accounts for uncertainty throughout the framework, allowing to provide a host of outputs in a probabilistic manner (e.g. reconstructions, spectral representations, and stochastic-process sample generations). <code class="language-plaintext highlighter-rouge">(iii)</code> applicable to nonstationary processes.</p>
 
 <p>Depending on the level of information incorporated, two frameworks are proposed.</p>
 
@@ -259,8 +261,8 @@
 
 </div>
 
-<p>We build on the premise that \textit{a priori} knowledge could provide general yet insightful prior expectations of the observation (with variaibility) of the physical process.
-The <em>a-priori</em> information is addressed by generating simulations based on the domain knowledge represented by $\boldsymbol{\theta}_{g}$.</p>
+<p>We build on the premise that prior knowledge could provide general yet insightful prior expectations of the observation (with variaibility) of the physical process.
+The <em>a-priori</em> information is addressed by generating simulations based on the domain knowledge represented by \(\boldsymbol{\theta}_{g}\).</p>
 
 <p>specifically, \(\boldsymbol{\theta}_{g} = (\theta_{1}, \dots, \theta_{n})\) represents a random vector of relevant physical parameters, each component of which stands for a random variable. \(g(\cdot)\) represents a generator function, which may just be a model with physics aspects capable of generating stochastic simulations accordingly. Collectively the corresponding probability distribution \(p(\boldsymbol{\theta}_{g})\) would reflect the variability of the simulations embedded in our prior belief.</p>
 
@@ -274,10 +276,58 @@ Besides, in this study we also present investigations and comparisons of
 a few neural network architectures in this regard. With the posterior distribution, an ensemble of recurrent imputations can be obtained by marginalizing out the parameter space, as follows:</p>
 
 \[\mathcal{R} = \int p(\tilde{\mathbf{y}} | \tilde{\mathbf{x}}, \boldsymbol{\omega}) p(\boldsymbol{\omega}| \mathcal{S}) \text{d} \boldsymbol{\omega}
-       \label{eq:predictive_distribution}\]
+    \label{eq:predictive_distribution}\]
 
 <p>where $\tilde{\mathbf{x}}$ represents the missing samples in a specific recording;
 $\mathcal{R}$ denotes the reconstructed process, practically through an ensemble of reconstructions, which contain both the recurrent imputations $\tilde{\mathbf{y}}$ and existing observations.</p>
+
+<hr>
+
+<h2 id="results">Results</h2>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/waveletEPSD3D-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/waveletEPSD3D-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/waveletEPSD3D-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/waveletEPSD3D.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/EPSD_uncertainty_plot-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/EPSD_uncertainty_plot-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/EPSD_uncertainty_plot-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/EPSD_uncertainty_plot.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    You can also have artistically styled 2/3 + 1/3 images, like these.
+</div>
+
+<hr>
 
 <h2 id="conclusion">Conclusion</h2>
 
