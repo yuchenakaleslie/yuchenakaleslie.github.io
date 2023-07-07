@@ -10,9 +10,9 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
-<div class="programs">
+<div class="projects">
 {%- if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized programs -->
+  <!-- Display categorized projects -->
   {%- for category in page.display_categories %}
   <h2 class="category">{{ category }}</h2>
   {%- assign categorized_programs = site.programs | where: "category", category -%}
@@ -21,35 +21,35 @@ horizontal: false
   {% if page.horizontal -%}
   <div class="container">
     <div class="row row-cols-2">
-    {%- for project in sorted_programs -%}
-      {% include programs_horizontal.html %}
+    {%- for program in sorted_programs -%}
+      {% include projects_horizontal.html %}
     {%- endfor %}
     </div>
   </div>
   {%- else -%}
   <div class="grid">
-    {%- for project in sorted_programs -%}
-      {% include programs.html %}
+    {%- for program in sorted_programs -%}
+      {% include projects.html %}
     {%- endfor %}
   </div>
   {%- endif -%}
   {% endfor %}
 
 {%- else -%}
-  <!-- Display programs without categories -->  
+  <!-- Display projects without categories -->  
   {%- assign sorted_programs = site.programs | sort: "importance" -%}
   <!-- Generate cards for each project -->
   {% if page.horizontal -%}
   <div class="container">
     <div class="row row-cols-2">
     {%- for project in sorted_programs -%}
-      {% include programs_horizontal.html %}
+      {% include projects_horizontal.html %}
     {%- endfor %}
     </div>
   </div>
   {%- else -%}
   <div class="grid">
-    {%- for project in sorted_projects -%}
+    {%- for project in sorted_programs -%}
       {% include projects.html %}
     {%- endfor %}
   </div>
