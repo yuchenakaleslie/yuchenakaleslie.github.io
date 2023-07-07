@@ -1,8 +1,8 @@
 ---
 layout: page
-title: test_program1
-description: test_program1
-img: assets/img/12.jpg
+title: StoSpecRep
+description: Spectral representation for stochastic processes
+img: assets/img/linearChirp_EPSD.png
 importance: 1
 category: work
 ---

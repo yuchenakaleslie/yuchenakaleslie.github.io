@@ -1,7 +1,7 @@
 ---
 layout: page
-title: test_program2
-description: test_program2
+title: StoEXSIM
+description: Stochastic ground motion simulations with variability in model parameters
 img: assets/img/3.jpg
 importance: 2
 category: work

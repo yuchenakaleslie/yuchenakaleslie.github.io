@@ -1,8 +1,8 @@
 ---
 layout: page
-title: test_program3
-description: test_program3
-img: assets/img/7.jpg
+title: KTnSRM
+description: Spectral models and Spectral Representation Method
+img: assets/img/separableEPSD.png
 redirect:
 importance: 3
 category: work
