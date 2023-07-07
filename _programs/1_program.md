@@ -4,7 +4,7 @@ title: test_program1
 description: test_program1
 img: assets/img/12.jpg
 importance: 1
-category: 
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
