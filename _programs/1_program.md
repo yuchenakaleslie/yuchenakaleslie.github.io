@@ -1,10 +1,10 @@
 ---
 layout: page
-title: missing data imputation
-description: spectral density estimation of stochastic processes in the presence of missing data
+title: test_program1
+description: test_program1
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: 
 ---
 
 Every project has a beautiful feature showcase page.

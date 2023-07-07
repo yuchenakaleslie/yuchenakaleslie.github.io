@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Concurrent seismic events identification
-description: A collaboration with GFZ
-img:
+title: test_program3
+description: test_program3
+img: assets/img/7.jpg
+redirect:
 importance: 3
-category: collaboration
+category: 
 ---
 
 Every project has a beautiful feature showcase page.

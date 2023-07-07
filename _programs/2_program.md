@@ -1,10 +1,10 @@
 ---
 layout: page
-title: SHM anomaly detection
-description: a collaboration with Isterre UGA
-img: assets/img/1.jpg
-importance: 3
-category: collaboration
+title: test_program2
+description: test_program2
+img: assets/img/3.jpg
+importance: 2
+category: 
 ---
 
 Every project has a beautiful feature showcase page.
