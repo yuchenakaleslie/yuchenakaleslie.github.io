@@ -3,7 +3,7 @@ layout: distill
 title: Imputation is no picnic
 description: Uncertainty quantification over spectral representation of stochastic processes in the presence of missing data
 img: assets/img/incomplete_puzzle.jpg
-giscus_comments: true
+giscus_comments: false
 date: 2023-06-26
 importance: 1
 category: work
