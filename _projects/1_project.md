@@ -63,7 +63,12 @@ Missing data is an ubiquitous problem of various engineering and physical fields
 
 ## Three challenges
 
-Stochastic processes are widely adopted to characterise time-dependent data which are random in nature and involve strong nonstationarity, as well as to model  system responses that involve highly nonstationarity and uncertain system parameters. We seek a probabilistic spectral representation of the underlying stochastic processes even in the presense of missing data, and investigate the propagation of uncertainties from imperfect observations all the way through the computational pipeline. However, we note there are three main challenges in this noble cause: **(I)** It's practically impossible for the certain event/scenario/incident under recording to be reevaluated (let bygones be bygones :pensive:) hence almost impossible to reconstruct the missing samples not measured with certainty. Uncertainty quantification plays a key role in reflecting the inherent uncertainty of the missing data and the downstream models. **(II)** most of current approaches are developed on the stationary assumption hence inadequate to reflect the nonstationary properties of most real world processes. **(III)** most importantly, most of current approaches are still significantly bounded by a ceiling in performance since they are merely driven by the very limited information contained in the incomplete data.
+Stochastic processes are widely adopted to characterise time-dependent data which are random in nature and involve strong nonstationarity, as well as to model  system responses that involve highly nonstationarity and uncertain system parameters. We seek a probabilistic spectral representation of the underlying stochastic processes even in the presense of missing data, and investigate the propagation of uncertainties from imperfect observations all the way through the computational pipeline. 
+
+However, we note there are three main challenges in this noble cause: 
+**(I)** It's practically impossible for the certain event/scenario/incident under recording to be reevaluated (let bygones be bygones :pensive:) hence almost impossible to reconstruct the missing samples not measured with certainty. Uncertainty quantification plays a key role in reflecting the inherent uncertainty of the missing data and the downstream models. 
+**(II)** most of current approaches are developed on the stationary assumption hence inadequate to reflect the nonstationary properties of most real world processes. 
+**(III)** most importantly, most of current approaches are still significantly bounded by a ceiling in performance since they are merely driven by the very limited information contained in the incomplete data.
 
 
 $$
