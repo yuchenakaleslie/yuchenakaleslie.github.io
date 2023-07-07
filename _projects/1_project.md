@@ -79,12 +79,35 @@ Depending on the level of information incorporated, two frameworks are proposed.
 
 ### Augmented-Learning 
 
-<div class="fake-img l-page">
+<div class="fake-img l-body">
   {% include figure.html path="assets/img/Framework2_latest.png" class="img-fluid rounded z-depth-1" %}
 </div>
 
+We build on the premise that \textit{a priori} knowledge could provide general yet insightful prior expectations of the observation (with variaibility) of the physical process.
+The \textit{a-priori} information is addressed by generating simulations based on the domain knowledge represented by $\boldsymbol{\theta}_{g}$. 
 
+specifically, $\boldsymbol{\theta}_{g} = (\theta_{1}, \dots, \theta_{n})$ represents a random vector of relevant physical parameters, each component of which stands for a random variable. $g(\cdot)$ represents a generator function, which may just be a model with physics aspects capable of generating stochastic simulations accordingly. Collectively the corresponding probability distribution $p(\boldsymbol{\theta}_{g})$ would reflect the variability of the simulations embedded in our prior belief.
 
+% These simulations represent our prior belief over the data we expect to observe.
+% \subsection{Learned representation}
+Given the data represented by those physics-informed simulations, Bayesian recurrent neural network models $\mathcal{M}$ are trained as probabilistic model representations of the underlying process, whereby the imputation of missing data is conducted as predictions in a recursive manner.
+Importantly, the epistemic uncertainties of the learned model representations are addressed by putting probability distributions over the model parameters $\boldsymbol{\omega}$ of neural nets, thus giving rise to the posterior distribution $p(\boldsymbol{\omega}| \mathcal{S}, \mathcal{M})$ through the Bayesian inference, as given below:
+
+\begin{equation}
+    p(\boldsymbol{\omega}|\mathcal{S}, \mathcal{M}) = \frac{p(\mathcal{S}|\boldsymbol{\omega}, \mathcal{M}) p(\boldsymbol{\omega}|\mathcal{M})}{p(\mathcal{S}|\mathcal{M})} \propto p(\mathcal{S}|\boldsymbol{\omega}, \mathcal{M}) p(\boldsymbol{\omega}|\mathcal{M})
+\end{equation}
+
+This marks a key step of the proposed framework, where a probabilistic representation of the underlying processes is learned by recurrent neural network models and further used to reconstruct the incomplete observations. 
+Besides, in this study we also present investigations and comparisons of 
+a few neural network architectures in this regard. With the posterior distribution, an ensemble of recurrent imputations can be obtained by marginalizing out the parameter space, as follows:
+
+\begin{equation}
+       \mathcal{R} = \int p(\tilde{\mathbf{y}} | \tilde{\mathbf{x}}, \boldsymbol{\omega}) p(\boldsymbol{\omega}| \mathcal{S}) \text{d} \boldsymbol{\omega}
+       \label{eq:predictive_distribution}
+\end{equation}
+
+where $\tilde{\mathbf{x}}$ represents the missing samples in a specific recording;
+$\mathcal{R}$ denotes the reconstructed process, practically through an ensemble of reconstructions, which contain both the recurrent imputations $\tilde{\mathbf{y}}$ and existing observations.
 
 
 
