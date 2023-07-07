@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Imputation is no picnic
-description: Uncertainty quantifition over spectral representation of stochastic processes in the presence of missing data
+description: Uncertainty quantification over spectral representation of stochastic processes in the presence of missing data
 img: assets/img/incomplete_puzzle.jpg
 giscus_comments: true
 date: 2023-06-26
@@ -30,8 +30,8 @@ toc:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Citations
-  - name: Footnotes
+  - name: Three challenges
+  - name: Our proposed solution and two frameworks 
   - name: Code Blocks
   - name: Interactive Plots
   - name: Layouts
@@ -59,14 +59,12 @@ _styles: >
 
 ## Introduction
 
-Missing data is an ubiquitous problem of various engineering and physical fields, in which incompleness may present in the observational data records or engineering monitoring data. In fact, it is pervasive in virtually any discipline where *in situ* measurements are collected and transferred, as a result of abundant reasons causing intermittent failure, such as sensor failure or incompetence, temporary transmission loss for real-time data, plus numerous other reasons including sensor maintenance, usage, data acquisition restrictions and or data-corruption, see <d-cite key="chen4405534bayesian"></d-cite> for thorough discussion. `It is vital for safety-critical systems operated on decision-makings on the basis real-time data streams (e.g. autonomous driving) to be robust under unexpected sensor failure.` 
+Missing data is an ubiquitous problem of various engineering and physical fields, in which incompleness may present in the observational recordings or engineering monitoring data. In fact, it is pervasive in virtually any discipline where *in situ* measurements are collected and transferred, as a result of abundant practical reasons causing intermittent failure, such as sensor failure or incompetence, temporary transmission loss for real-time data, plus numerous other reasons including sensor maintenance, usage, data acquisition restrictions and or data-corruption, see <d-cite key="chen4405534bayesian"></d-cite> for a thorough discussion. `It is therefore vital for safety-critical systems operated by decision-makings on the basis of real-time data streams (e.g. autonomous driving) to be robust under unexpected sensor failure.`
 
-## three challenges
+## Three challenges
 
-It's practically impossible for the certain event/scenario/incident under recording to be reevaluated hence almost impossible to reconstruct the missing samples not measured with certainty.
+Stochastic processes are widely adopted to characterise time-dependent data which are random in nature and involve strong nonstationarity, as well as to model  system responses that involve highly nonstationarity and uncertain system parameters. We seek a probabilistic spectral representation of the underlying stochastic processes even in the presense of missing data, and investigate the propagation of uncertainties from imperfect observations all the way through the computational pipeline. However, we note there are three main challenges in this noble cause: **(I)** It's practically impossible for the certain event/scenario/incident under recording to be reevaluated (let bygones be bygones :pensive:) hence almost impossible to reconstruct the missing samples not measured with certainty. Uncertainty quantification plays a key role in reflecting the inherent uncertainty of the missing data and the downstream models. **(II)** most of current approaches are developed on the stationary assumption hence inadequate to reflect the nonstationary properties of most real world processes. **(III)** most importantly, most of current approaches are still significantly bounded by a ceiling in performance since they are merely driven by the very limited information contained in the incomplete data.
 
-To use display mode, again surround your expression with `$$` and place it as a separate paragraph.
-Here is an example:
 
 $$
 \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
@@ -75,13 +73,8 @@ $$
 
 ***
 
+## Our proposed solution and two frameworks 
 
-***
-
-## Footnotes
-
-Just wrap the text you would like to show up in a footnote in a `<d-footnote>` tag.
-The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote>
 
 ***
 
