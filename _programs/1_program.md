@@ -4,7 +4,7 @@ title: StoSpecRep
 description: 
 img: assets/img/linearChirp_EPSD.png
 importance: 1
-category: program
+category: work
 ---
 
 **Spe**ctral **rep**resentation for **sto**chastic processes

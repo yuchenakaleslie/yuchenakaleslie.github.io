@@ -4,7 +4,7 @@ title: StoEXSIM
 description: Stochastic ground motion simulations with variability in model parameters
 img: assets/img/command-line interface.png
 importance: 2
-category: program
+category: work
 ---
 
 Stochastic ground motion simulations with variability in model parameters.

@@ -5,7 +5,7 @@ description:
 img: assets/img/separableEPSD.png
 redirect:
 importance: 3
-category: program
+category: work
 ---
 
 Spectral power density models and Spectral Representation Method
