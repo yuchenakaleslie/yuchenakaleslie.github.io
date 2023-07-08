@@ -10,10 +10,10 @@ category: work
 
 Spectral power density models and Spectral Representation Method
 
-> The latest release can be accessed via [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7979812.svg)](https://doi.org/10.5281/zenodo.7979812).
-
-> It has been hosted on [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/leslieDLcy/ktnsrm).
-
+>
+> - The latest release can be accessed via [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7979812.svg)](https://doi.org/10.5281/zenodo.7979812).
+> - It has been hosted on [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/leslieDLcy/ktnsrm).
+>
 
 ***
 

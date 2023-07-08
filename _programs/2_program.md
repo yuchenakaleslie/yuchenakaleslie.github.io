@@ -9,10 +9,10 @@ category: work
 
 Stochastic ground motion simulations with variability in model parameters.
 
-> The latest release can be accessed via [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8017643.svg)](https://doi.org/10.5281/zenodo.8017643).
-
-> It has been hosted on [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/leslieDLcy/stoexsim).
-
+>
+> - The latest release can be accessed via [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8017643.svg)](https://doi.org/10.5281/zenodo.8017643).
+> - It has been hosted on [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/leslieDLcy/stoexsim).
+>
 
 ## Introduction
 
