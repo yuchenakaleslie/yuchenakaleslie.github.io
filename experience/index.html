@@ -90,18 +90,8 @@
     <script async type="text/json">{
       "title": "experience",
       "description": "some of my personal experiences to share",
-      "published": "June 26, 2023",
+      "published": "",
       "authors": [
-        {
-          "author": "Yu Chen",
-          "authorURL": "https://riskinstitute.uk",
-          "affiliations": [
-            {
-              "name": "Risk institute, Univ of Liverpool",
-              "url": ""
-            }
-          ]
-        }
         
       ],
       "katex": {
@@ -203,300 +193,36 @@
         <d-contents>
           <nav class="l-text figcaption">
           <h3>Contents</h3>
-            <div><a href="#introduction">Introduction</a></div>
-            <div><a href="#three-challenges">Three challenges</a></div>
-            <div><a href="#our-proposed-solution-and-two-frameworks">Our proposed solution and two frameworks</a></div>
-            <div><a href="#conclusion">Conclusion</a></div>
-            <div><a href="#interactive-plots">Interactive Plots</a></div>
+            <div><a href="#teaching">Teaching</a></div>
+            <div><a href="#secondment">Secondment</a></div>
+            <div><a href="#trainings">Trainings</a></div>
+            <div><a href="#conference-talks">Conference talks</a></div>
+            <div><a href="#reviewer">Reviewer</a></div>
             <div><a href="#layouts">Layouts</a></div>
             <div><a href="#other-typography">Other Typography?</a></div>
             
           </nav>
         </d-contents>
 
-        <h2 id="introduction">Introduction</h2>
+        <h3 id="teaching">Teaching</h3>
 
 <p>Missing data is an ubiquitous problem of various engineering and physical fields, in which incompleness may present in the observational recordings or engineering monitoring data. In fact, it is pervasive in virtually any discipline where <em>in situ</em> measurements are collected and transferred, as a result of abundant practical reasons causing intermittent failure, such as sensor failure or incompetence, temporary transmission loss for real-time data, plus numerous other reasons including sensor maintenance, usage, data acquisition restrictions and or data-corruption, see <d-cite key="chen4405534bayesian"></d-cite> for a thorough discussion. <code class="language-plaintext highlighter-rouge">It is therefore vital for safety-critical systems operated by decision-makings on the basis of real-time data streams (e.g. autonomous driving) to be robust under unexpected sensor failure.</code></p>
 
-<h2 id="three-challenges">Three challenges</h2>
+<h3 id="secondment">Secondment</h3>
 
-<p>Stochastic processes are widely adopted to characterise time-dependent data which are random in nature and involve strong nonstationarity, as well as to model  system responses that involve highly nonstationarity and uncertain system parameters. We seek a probabilistic spectral representation of the underlying stochastic processes even in the presense of missing data, and investigate the propagation of uncertainties from imperfect observations all the way through the computational pipeline.</p>
+<p>UGA, 2023 Jan - June</p>
 
-<p>However, we note there are <strong>three main challenges</strong> in this noble cause: 
-<code class="language-plaintext highlighter-rouge">(I)</code> It’s practically impossible for the certain event/scenario/incident under recording to be reevaluated (<em>let bygones be bygones</em> <img class="emoji" title=":pensive:" alt=":pensive:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png" height="20" width="20">) hence almost impossible to reconstruct the missing samples not measured with certainty. <strong>Uncertainty quantification</strong> plays a key role in reflecting the inherent uncertainty of the missing data and the downstream models. 
-<code class="language-plaintext highlighter-rouge">(II)</code> most of current approaches are developed on the stationary assumption hence inadequate to reflect the <strong>nonstationary properties</strong> of most real world processes. 
-<code class="language-plaintext highlighter-rouge">(III)</code> most importantly, most of current approaches are still significantly bounded by a ceiling in performance since they are merely <strong>driven by the very limited information</strong> contained in the incomplete data.</p>
+<h3 id="trainings">Trainings</h3>
 
-<h2 id="our-proposed-solution-and-two-frameworks">Our proposed solution and two frameworks</h2>
+<p>bla bla</p>
 
-<p>Due to the limit of data quality, fully data-driven methods are bounded to a ceiling performance. As such, our idea is rooted in the incorporation of prior domain knowledge to guide the learning/inference and mitigate the impacts of data problems, thereby producing robust and informed models.</p>
+<h3 id="conference-talks">Conference talks</h3>
 
-<p>Particularly, in response to the three challenges, we propose knowledge-guided Bayesian frameworks. Depending on the level of information incorporated, two frameworks are proposed. We first proposed a Augmented-Learning framework <d-cite key="chen4405534bayesian"></d-cite> that <code class="language-plaintext highlighter-rouge">(i)</code> takes advantage of a-priori knowledge of the underlying process, enabling to incorporate additional information (physics-based knowledge) into the modelling. <code class="language-plaintext highlighter-rouge">(ii)</code> accounts for uncertainty throughout the framework, allowing to provide a host of outputs in a probabilistic manner (e.g. reconstructions, spectral representations, and stochastic-process sample generations). <code class="language-plaintext highlighter-rouge">(iii)</code> applicable to nonstationary processes. Beyond that, an extension is further proposed <d-cite key="eesdchen2023"></d-cite> to update the learnt prior-knowledge-guided models, within the Bayesian inference, in light of available incomplete observations of specified formats, this suggests a greedy effort to extract information from the empirical observations at hand.</p>
+<p>bla bla</p>
 
-<div class="fake-img l-body">
-  <figure>
+<h3 id="reviewer">Reviewer</h3>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/Framework2_latest-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/Framework2_latest-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Framework2_latest-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/Framework2_latest.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-</div>
-
-<p>We build on the premise that prior knowledge could provide general yet insightful prior expectations of the observation (with variaibility) of the physical process.
-The <em>a-priori</em> information is addressed by generating simulations based on the domain knowledge represented by \(\boldsymbol{\theta}_{g}\).</p>
-
-<p>specifically, \(\boldsymbol{\theta}_{g} = (\theta_{1}, \dots, \theta_{n})\) represents a random vector of relevant physical parameters, each component of which stands for a random variable. \(g(\cdot)\) represents a generator function, which may just be a model with physics aspects capable of generating stochastic simulations accordingly. Collectively the corresponding probability distribution \(p(\boldsymbol{\theta}_{g})\) would reflect the variability of the simulations embedded in our prior belief.</p>
-
-<p>Given the data represented by those physics-informed simulations, Bayesian recurrent neural network models \(\mathcal{M}\) are trained as probabilistic model representations of the underlying process, whereby the imputation of missing data is conducted as predictions in a recursive manner.
-Importantly, the epistemic uncertainties of the learned model representations are addressed by putting probability distributions over the model parameters \(\boldsymbol{\omega}\) of neural nets, thus giving rise to the posterior distribution \(p(\boldsymbol{\omega}| \mathcal{S}, \mathcal{M})\) through the Bayesian inference, as given below:</p>
-
-\[p(\boldsymbol{\omega}|\mathcal{S}, \mathcal{M}) = \frac{p(\mathcal{S}|\boldsymbol{\omega}, \mathcal{M}) p(\boldsymbol{\omega}|\mathcal{M})}{p(\mathcal{S}|\mathcal{M})} \propto p(\mathcal{S}|\boldsymbol{\omega}, \mathcal{M}) p(\boldsymbol{\omega}|\mathcal{M})\]
-
-<p>This marks a key step of the proposed framework, where a probabilistic representation of the underlying processes is learned by recurrent neural network models and further used to reconstruct the incomplete observations. 
-Besides, in this study we also present investigations and comparisons of 
-a few neural network architectures in this regard. With the posterior distribution, an ensemble of recurrent imputations can be obtained by marginalizing out the parameter space, as follows:</p>
-
-\[\mathcal{R} = \int p(\tilde{\mathbf{y}} | \tilde{\mathbf{x}}, \boldsymbol{\omega}) p(\boldsymbol{\omega}| \mathcal{S}) \text{d} \boldsymbol{\omega}
-    \label{eq:predictive_distribution}\]
-
-<p>where $\tilde{\mathbf{x}}$ represents the missing samples in a specific recording;
-$\mathcal{R}$ denotes the reconstructed process, practically through an ensemble of reconstructions, which contain both the recurrent imputations $\tilde{\mathbf{y}}$ and existing observations.</p>
-
-<hr>
-
-<h2 id="results">Results</h2>
-
-<div class="fake-img l-page-outset">
-  <div class="row justify-content-sm-center">
-      <div class="col-sm-8 mt-3 mt-md-0">
-          <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/waveletEPSD3D-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/waveletEPSD3D-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/waveletEPSD3D-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/waveletEPSD3D.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-      </div>
-      <div class="col-sm-4 mt-3 mt-md-0">
-          <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/EPSD_uncertainty_plot-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/EPSD_uncertainty_plot-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/EPSD_uncertainty_plot-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/EPSD_uncertainty_plot.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-      </div>
-  </div>
-  <div class="caption">
-      Ensemble-averaged evolutionary spectrum (EPSD) by Morlet wavelet transform with 70% missing data (Left). Probability density of estimated EPSD shown at selected time instants for a certain frequency (Right). Zoom in for larger plots.
-  </div>
-</div>
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3modelscomp-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3modelscomp-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3modelscomp-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3modelscomp.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    Probability distributions of power spectral density (PSD) for three Bayesian recurrent network models with respect to one scenario
-</div>
-
-<p>Uncertainty metrics are computed below:</p>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/psd_WF-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/psd_WF-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/psd_WF-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/psd_WF.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/psd_WIDTH-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/psd_WIDTH-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/psd_WIDTH-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/psd_WIDTH.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    Uncertainty metrics across a range of missing percentages
-</div>
-
-<hr>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Syntax highlighting is provided within <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> tags.
-An example of inline code snippets: <code class="language-plaintext highlighter-rouge">&lt;d-code language="html"&gt;let x = 10;&lt;/d-code&gt;</code>.
-For larger blocks of code, add a <code class="language-plaintext highlighter-rouge">block</code> attribute:</p>
-
-<d-code block="" language="javascript">
-  var x = 25;
-  function(x) {
-    return x * x;
-  }
-</d-code>
-
-<p><strong>Note:</strong> <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> blocks do not look good in the dark mode.
-You can always use the default code-highlight using the <code class="language-plaintext highlighter-rouge">highlight</code> liquid tag:</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
-<span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">x</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<hr>
-
-<h2 id="interactive-plots">Interactive Plots</h2>
-
-<p>You can add interative plots using plotly + iframes <img class="emoji" title=":framed_picture:" alt=":framed_picture:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f5bc.png" height="20" width="20"></p>
-
-<div class="l-page">
-  <iframe src="/assets/plotly/demo.html" frameborder="0" scrolling="no" height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
-</div>
-
-<p>The plot must be generated separately and saved into an HTML file.
-To generate the plot that you see above, you can use the following code snippet:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">import</span> <span class="n">plotly.express</span> <span class="k">as</span> <span class="n">px</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span>
-  <span class="sh">'</span><span class="s">https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv</span><span class="sh">'</span>
-<span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="nf">density_mapbox</span><span class="p">(</span>
-  <span class="n">df</span><span class="p">,</span>
-  <span class="n">lat</span><span class="o">=</span><span class="sh">'</span><span class="s">Latitude</span><span class="sh">'</span><span class="p">,</span>
-  <span class="n">lon</span><span class="o">=</span><span class="sh">'</span><span class="s">Longitude</span><span class="sh">'</span><span class="p">,</span>
-  <span class="n">z</span><span class="o">=</span><span class="sh">'</span><span class="s">Magnitude</span><span class="sh">'</span><span class="p">,</span>
-  <span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-  <span class="n">center</span><span class="o">=</span><span class="nf">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">180</span><span class="p">),</span>
-  <span class="n">zoom</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-  <span class="n">mapbox_style</span><span class="o">=</span><span class="sh">"</span><span class="s">stamen-terrain</span><span class="sh">"</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">fig</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
-<span class="n">fig</span><span class="p">.</span><span class="nf">write_html</span><span class="p">(</span><span class="sh">'</span><span class="s">assets/plotly/demo.html</span><span class="sh">'</span><span class="p">)</span></code></pre></figure>
-
-<hr>
-
-<!-- ## Details boxes 
-
-Details boxes are collapsible boxes which hide additional information from the user. They can be added with the `details` liquid tag:
-
-<details><summary>Click here to know more</summary>
-<p>Additional details, where math \(2x - 1\) and <code class="language-plaintext highlighter-rouge">code</code> is rendered correctly.</p>
-</details> -->
-
-<h2 id="layouts">Layouts</h2>
-
-<p>The main text column is referred to as the body.
-It is the assumed layout of any direct descendants of the <code class="language-plaintext highlighter-rouge">d-article</code> element.</p>
-
-<div class="fake-img l-body">
-  <p>.l-body</p>
-</div>
-
-<p>For images you want to display a little larger, try <code class="language-plaintext highlighter-rouge">.l-page</code>:</p>
-
-<div class="fake-img l-page">
-  <p>.l-page</p>
-</div>
-
-<p>All of these have an outset variant if you want to poke out from the body text a little bit.
-For instance:</p>
-
-<div class="fake-img l-body-outset">
-  <p>.l-body-outset</p>
-</div>
-
-<div class="fake-img l-page-outset">
-  <p>.l-page-outset</p>
-</div>
-
-<p>Occasionally you’ll want to use the full browser width.
-For this, use <code class="language-plaintext highlighter-rouge">.l-screen</code>.
-You can also inset the element a little from the edge of the browser by using the inset variant.</p>
-
-<div class="fake-img l-screen">
-  <p>.l-screen</p>
-</div>
-<div class="fake-img l-screen-inset">
-  <p>.l-screen-inset</p>
-</div>
-
-<p>The final layout is for marginalia, asides, and footnotes.
-It does not interrupt the normal flow of <code class="language-plaintext highlighter-rouge">.l-body</code> sized text except on mobile screen sizes.</p>
-
-<div class="fake-img l-gutter">
-  <p>.l-gutter</p>
-</div>
-
-<hr>
+<p>bla bla</p>
 
 <h2 id="other-typography">Other Typography?</h2>
 
