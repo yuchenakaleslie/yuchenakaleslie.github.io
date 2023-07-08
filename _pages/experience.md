@@ -5,6 +5,9 @@ title: experience
 description: some of my personal experiences to share
 nav: true
 nav_order: 5
+giscus_comments: false
+date: 2023-06-26
+importance: 1
 ---
 
 authors:
@@ -15,20 +18,8 @@ authors:
 
 bibliography: 2018-12-22-distill.bib
 
-# see `bin/2018-12-22-distill.md` for the origianl version
-
-# Optionally, you can add a table of contents to your post.
-# NOTES:
-#   - make sure that TOC names match the actual section names
-#     for hyperlinks within the post to work correctly.
-#   - we may want to automate TOC generation in the future using
-#     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
   - name: Introduction
-    # if a section has subsections, you can add them as follows:
-    # subsections:
-    #   - name: Example Child Subsection 1
-    #   - name: Example Child Subsection 2
   - name: Three challenges
   - name: Our proposed solution and two frameworks 
   - name: Conclusion
@@ -36,8 +27,6 @@ toc:
   - name: Layouts
   - name: Other Typography?
 
-# Below is an example of injecting additional post-specific styles.
-# If you use this post as a template, delete this _styles block.
 _styles: >
   .fake-img {
     background: #bbb;
