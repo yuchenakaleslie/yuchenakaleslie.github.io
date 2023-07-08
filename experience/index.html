@@ -66,6 +66,23 @@
     <script src="/assets/js/distillpub/transforms.v2.js"></script>
     <script src="/assets/js/distillpub/overrides.js"></script>
     
+    <!-- Page/Post style -->
+    <style type="text/css">
+      .fake-img {
+  background: #bbb;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+} .fake-img p {
+  font-family: monospace;
+  color: white;
+  text-align: left;
+  margin: 12px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+    </style>
   </head>
 
   <body>
@@ -75,6 +92,16 @@
       "description": "some of my personal experiences to share",
       "published": "June 26, 2023",
       "authors": [
+        {
+          "author": "Yu Chen",
+          "authorURL": "https://riskinstitute.uk",
+          "affiliations": [
+            {
+              "name": "Risk institute, Univ of Liverpool",
+              "url": ""
+            }
+          ]
+        }
         
       ],
       "katex": {
@@ -173,48 +200,21 @@
       <d-byline></d-byline>
 
       <d-article>
-        
+        <d-contents>
+          <nav class="l-text figcaption">
+          <h3>Contents</h3>
+            <div><a href="#introduction">Introduction</a></div>
+            <div><a href="#three-challenges">Three challenges</a></div>
+            <div><a href="#our-proposed-solution-and-two-frameworks">Our proposed solution and two frameworks</a></div>
+            <div><a href="#conclusion">Conclusion</a></div>
+            <div><a href="#interactive-plots">Interactive Plots</a></div>
+            <div><a href="#layouts">Layouts</a></div>
+            <div><a href="#other-typography">Other Typography?</a></div>
+            
+          </nav>
+        </d-contents>
 
-        <p>authors:</p>
-<ul>
-  <li>name: Yu Chen
-url: “https://riskinstitute.uk”
-affiliations:
-  name: Risk institute, Univ of Liverpool</li>
-</ul>
-
-<p>bibliography: 2018-12-22-distill.bib</p>
-
-<p>toc:</p>
-<ul>
-  <li>name: Introduction</li>
-  <li>name: Three challenges</li>
-  <li>name: Our proposed solution and two frameworks</li>
-  <li>name: Conclusion</li>
-  <li>name: Interactive Plots</li>
-  <li>name: Layouts</li>
-  <li>name: Other Typography?</li>
-</ul>
-
-<p>_styles: &gt;
-  .fake-img {
-    background: #bbb;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 12px;
-  }
-  .fake-img p {
-    font-family: monospace;
-    color: white;
-    text-align: left;
-    margin: 12px 0;
-    text-align: center;
-    font-size: 16px;
-  }</p>
-
-<hr>
-
-<h2 id="introduction">Introduction</h2>
+        <h2 id="introduction">Introduction</h2>
 
 <p>Missing data is an ubiquitous problem of various engineering and physical fields, in which incompleness may present in the observational recordings or engineering monitoring data. In fact, it is pervasive in virtually any discipline where <em>in situ</em> measurements are collected and transferred, as a result of abundant practical reasons causing intermittent failure, such as sensor failure or incompetence, temporary transmission loss for real-time data, plus numerous other reasons including sensor maintenance, usage, data acquisition restrictions and or data-corruption, see <d-cite key="chen4405534bayesian"></d-cite> for a thorough discussion. <code class="language-plaintext highlighter-rouge">It is therefore vital for safety-critical systems operated by decision-makings on the basis of real-time data streams (e.g. autonomous driving) to be robust under unexpected sensor failure.</code></p>
 
@@ -665,7 +665,7 @@ This line is only separated by a single newline, so it’s a separate line in th
         <d-citation-list></d-citation-list>
       </d-appendix>
 
-      <d-bibliography src="/assets/bibliography/"></d-bibliography>
+      <d-bibliography src="/assets/bibliography/2018-12-22-distill.bib"></d-bibliography>
 </div>
 
     <!-- Footer -->    
