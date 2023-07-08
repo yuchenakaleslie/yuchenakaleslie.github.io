@@ -1,7 +1,7 @@
 ---
 layout: page
 title: StoSpecRep
-description: **Spectral** representation for stochastic processes
+description: 
 img: assets/img/linearChirp_EPSD.png
 importance: 1
 category: work
