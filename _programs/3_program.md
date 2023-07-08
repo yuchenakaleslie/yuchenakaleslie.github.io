@@ -8,7 +8,6 @@ importance: 3
 category: work
 ---
 
-# ktnsrm
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7979812.svg)](https://doi.org/10.5281/zenodo.7979812)
 
 Spectral power density models and Spectral Representation Method
@@ -47,7 +46,7 @@ where $$w_{g}=5 \pi$$ rad/s; $$\zeta$$ = 0.63; $$S_{0}$$ = 0.011;
 </div>
 
 
-`2. non-separable EPSD`
+`2. separable EPSD`
 
 Define an evolutionary spectrum in the form $$S(\omega, t)=g(t)^2S(\omega)$$
 
@@ -65,9 +64,7 @@ where $b$=4, $c$=0.8
 </div>
 
 
-
-
-`3. separable EPSD`
+`3. non-separable EPSD`
 
 An evolutionary spectrum with fully coupled time and frequency nonstationarity. Define an example EPS:
 $$S(\omega, t) =\frac{\omega^2}{5 \pi} e^{-0.15t} t^{2} e^{-(\frac{\omega}{5 \pi})^2 t}$$ 
