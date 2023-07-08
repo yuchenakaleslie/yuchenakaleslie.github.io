@@ -2,79 +2,83 @@
 layout: page
 title: StoEXSIM
 description: Stochastic ground motion simulations with variability in model parameters
-img: assets/img/3.jpg
+img: assets/img/command-line interface.png
 importance: 2
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8017643.svg)](https://doi.org/10.5281/zenodo.8017643)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Stochastic ground motion simulations with variability in model parameters.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Introduction
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+A CLI interface for the implementation of the `stochastic finite-fault model`. Particularly, we provide extra capabilities in modeling some key parameters as random variables to account for variability.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+> *Note: A concise introduction is shown below in the collapsable section while a thorough Python implementation can be found in another [repo](https://github.com/leslieDLcy/eqstochsim). A technical formulation can be found in the section below*. This type of stochastic model is referred to as source-based models. On the other hand, there is another type of site-based stochastic models that are popular in the study of stochastic dynamics, check out [ktnsrm](https://github.com/leslieDLcy/ktnsrm) as a template in implementing those models.
 
+***
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## formulation
+A stochastic representation that encapsulates the physics of the earthquake process and wave propagation plays the central role, from the seismological perspective, in characterizing the ground motions. One of the most desired advantage is that such type of representations explicitly distill the knowledge of various factors affecting ground motions (e.g. source, path, and site) into a parametric formulation.
+In this study, we have adopted a well-validated stochastic seismological model, as given below, whereby source process, attenuation, and site effects are encapsulated in a parameterized form of the amplitude spectrum. A finite fault strategy is particularly employed to represent the geometry of larger ruptures for large earthquakes.
 
+$$A(f; \Theta) = E(f, M; \theta_{E}) \times P(f, R; \theta_{P}) \times S(f; \theta_{S})$$
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+Particularly, the variability of such effects in the spectral formulation and hence the uncertainty in stochastic simulations are represented by probability distribution over the input parameters $$\Theta=(\theta_{E}, \theta_{P}, \theta_{S}) \sim p(\Theta)$$.
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+***
+
+## functionalities in short
+
+- [x] A CLI interface facilitating the use of stochastic finite fault model;
+- [x] Aleatoric uncertainty on the region-specific parameters
+- [x] An easy implementation of generating an ensemble of simulations
+
+***
+
+## how *stochastic* the simulations are ?
+
+`1. standard implementation`
+
+Though bearing the name "*the stochastic method*" for a while, Boore's model[^1] is not the only stochastic implementation in simulating ground motions of certainty earthquake scenarios. It should be, however, more appropritely referred to as *stochastic source method*[^2]. A standard implementation, shown below, will consider random slip distribution and hypocenter location, coupled with random phase in generating time series.  
+
+```shell
+$ "mechanism=N;depth=10;Mw=6.5;Repi=10; csh do_exsim.csh $mechanism $depth $Mw $Repi"
 ```
-{% endraw %}
+
+`2. aleatoric implementation`
+
+One step further, to reflect the aleatoric uncertainty of many region-specific parameters and then the variability of ground motions:
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/alea_single.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Single aleatoric simulations
+</div>
+
+
+`3. ensemble implementation`
+
+For practical convenience, you will probably want to generate a suite of simulations for a certain earthquake scenario. Input the number of simulations when prompted.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/alea_ensemble.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    A suite of simulations
+</div>
+
+***
+
+[^1]: Atkinson etc. Stochastic Modeling of California Ground Motions
+[^2]: Rezaeian etc. Simulation of synthetic ground motions for specified earthquake and site characteristics.
+
+
+<!-- TODO: Tweak the standart out look of the CLI -->
+
