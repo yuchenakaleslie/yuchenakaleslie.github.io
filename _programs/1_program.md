@@ -4,13 +4,12 @@ title: StoSpecRep
 description: 
 img: assets/img/linearChirp_EPSD.png
 importance: 1
-category: work
+category: program
 ---
 
 **Spe**ctral **rep**resentation for **sto**chastic processes
 
-> The latest release can be accessed via [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8017553.svg)](https://doi.org/10.5281/zenodo.8017553).
-
+> The latest release can be accessed via [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8017553.svg)](https://doi.org/10.5281/zenodo.8017553).<br.>
 > It has been hosted on [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/leslieDLcy/StoSpecRep).
 
 

@@ -2,7 +2,7 @@
 layout: page
 title: programs
 permalink: /programs/
-description: my personal programs.
+description: Open-source programs and applications
 nav: true
 nav_order: 2
 display_categories: [work, collaboration]
