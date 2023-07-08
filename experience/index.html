@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <!-- Head -->
+<!-- _layouts/distill.html --><html>
   <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
@@ -48,10 +46,55 @@
     <script src="/assets/js/dark_mode.js"></script>
     
 
+
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Distill js -->
+    <script src="/assets/js/distillpub/template.v2.js"></script>
+    <script src="/assets/js/distillpub/transforms.v2.js"></script>
+    <script src="/assets/js/distillpub/overrides.js"></script>
+    
   </head>
 
-  <!-- Body -->
-  <body class="fixed-top-nav ">
+  <body>
+<d-front-matter>
+    <script async type="text/json">{
+      "title": "experience",
+      "description": "some of my personal experiences to share",
+      "published": "",
+      "authors": [
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  
 
     <!-- Header -->
     <header>
@@ -120,26 +163,525 @@
 
 
     <!-- Content -->
-    <div class="container mt-5">
-      
-        <!-- page.html -->
-        <div class="post">
+    <div class="post distill">
 
-          <header class="post-header">
-            <h1 class="post-title">experience</h1>
-            <p class="post-description">some of my personal experiences to share</p>
-          </header>
+      <d-title>
+        <h1>experience</h1>
+        <p>some of my personal experiences to share</p>
+      </d-title>
 
-          <article>
-            <p>some of my personal experiences to share</p>
+      <d-byline></d-byline>
 
+      <d-article>
+        
 
-          </article>
+        <p>authors:</p>
+<ul>
+  <li>name: Yu Chen
+url: “https://riskinstitute.uk”
+affiliations:
+  name: Risk institute, Univ of Liverpool</li>
+</ul>
 
-        </div>
+<p>bibliography: 2018-12-22-distill.bib</p>
 
-      
+<h1 id="see-bin2018-12-22-distillmd-for-the-origianl-version">see <code class="language-plaintext highlighter-rouge">bin/2018-12-22-distill.md</code> for the origianl version</h1>
+
+<h1 id="optionally-you-can-add-a-table-of-contents-to-your-post">Optionally, you can add a table of contents to your post.</h1>
+<h1 id="notes">NOTES:</h1>
+<h1 id="--make-sure-that-toc-names-match-the-actual-section-names">- make sure that TOC names match the actual section names</h1>
+<h1 id="for-hyperlinks-within-the-post-to-work-correctly">for hyperlinks within the post to work correctly.</h1>
+<h1 id="--we-may-want-to-automate-toc-generation-in-the-future-using">- we may want to automate TOC generation in the future using</h1>
+<h1 id="jekyll-toc-plugin-httpsgithubcomtoshimarujekyll-toc">jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).</h1>
+<p>toc:</p>
+<ul>
+  <li>name: Introduction
+    <h1 id="if-a-section-has-subsections-you-can-add-them-as-follows">if a section has subsections, you can add them as follows:</h1>
+    <h1 id="subsections">subsections:</h1>
+    <h1 id="--name-example-child-subsection-1">- name: Example Child Subsection 1</h1>
+    <h1 id="--name-example-child-subsection-2">- name: Example Child Subsection 2</h1>
+  </li>
+  <li>name: Three challenges</li>
+  <li>name: Our proposed solution and two frameworks</li>
+  <li>name: Conclusion</li>
+  <li>name: Interactive Plots</li>
+  <li>name: Layouts</li>
+  <li>name: Other Typography?</li>
+</ul>
+
+<h1 id="below-is-an-example-of-injecting-additional-post-specific-styles">Below is an example of injecting additional post-specific styles.</h1>
+<h1 id="if-you-use-this-post-as-a-template-delete-this-_styles-block">If you use this post as a template, delete this _styles block.</h1>
+<p>_styles: &gt;
+  .fake-img {
+    background: #bbb;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+  }
+  .fake-img p {
+    font-family: monospace;
+    color: white;
+    text-align: left;
+    margin: 12px 0;
+    text-align: center;
+    font-size: 16px;
+  }</p>
+
+<hr>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Missing data is an ubiquitous problem of various engineering and physical fields, in which incompleness may present in the observational recordings or engineering monitoring data. In fact, it is pervasive in virtually any discipline where <em>in situ</em> measurements are collected and transferred, as a result of abundant practical reasons causing intermittent failure, such as sensor failure or incompetence, temporary transmission loss for real-time data, plus numerous other reasons including sensor maintenance, usage, data acquisition restrictions and or data-corruption, see <d-cite key="chen4405534bayesian"></d-cite> for a thorough discussion. <code class="language-plaintext highlighter-rouge">It is therefore vital for safety-critical systems operated by decision-makings on the basis of real-time data streams (e.g. autonomous driving) to be robust under unexpected sensor failure.</code></p>
+
+<h2 id="three-challenges">Three challenges</h2>
+
+<p>Stochastic processes are widely adopted to characterise time-dependent data which are random in nature and involve strong nonstationarity, as well as to model  system responses that involve highly nonstationarity and uncertain system parameters. We seek a probabilistic spectral representation of the underlying stochastic processes even in the presense of missing data, and investigate the propagation of uncertainties from imperfect observations all the way through the computational pipeline.</p>
+
+<p>However, we note there are <strong>three main challenges</strong> in this noble cause: 
+<code class="language-plaintext highlighter-rouge">(I)</code> It’s practically impossible for the certain event/scenario/incident under recording to be reevaluated (<em>let bygones be bygones</em> <img class="emoji" title=":pensive:" alt=":pensive:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png" height="20" width="20">) hence almost impossible to reconstruct the missing samples not measured with certainty. <strong>Uncertainty quantification</strong> plays a key role in reflecting the inherent uncertainty of the missing data and the downstream models. 
+<code class="language-plaintext highlighter-rouge">(II)</code> most of current approaches are developed on the stationary assumption hence inadequate to reflect the <strong>nonstationary properties</strong> of most real world processes. 
+<code class="language-plaintext highlighter-rouge">(III)</code> most importantly, most of current approaches are still significantly bounded by a ceiling in performance since they are merely <strong>driven by the very limited information</strong> contained in the incomplete data.</p>
+
+<h2 id="our-proposed-solution-and-two-frameworks">Our proposed solution and two frameworks</h2>
+
+<p>Due to the limit of data quality, fully data-driven methods are bounded to a ceiling performance. As such, our idea is rooted in the incorporation of prior domain knowledge to guide the learning/inference and mitigate the impacts of data problems, thereby producing robust and informed models.</p>
+
+<p>Particularly, in response to the three challenges, we propose knowledge-guided Bayesian frameworks. Depending on the level of information incorporated, two frameworks are proposed. We first proposed a Augmented-Learning framework <d-cite key="chen4405534bayesian"></d-cite> that <code class="language-plaintext highlighter-rouge">(i)</code> takes advantage of a-priori knowledge of the underlying process, enabling to incorporate additional information (physics-based knowledge) into the modelling. <code class="language-plaintext highlighter-rouge">(ii)</code> accounts for uncertainty throughout the framework, allowing to provide a host of outputs in a probabilistic manner (e.g. reconstructions, spectral representations, and stochastic-process sample generations). <code class="language-plaintext highlighter-rouge">(iii)</code> applicable to nonstationary processes. Beyond that, an extension is further proposed <d-cite key="eesdchen2023"></d-cite> to update the learnt prior-knowledge-guided models, within the Bayesian inference, in light of available incomplete observations of specified formats, this suggests a greedy effort to extract information from the empirical observations at hand.</p>
+
+<div class="fake-img l-body">
+  <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/Framework2_latest-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/Framework2_latest-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Framework2_latest-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/Framework2_latest.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+</div>
+
+<p>We build on the premise that prior knowledge could provide general yet insightful prior expectations of the observation (with variaibility) of the physical process.
+The <em>a-priori</em> information is addressed by generating simulations based on the domain knowledge represented by \(\boldsymbol{\theta}_{g}\).</p>
+
+<p>specifically, \(\boldsymbol{\theta}_{g} = (\theta_{1}, \dots, \theta_{n})\) represents a random vector of relevant physical parameters, each component of which stands for a random variable. \(g(\cdot)\) represents a generator function, which may just be a model with physics aspects capable of generating stochastic simulations accordingly. Collectively the corresponding probability distribution \(p(\boldsymbol{\theta}_{g})\) would reflect the variability of the simulations embedded in our prior belief.</p>
+
+<p>Given the data represented by those physics-informed simulations, Bayesian recurrent neural network models \(\mathcal{M}\) are trained as probabilistic model representations of the underlying process, whereby the imputation of missing data is conducted as predictions in a recursive manner.
+Importantly, the epistemic uncertainties of the learned model representations are addressed by putting probability distributions over the model parameters \(\boldsymbol{\omega}\) of neural nets, thus giving rise to the posterior distribution \(p(\boldsymbol{\omega}| \mathcal{S}, \mathcal{M})\) through the Bayesian inference, as given below:</p>
+
+\[p(\boldsymbol{\omega}|\mathcal{S}, \mathcal{M}) = \frac{p(\mathcal{S}|\boldsymbol{\omega}, \mathcal{M}) p(\boldsymbol{\omega}|\mathcal{M})}{p(\mathcal{S}|\mathcal{M})} \propto p(\mathcal{S}|\boldsymbol{\omega}, \mathcal{M}) p(\boldsymbol{\omega}|\mathcal{M})\]
+
+<p>This marks a key step of the proposed framework, where a probabilistic representation of the underlying processes is learned by recurrent neural network models and further used to reconstruct the incomplete observations. 
+Besides, in this study we also present investigations and comparisons of 
+a few neural network architectures in this regard. With the posterior distribution, an ensemble of recurrent imputations can be obtained by marginalizing out the parameter space, as follows:</p>
+
+\[\mathcal{R} = \int p(\tilde{\mathbf{y}} | \tilde{\mathbf{x}}, \boldsymbol{\omega}) p(\boldsymbol{\omega}| \mathcal{S}) \text{d} \boldsymbol{\omega}
+    \label{eq:predictive_distribution}\]
+
+<p>where $\tilde{\mathbf{x}}$ represents the missing samples in a specific recording;
+$\mathcal{R}$ denotes the reconstructed process, practically through an ensemble of reconstructions, which contain both the recurrent imputations $\tilde{\mathbf{y}}$ and existing observations.</p>
+
+<hr>
+
+<h2 id="results">Results</h2>
+
+<div class="fake-img l-page-outset">
+  <div class="row justify-content-sm-center">
+      <div class="col-sm-8 mt-3 mt-md-0">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/waveletEPSD3D-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/waveletEPSD3D-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/waveletEPSD3D-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/waveletEPSD3D.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+      </div>
+      <div class="col-sm-4 mt-3 mt-md-0">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/EPSD_uncertainty_plot-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/EPSD_uncertainty_plot-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/EPSD_uncertainty_plot-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/EPSD_uncertainty_plot.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+      </div>
+  </div>
+  <div class="caption">
+      Ensemble-averaged evolutionary spectrum (EPSD) by Morlet wavelet transform with 70% missing data (Left). Probability density of estimated EPSD shown at selected time instants for a certain frequency (Right). Zoom in for larger plots.
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3modelscomp-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3modelscomp-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3modelscomp-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/3modelscomp.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
     </div>
+</div>
+<div class="caption">
+    Probability distributions of power spectral density (PSD) for three Bayesian recurrent network models with respect to one scenario
+</div>
+
+<p>Uncertainty metrics are computed below:</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/psd_WF-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/psd_WF-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/psd_WF-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/psd_WF.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/psd_WIDTH-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/psd_WIDTH-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/psd_WIDTH-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/psd_WIDTH.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Uncertainty metrics across a range of missing percentages
+</div>
+
+<hr>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Syntax highlighting is provided within <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> tags.
+An example of inline code snippets: <code class="language-plaintext highlighter-rouge">&lt;d-code language="html"&gt;let x = 10;&lt;/d-code&gt;</code>.
+For larger blocks of code, add a <code class="language-plaintext highlighter-rouge">block</code> attribute:</p>
+
+<d-code block="" language="javascript">
+  var x = 25;
+  function(x) {
+    return x * x;
+  }
+</d-code>
+
+<p><strong>Note:</strong> <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> blocks do not look good in the dark mode.
+You can always use the default code-highlight using the <code class="language-plaintext highlighter-rouge">highlight</code> liquid tag:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+<span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">x</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<hr>
+
+<h2 id="interactive-plots">Interactive Plots</h2>
+
+<p>You can add interative plots using plotly + iframes <img class="emoji" title=":framed_picture:" alt=":framed_picture:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f5bc.png" height="20" width="20"></p>
+
+<div class="l-page">
+  <iframe src="/assets/plotly/demo.html" frameborder="0" scrolling="no" height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
+</div>
+
+<p>The plot must be generated separately and saved into an HTML file.
+To generate the plot that you see above, you can use the following code snippet:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">plotly.express</span> <span class="k">as</span> <span class="n">px</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span>
+  <span class="sh">'</span><span class="s">https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv</span><span class="sh">'</span>
+<span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="nf">density_mapbox</span><span class="p">(</span>
+  <span class="n">df</span><span class="p">,</span>
+  <span class="n">lat</span><span class="o">=</span><span class="sh">'</span><span class="s">Latitude</span><span class="sh">'</span><span class="p">,</span>
+  <span class="n">lon</span><span class="o">=</span><span class="sh">'</span><span class="s">Longitude</span><span class="sh">'</span><span class="p">,</span>
+  <span class="n">z</span><span class="o">=</span><span class="sh">'</span><span class="s">Magnitude</span><span class="sh">'</span><span class="p">,</span>
+  <span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+  <span class="n">center</span><span class="o">=</span><span class="nf">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">180</span><span class="p">),</span>
+  <span class="n">zoom</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+  <span class="n">mapbox_style</span><span class="o">=</span><span class="sh">"</span><span class="s">stamen-terrain</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">.</span><span class="nf">write_html</span><span class="p">(</span><span class="sh">'</span><span class="s">assets/plotly/demo.html</span><span class="sh">'</span><span class="p">)</span></code></pre></figure>
+
+<hr>
+
+<!-- ## Details boxes 
+
+Details boxes are collapsible boxes which hide additional information from the user. They can be added with the `details` liquid tag:
+
+<details><summary>Click here to know more</summary>
+<p>Additional details, where math \(2x - 1\) and <code class="language-plaintext highlighter-rouge">code</code> is rendered correctly.</p>
+</details> -->
+
+<h2 id="layouts">Layouts</h2>
+
+<p>The main text column is referred to as the body.
+It is the assumed layout of any direct descendants of the <code class="language-plaintext highlighter-rouge">d-article</code> element.</p>
+
+<div class="fake-img l-body">
+  <p>.l-body</p>
+</div>
+
+<p>For images you want to display a little larger, try <code class="language-plaintext highlighter-rouge">.l-page</code>:</p>
+
+<div class="fake-img l-page">
+  <p>.l-page</p>
+</div>
+
+<p>All of these have an outset variant if you want to poke out from the body text a little bit.
+For instance:</p>
+
+<div class="fake-img l-body-outset">
+  <p>.l-body-outset</p>
+</div>
+
+<div class="fake-img l-page-outset">
+  <p>.l-page-outset</p>
+</div>
+
+<p>Occasionally you’ll want to use the full browser width.
+For this, use <code class="language-plaintext highlighter-rouge">.l-screen</code>.
+You can also inset the element a little from the edge of the browser by using the inset variant.</p>
+
+<div class="fake-img l-screen">
+  <p>.l-screen</p>
+</div>
+<div class="fake-img l-screen-inset">
+  <p>.l-screen-inset</p>
+</div>
+
+<p>The final layout is for marginalia, asides, and footnotes.
+It does not interrupt the normal flow of <code class="language-plaintext highlighter-rouge">.l-body</code> sized text except on mobile screen sizes.</p>
+
+<div class="fake-img l-gutter">
+  <p>.l-gutter</p>
+</div>
+
+<hr>
+
+<h2 id="other-typography">Other Typography?</h2>
+
+<p>Emphasis, aka italics, with <em>asterisks</em> (<code class="language-plaintext highlighter-rouge">*asterisks*</code>) or <em>underscores</em> (<code class="language-plaintext highlighter-rouge">_underscores_</code>).</p>
+
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+
+<ol>
+  <li>First ordered list item</li>
+  <li>Another item
+⋅⋅* Unordered sub-list.</li>
+  <li>Actual numbers don’t matter, just that it’s a number
+⋅⋅1. Ordered sub-list</li>
+  <li>And another item.</li>
+</ol>
+
+<p>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we’ll use three here to also align the raw Markdown).</p>
+
+<p>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+
+<ul>
+  <li>Unordered list can use asterisks</li>
+  <li>Or minuses</li>
+  <li>Or pluses</li>
+</ul>
+
+<p><a href="https://www.google.com" rel="external nofollow noopener" target="_blank">I’m an inline-style link</a></p>
+
+<p><a href="https://www.google.com" title="Google's Homepage" rel="external nofollow noopener" target="_blank">I’m an inline-style link with title</a></p>
+
+<p><a href="https://www.mozilla.org" rel="external nofollow noopener" target="_blank">I’m a reference-style link</a></p>
+
+<p><a href="../blob/master/LICENSE">I’m a relative reference to a repository file</a></p>
+
+<p><a href="http://slashdot.org" rel="external nofollow noopener" target="_blank">You can use numbers for reference-style link definitions</a></p>
+
+<p>Or leave it empty and use the <a href="http://www.reddit.com" rel="external nofollow noopener" target="_blank">link text itself</a>.</p>
+
+<p>URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <a href="http://www.example.com" rel="external nofollow noopener" target="_blank">http://www.example.com</a> and sometimes
+example.com (but not on Github, for example).</p>
+
+<p>Some text to show that the reference links can follow later.</p>
+
+<p>Here’s our logo (hover to see the title text):</p>
+
+<p>Inline-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1"></p>
+
+<p>Reference-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 2"></p>
+
+<p>Inline <code class="language-plaintext highlighter-rouge">code</code> has <code class="language-plaintext highlighter-rouge">back-ticks around</code> it.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">JavaScript syntax highlighting</span><span class="dl">"</span><span class="p">;</span>
+<span class="nf">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="n">s</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Python syntax highlighting</span><span class="sh">"</span>
+<span class="k">print</span> <span class="n">s</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>No language indicated, so no syntax highlighting.
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>Colons can be used to align columns.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tables</th>
+      <th style="text-align: center">Are</th>
+      <th style="text-align: right">Cool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>col 3 is</td>
+      <td style="text-align: center">right-aligned</td>
+      <td style="text-align: right">$1600</td>
+    </tr>
+    <tr>
+      <td>col 2 is</td>
+      <td style="text-align: center">centered</td>
+      <td style="text-align: right">$12</td>
+    </tr>
+    <tr>
+      <td>zebra stripes</td>
+      <td style="text-align: center">are neat</td>
+      <td style="text-align: right">$1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don’t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Markdown</th>
+      <th>Less</th>
+      <th>Pretty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Still</em></td>
+      <td><code class="language-plaintext highlighter-rouge">renders</code></td>
+      <td><strong>nicely</strong></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p>
+</blockquote>
+
+<p>Quote break.</p>
+
+<blockquote>
+  <p>This is a very long line that will still be quoted properly when it wraps. Oh boy let’s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
+</blockquote>
+
+<p>Here’s a line for us to start with.</p>
+
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+
+<p>This line is also a separate paragraph, but…
+This line is only separated by a single newline, so it’s a separate line in the <em>same paragraph</em>.</p>
+
+
+      </d-article>
+
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
+
+      <d-bibliography src="/assets/bibliography/"></d-bibliography>
+</div>
 
     <!-- Footer -->    
     <footer class="fixed-bottom">
@@ -149,45 +691,9 @@
       </div>
     </footer>
 
-    <!-- JavaScripts -->
-    <!-- jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     <!-- Bootsrap & MDB scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
-
-    <!-- Masonry & imagesLoaded -->
-  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
-    
-  <!-- Medium Zoom JS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
-  <script defer src="/assets/js/zoom.js"></script>
-
-  <!-- Bootstrap Table -->
-  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
-
-  <!-- Load Common JS -->
-  <script src="/assets/js/no_defer.js"></script>
-  <script defer src="/assets/js/common.js"></script>
-  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
-
-    
-  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
-
-    <!-- MathJax -->
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        tags: 'ams'
-      }
-    };
-  </script>
-  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
-  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
     
     
@@ -269,5 +775,6 @@
   }
 </script>
 
-  </body>
+  
+</body>
 </html>
