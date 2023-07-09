@@ -51,9 +51,9 @@ _styles: >
 
 ### Secondment
 
-- <a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a>, 2023 Jan - June
+- <a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a>, 2022 Jan - June
 
-where I mmbarked on a collaboration work with Prof. Philleppe Gueguen in an [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
+I embarked on a collaboration work with Prof. Philleppe Gueguen in an [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
 
 ***
 
@@ -61,10 +61,15 @@ where I mmbarked on a collaboration work with Prof. Philleppe Gueguen in an [unc
 
 | year          | training      | 
 | ------------- |:-------------:| 
-| 2023          | 9 thInternational School on Deep Learning DeepLearn| 
-| 2022          | 6 thInternational Gran Canaria School on Deep Learning DeepLearn| 
-| 2021          | Nordic Probabilistic AI school: ProbAI| 
-|               | Virtual Conference on Epistemic Uncertainty in Engineering VICE| 
+| 2023          | [9th International School on Deep Learning (DeepLearn Spring)](https://deeplearn.irdta.eu/2023sp/)| 
+| 2022          | [6th International Gran Canaria School on Deep Learning (DeepLearn Summer)](https://deeplearn.irdta.eu/2022su/)| 
+| 2021          | [Nordic Probabilistic AI school: ProbAI](https://probabilistic.ai/) | 
+|               | [Virtual Conference on Epistemic Uncertainty in Engineering VICE](https://riskinstitute.uk/events/vice/)| 
+|               | [Machine Learning in Solid Earth Geoscience](https://web.cvent.com/event5c47c644-a0e3-4632-9736-4db8c04f4601/summary)| 
+| 2020          | [9th SIPTA Online School - The Society for Imprecise Probability: Theories and Applications](https://school20.sipta.org/)| 
+|               | [Helmholtz Virtual Machine Learning Summer School](https://www.helmholtz-hida.de/en/events/helmholtz-virtual-ml-summer-school-2020/)| 
+|               | [COSSAN training for uncertainty management and quantification in Engineering](https://cossan.co.uk/training/training_UoL_2020.php)| 
+
 
 
 ### Conference talks
