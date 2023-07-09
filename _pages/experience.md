@@ -21,8 +21,6 @@ toc:
   - name: Trainings 
   - name: Conference talks
   - name: Reviewer
-  - name: Layouts
-  - name: Other Typography?
 
 _styles: >
   .fake-img {
@@ -51,7 +49,7 @@ _styles: >
 
 ### Secondment
 
-- 2022 Jan - June, <a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a> France. 
+- 2022 Jan - June, <a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a>, France. 
 
 I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
 
@@ -80,16 +78,20 @@ I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertain
 | ------------- | --------------------:|
 | 2023          | *5th International Conference on Uncertainty Quantification in Computational Science and Engineering*<br />Athens, Greece |
 | 2022          | *32st European Safety and Reliability Conference*<br />Dublin, Ireland |
+| 2022          | *The International Symposium on Reliability Engineering and Risk Management*<br />Hanover, Germany |
+| 2022          | *Seismological Society of America annual meeting*<br />Bellevue Washington, U.S.A |
+| 2021          | *17th World Conference on Earthquake Engineering*<br />Sendai, Japan |
+| 2020          | *30 European Safety and Reliability Conference & 15th Probabilistic Safety Assessment and Management Conference*<br />Venice, Italy |
 
 ***
 
 ### Reviewer
 
-> I have been invited as the reviewer for several esteemed journals and conferences.
+> I am invited as the reviewer for several esteemed journals and conferences.
 
-1. RMRE
-2. xxx
-3. xxx
+1. Rock Mechanics and Rock Engineering (5-year IF 7.049)
+2. Reliability Engineering and System Safety (IF 7.247)
+3. Earthquake Spectra (IF 5.0)
 
 ***
 
