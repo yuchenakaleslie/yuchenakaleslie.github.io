@@ -2,7 +2,7 @@
 layout: distill
 permalink: /experience/
 title: experience
-description: some of my personal experiences to share
+description: academic experiences
 nav: true
 nav_order: 5
 giscus_comments: false
@@ -43,7 +43,7 @@ _styles: >
 ### Teaching
 
 - Teaching Assistant (TA) for the module Geophysical Project (ENVS300) of Univ of Liverpool;
-- Supervising an undergraduate Stephen Guerin with dissertation "_Using machine learning to forecast induced seismicity_"
+- Supervised an undergraduate Stephen Guerin with dissertation "_Using machine learning to forecast induced seismicity_"
 
 ***
 
@@ -76,12 +76,12 @@ I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertain
 
 | Year          | Conference           |
 | ------------- | --------------------:|
-| 2023          | *5th International Conference on Uncertainty Quantification in Computational Science and Engineering*<br />Athens, Greece |
-| 2022          | *32st European Safety and Reliability Conference*<br />Dublin, Ireland |
-| 2022          | *The International Symposium on Reliability Engineering and Risk Management*<br />Hanover, Germany |
-| 2022          | *Seismological Society of America annual meeting*<br />Bellevue Washington, U.S.A |
-| 2021          | *17th World Conference on Earthquake Engineering*<br />Sendai, Japan |
-| 2020          | *30 European Safety and Reliability Conference & 15th Probabilistic Safety Assessment and Management Conference*<br />Venice, Italy |
+| 2023          | *[5th International Conference on Uncertainty Quantification in Computational Science and Engineering](https://2023.uncecomp.org/)*<br />Athens, Greece |
+| 2022          | *[32st European Safety and Reliability Conference](https://www.esrel2022.com/)*<br />Dublin, Ireland |
+| 2022          | *[8th The International Symposium on Reliability Engineering and Risk Management](https://isrerm.org/)*<br />Hanover, Germany |
+| 2022          | *[Seismological Society of America annual meeting](https://www.seismosoc.org/events/event/ssa-annual-meeting-2022/)*<br />Bellevue Washington, U.S.A |
+| 2021          | *[17th World Conference on Earthquake Engineering](https://www.jaee.gr.jp/jp/event/wcee/)*<br />Sendai, Japan |
+| 2020          | *[30 European Safety and Reliability Conference & 15th Probabilistic Safety Assessment and Management Conference](https://www.rpsonline.com.sg/proceedings/esrel2020/)*<br />Venice, Italy |
 
 ***
 
