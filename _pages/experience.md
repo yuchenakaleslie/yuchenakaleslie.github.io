@@ -51,16 +51,16 @@ _styles: >
 
 ### Secondment
 
-- <a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a>, 2022 Jan - June
+- 2022 Jan - June, <a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a> France. 
 
-I embarked on a collaboration work with Prof. Philleppe Gueguen in an [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
+I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
 
 ***
 
 ### Trainings
 
 | year          | training      | 
-| ------------- |:-------------:| 
+| ------------- | -------------:| 
 | 2023          | [9th International School on Deep Learning (DeepLearn Spring)](https://deeplearn.irdta.eu/2023sp/)| 
 | 2022          | [6th International Gran Canaria School on Deep Learning (DeepLearn Summer)](https://deeplearn.irdta.eu/2022su/)| 
 | 2021          | [Nordic Probabilistic AI school: ProbAI](https://probabilistic.ai/) | 
@@ -74,7 +74,12 @@ I embarked on a collaboration work with Prof. Philleppe Gueguen in an [uncertain
 
 ### Conference talks
 
-bla bla
+During PhD, I am honored to have given oral presentations of our research works in several international conferences reolving around the themes of "uncertainty quantification" and "machine learning".
+
+| Year          | Conference           |
+| ------------- | --------------------:|
+| 2023          | 5th International Conference on Uncertainty Quantification in Computational Science and Engineering <br />Athens, Greece |
+
 
 
 ### Reviewer
