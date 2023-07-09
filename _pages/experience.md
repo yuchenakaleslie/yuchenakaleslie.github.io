@@ -57,6 +57,8 @@ I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertain
 
 ### Trainings
 
+> I have taken part in trainings themed around **Probabilsitic Machine Learning**, **Uncertainty quantification**, **Imprecise probability**.
+
 | year          | training      | 
 | ------------- | -------------:| 
 | 2023          | [9th International School on Deep Learning (DeepLearn Spring)](https://deeplearn.irdta.eu/2023sp/)| 
@@ -72,7 +74,7 @@ I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertain
 
 ### Conference talks
 
-> During PhD, I am honored to have given oral presentations of our research works in several international conferences reolving around the themes of `uncertainty quantification` and `machine learning`.
+> I have given oral presentations of our research works in several international conferences reolving around the themes of `uncertainty quantification` and `machine learning`.
 
 | Year          | Conference           |
 | ------------- | --------------------:|
