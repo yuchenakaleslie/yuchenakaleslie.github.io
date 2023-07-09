@@ -89,9 +89,9 @@ I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertain
 
 > I am invited as the reviewer for several esteemed journals and conferences.
 
-1. Rock Mechanics and Rock Engineering (5-year IF 7.049)
-2. Reliability Engineering and System Safety (IF 7.247)
-3. Earthquake Spectra (IF 5.0)
+1. [Rock Mechanics and Rock Engineering](https://www.springer.com/journal/603) (5-year IF 7.049)
+2. [Reliability Engineering and System Safety](https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety) (IF 8.1)
+3. [Earthquake Spectra](https://journals.sagepub.com/home/EQS) (IF 5.0)
 
 ***
 
