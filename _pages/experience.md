@@ -44,28 +44,27 @@ _styles: >
 
 ### Teaching
 
-- Teaching Assistant (TA) for the module Geophysical Project(ENVS300);
-- Supervising an undergraduate Stephen Guerin with dissertation "Using machine learning to forecast induced seismicity"
+- Teaching Assistant (TA) for the module Geophysical Project (ENVS300) of Univ of Liverpool;
+- Supervising an undergraduate Stephen Guerin with dissertation "_Using machine learning to forecast induced seismicity_"
 
 ***
 
 ### Secondment
 
-<a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a>, 2023 Jan - June
-Embarked on a collaboration work with Prof. Philleppe Gueguen in an [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
+- <a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a>, 2023 Jan - June
+
+where I mmbarked on a collaboration work with Prof. Philleppe Gueguen in an [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
 
 ***
 
 ### Trainings
 
-| year          | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| 2023          | right-aligned | $1600 |
-|               | centered      |   $12 |
-|               | are neat      |    $1 |
-| 2022          | right-aligned | $1600 |
-|               | centered      |   $12 |
-|               | are neat      |    $1 |
+| year          | training      | 
+| ------------- |:-------------:| 
+| 2023          | 9 thInternational School on Deep Learning DeepLearn| 
+| 2022          | 6 thInternational Gran Canaria School on Deep Learning DeepLearn| 
+| 2021          | Nordic Probabilistic AI school: ProbAI| 
+|               | Virtual Conference on Epistemic Uncertainty in Engineering VICE| 
 
 
 ### Conference talks
