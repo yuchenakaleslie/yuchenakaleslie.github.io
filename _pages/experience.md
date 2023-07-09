@@ -6,6 +6,7 @@ description: some of my personal experiences to share
 nav: true
 nav_order: 5
 giscus_comments: false
+date: 2023-06-26
 
 bibliography: 2018-12-22-distill.bib
 
@@ -43,16 +44,28 @@ _styles: >
 
 ### Teaching
 
-Missing data is an ubiquitous problem of various engineering and physical fields;
+- Teaching Assistant (TA) for the module Geophysical Project(ENVS300);
+- Supervising an undergraduate Stephen Guerin with dissertation "Using machine learning to forecast induced seismicity"
+
+***
 
 ### Secondment
 
-UGA, 2023 Jan - June
+<a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a>, 2023 Jan - June
+Embarked on a collaboration work with Prof. Philleppe Gueguen in an [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
 
+***
 
 ### Trainings
 
-bla bla
+| year          | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| 2023          | right-aligned | $1600 |
+|               | centered      |   $12 |
+|               | are neat      |    $1 |
+| 2022          | right-aligned | $1600 |
+|               | centered      |   $12 |
+|               | are neat      |    $1 |
 
 
 ### Conference talks
@@ -64,64 +77,6 @@ bla bla
 
 bla bla
 
-## Other Typography?
-
-Emphasis, aka italics, with *asterisks* (`*asterisks*`) or _underscores_ (`_underscores_`).
-
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list.
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
-
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
-
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
-
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-Here's our logo (hover to see the title text):
-
-Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style:
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 
 Colons can be used to align columns.
