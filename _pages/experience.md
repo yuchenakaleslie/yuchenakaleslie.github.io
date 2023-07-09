@@ -51,13 +51,13 @@ _styles: >
 
 - 2022 Jan - June, <a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a>, France. 
 
-I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
+During which I embarked on a collaboration work (underway) with Prof. Philippe Guéguen in the study [uncertainty-informed approach for structural damage detection with envrionmental factors]({% link _projects/5_project.md %}).
 
 ***
 
 ### Trainings
 
-> I have taken part in trainings themed around **Probabilsitic Machine Learning**, **Uncertainty quantification**, **Imprecise probability**.
+> I have taken part in trainings themed around `Probabilsitic Machine Learning`, `Uncertainty quantification`, `Imprecise probability`.
 
 | year          | training      | 
 | ------------- | -------------:| 
@@ -95,7 +95,6 @@ I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertain
 2. [Reliability Engineering and System Safety](https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety) (IF 8.1)
 3. [Earthquake Spectra](https://journals.sagepub.com/home/EQS) (IF 5.0)
 
-***
 
 
 
