@@ -70,47 +70,30 @@ I embarked on a collaboration work with Prof. Philippe Guéguen in an [uncertain
 |               | [Helmholtz Virtual Machine Learning Summer School](https://www.helmholtz-hida.de/en/events/helmholtz-virtual-ml-summer-school-2020/)| 
 |               | [COSSAN training for uncertainty management and quantification in Engineering](https://cossan.co.uk/training/training_UoL_2020.php)| 
 
-
+***
 
 ### Conference talks
 
-During PhD, I am honored to have given oral presentations of our research works in several international conferences reolving around the themes of "uncertainty quantification" and "machine learning".
+> During PhD, I am honored to have given oral presentations of our research works in several international conferences reolving around the themes of `uncertainty quantification` and `machine learning`.
 
 | Year          | Conference           |
 | ------------- | --------------------:|
-| 2023          | 5th International Conference on Uncertainty Quantification in Computational Science and Engineering <br />Athens, Greece |
+| 2023          | *5th International Conference on Uncertainty Quantification in Computational Science and Engineering*<br />Athens, Greece |
+| 2022          | *32st European Safety and Reliability Conference*<br />Dublin, Ireland |
 
-
+***
 
 ### Reviewer
 
-bla bla
+> I have been invited as the reviewer for several esteemed journals and conferences.
+
+1. RMRE
+2. xxx
+3. xxx
+
+***
 
 
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
 
 
