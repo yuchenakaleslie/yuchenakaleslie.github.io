@@ -2,7 +2,7 @@
 layout: page
 title: research
 permalink: /projects/
-description: A glimpse of the research projects.
+description: Research projects I lead and collaboration works I actively participate in
 nav: true
 nav_order: 2
 display_categories: [work, collaboration]

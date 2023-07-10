@@ -2,7 +2,7 @@
 layout: distill
 permalink: /experience/
 title: experience
-description: academic experiences
+description: academic experience and professional development
 nav: true
 nav_order: 5
 giscus_comments: false
