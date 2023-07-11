@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: PhD candidate and Early-Stage-Researcher
+subtitle: <strong>PhD candidate</strong> and <strong>Early-Stage-Researcher</strong>
 
 profile:
   align: right
