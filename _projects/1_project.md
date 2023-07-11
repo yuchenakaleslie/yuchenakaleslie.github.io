@@ -33,9 +33,7 @@ toc:
   - name: Three challenges
   - name: Our proposed solution and two frameworks 
   - name: Conclusion
-  - name: Interactive Plots
-  - name: Layouts
-  - name: Other Typography?
+
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
