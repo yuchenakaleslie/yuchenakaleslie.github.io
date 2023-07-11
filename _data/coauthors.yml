@@ -9,3 +9,7 @@
 "Beer":
   - firstname: ["Michael", "Michael Beer", "M. Beer", "Beer, Michael"]
     url: https://www.irz.uni-hannover.de/en/institute/people/beer/
+
+"Jimenez":
+  - firstname: ["Jimenez", "Rafael Jimenez", "Jimenez, Rafael"]
+    url: https://www.dit.upm.es/~aalvarez/PhD/web-jimenez/
