@@ -10,6 +10,8 @@ category: collaboration
 <!-- Concurrent seismic events identification -->
 <!-- https://medium.com/mlearning-ai/explainable-ai-brain-tumor-classification-with-efficientnet-and-gradient-weighted-class-activation-24c57ae6175d -->
 
+> This study embodies efforts in developing robust framework that can deliver autonomous decision-making under uncertainty based on real-time data streams with data problems.
+
 The exponential increase in seismic recordings recently, facilitated by abundant dense monitoring networks, demands systematic approaches to deal with continuous data-streams, such as pipelines for data downloading as well as pre-processing. However, implicit in much of these automated procedures is the reality that often a multi-event segment may arise once a station simultaneously records a near event as well as other events (i.e. teleseismic events or aftershocks), contaminating the main earthquake recording of interest. Significant consequences might occur should this error be unidentified and propagated into subsequent spectral analyses. 
  
 This study presents a novel approach to identify multiple seismic events using Deep Learning techniques in an end-to-end and uncertainty-aware fashion. In particular, we transform the waveforms into time-frequency representations, thereby applying Bayesian Convnets (CNN) to automatically pick out and separate the multi-events, without manual feature design. 
