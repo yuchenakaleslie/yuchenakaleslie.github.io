@@ -132,9 +132,12 @@
           <article>
             <p>We have created an integrated web application for facilitating tunneling squeezing hazard analysis and uncertainty-informed engineering decision making. Currently, it is hosted on PythonAnywhere.</p>
 
-<h3 id="front-end-for-deploying-bayesian-deep-learning-models">front-end for deploying Bayesian deep learning models</h3>
+<h3 id="front-end-for-deploying-bayesian-deep-learning-models">
+<em>front-end</em> for deploying Bayesian deep learning models</h3>
 
-<p>In practice, it is desired to have reliable (uncertainty-informed) prediction in a fast and simple manner. Practioners need tools that work in a pragmatic way. We have discussed about a few ways to <a href="/blog/2022/Deploy-Python-Webapps/">deploy the learned Machine Learning models</a>. The most convenient and visualised way is through a web-based application where users can interact with anytime anywhere. Shown below, I have created such an web application to display the uncertainty along with the squeezing prediction. Two types of prediction are supported, users can either type in the input feaures or directly compute with a grouped data set and additional obtain more overall insights (as in metrics and figures.)</p>
+<p>In practice, it is desired to have reliable (uncertainty-informed) prediction in a fast and simple manner. Practioners need tools that work in a pragmatic way. We have discussed about a few ways to <a href="/blog/2022/Deploy-Python-Webapps/">deploy the learned Machine Learning models</a>. The most convenient and visualised way is through a web-based application where users can interact with anytime anywhere. Shown below, I have created such an web application to display the uncertainty along with the squeezing prediction.</p>
+
+<p>Two types of prediction are supported, users can either type in the input feaures or directly compute with a grouped data set and additionally obtain more overall insights (i.e. additional metrics and figures.)</p>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -161,6 +164,8 @@
 </div>
 
 <h3 id="integrated-interface-for-understanding-the-tunnel-squeezing-hazard">Integrated interface for understanding the tunnel squeezing hazard</h3>
+
+<p>Besides the ease of running uncertatinty-aware models, a lot of relevant resources are also provided “on site” for facilitating the understanding of the research task at hand, the models used, papers published, and the data set available. Overall, the web application works as an one-stop service. Currenly We have another collegue working on a platform that collects and visualizes data (e.g. real-time sensor measurements) along construction. This web app will then be integrated into the platform to have autonomous decision-making ability in a dynamic way as with the excavation of tunnels.</p>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -189,6 +194,69 @@
 <h3 id="showcase-uncertainty">Showcase uncertainty</h3>
 
 <p>Uncertainty in predictive distributions are intuitively displayed. Especially, the epistemic uncertainty is considered thanks to the Bayesian neural network model. By comparison, results from other models that lack model uncertainty (e.g. Decision Tree) is also shown.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/ensemblePredictions-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/ensemblePredictions-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/ensemblePredictions-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/ensemblePredictions.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/ensemblePredictions-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/ensemblePredictions-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/ensemblePredictions-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/ensemblePredictions.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/yarinfancyplot-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/yarinfancyplot-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/yarinfancyplot-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/yarinfancyplot.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Uncertainty representation for 10 data points
+</div>
 
           </article>
 
