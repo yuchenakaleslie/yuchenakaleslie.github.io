@@ -4,7 +4,7 @@ title: programs
 permalink: /programs/
 description: Open-source programs and applications
 nav: true
-nav_order: 2
+nav_order: 3
 display_categories: [work, collaboration]
 horizontal: false
 ---

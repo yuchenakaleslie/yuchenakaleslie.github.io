@@ -5,6 +5,8 @@ description: Dynamic and Uncertainty-informed squeezing intensity prediction
 img: assets/img/two_moon.png
 importance: 2
 category: work
+toc:
+  sidebar: left
 ---
 
 > Part of the results herein are published. Pls refer to [RMRE](https://doi.org/10.1007/s00603-020-02138-8) and [ESREL2020](https://www.researchgate.net/publication/349715719_Decision_Making_for_Optimal_Primary-Support_Selection_to_Minimise_Tunnel-_Squeezing_Risk) for additional details.

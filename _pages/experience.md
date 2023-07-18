@@ -4,7 +4,7 @@ permalink: /experience/
 title: experience
 description: academic experience and professional development
 nav: true
-nav_order: 5
+nav_order: 4
 giscus_comments: false
 date: 2023-06-26
 
