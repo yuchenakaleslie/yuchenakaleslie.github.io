@@ -134,9 +134,9 @@
 
           <article>
             <blockquote>
-  <p>Part of the results herein are published. Pls refer to <a href="https://doi.org/10.1007/s00603-020-02138-8" rel="external nofollow noopener" target="_blank">RMRE</a> and <a href="https://www.researchgate.net/publication/349715719_Decision_Making_for_Optimal_Primary-Support_Selection_to_Minimise_Tunnel-_Squeezing_Risk" rel="external nofollow noopener" target="_blank">ESREL2020</a> for additional details.
-some other parts are currently under review.
-A web-application is provided for uncertainty-informed prediction of squeezing intensity.</p>
+  <p>Part of the results herein are published. Please refer to <a href="https://doi.org/10.1007/s00603-020-02138-8" rel="external nofollow noopener" target="_blank">RMRE</a> and <a href="https://www.researchgate.net/publication/349715719_Decision_Making_for_Optimal_Primary-Support_Selection_to_Minimise_Tunnel-_Squeezing_Risk" rel="external nofollow noopener" target="_blank">ESREL2020</a> for additional details.
+Some other parts are currently under review.
+<a href="/teaching/">A web-application</a> is provided for uncertainty-informed prediction of squeezing intensity.</p>
 </blockquote>
 
 <p>Tunnel squeezing is a time-dependent process that typically occurs in weak or over-stressed rock masses, significantly influencing the budget and time of tunnel construction. Given that only limited databases of case histories are documented in literature, many supervised-learning based probabilistic models, naturally probabilistic or not, are prone to provide over confident (some even distorted) probability estimates of squeezing intensity, due to the ignorance of model uncertainties.</p>
@@ -169,6 +169,66 @@ A web-application is provided for uncertainty-informed prediction of squeezing i
 
 <p>The absence of enough data has restricted Machine Learning models from effectively learning the true relationship between features and labels (i.e. the underlying data generating process). Significant uncertainties exist on the model configurations that may have explained such limited data. Consequently, such uncertainties further compromise the generalization power of learned models in that predictions from uncertain/unrepresentative models can still be unreliable and over confident, especially when doing extrapolation on unseen geologic conditions. These unreliable probabilistic predictions will propagate errors (e.g. misclassification costs) into risk analysis of the hazard, further leading to biased construction strategies.</p>
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/ensemblePredictions-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/ensemblePredictions-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/ensemblePredictions-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/ensemblePredictions.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/Histogram-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/Histogram-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Histogram-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/Histogram.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/yarinfancyplot-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/yarinfancyplot-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/yarinfancyplot-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/yarinfancyplot.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Uncertainty in predictive distributions
+</div>
+
 <h3 id="dynamically-updated">Dynamically updated</h3>
 
 <p>In addition, another challenge in terms of reliable predictions in underground space is that geologic conditions of surrounding rocks obtained in the investigation stage are often incomplete and unreliable. Therefore, such inconsistencies between investigation and construction significantly reduce the accuracy of those aforementioned methods. As such, a <strong>dynamic</strong> scheme based on excavated grounds to predict the squeezing hazard is vital as it can reasonably boost the reliability and practicality of the prediction of squeezing. Mathematically, a Markov process is used to simulate the random process in which the probability distribution of the representative geologic parameters are changing over locations. As such, probabilistic prediction of squeezing is <strong>continuously updated</strong> in light of newly excavated rockmass conditions during construction phase.</p>
@@ -199,55 +259,21 @@ A web-application is provided for uncertainty-informed prediction of squeezing i
 
 <h3 id="decision-making-under-uncertainty">Decision making under uncertainty</h3>
 
+<p>In tunneling practices, it’s of great engineering importance to avoid overconfident yet incorrect predictions, as such biased predictions will lead to faulty construction strategies. To better understand the risks associated with squeezing and thus guiding construction strategies, for example designing support system schemes, adjusting the excavation rate, enhancing monitoring frequencies, etc, tunnel practitioners would desire that they can be confident about the probabilistic hazard prediction. This motivates the use of uncertainty measures to make uncertainty-informed engineering decision.</p>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/risk_decision-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/risk_decision-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/risk_decision-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/risk_decision.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -256,16 +282,12 @@ A web-application is provided for uncertainty-informed prediction of squeezing i
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Updating of probabilistic predictions along excavation
 </div>
-
-<p>In tunneling practices, it’s of great engineering importance to avoid overconfident yet incorrect predictions, as such biased predictions will lead to faulty construction strategies. To better understand the risks associated with squeezing and thus guiding construction strategies, for example designing support system schemes, adjusting the excavation rate, enhancing monitoring frequencies, etc, tunnel practitioners would desire that they can be confident about the probabilistic hazard prediction. This motivates the use of uncertainty measures to make uncertainty-informed engineering decision.</p>
 
 <hr>
 
-<blockquote>
-  <p>Footnote: thumbnail image credit: <a href="https://towardsdatascience.com/am-i-sure-or-unsure-talks-with-a-neural-network-fc0e14d31373" rel="external nofollow noopener" target="_blank">Purvanshi Mehta</a></p>
-</blockquote>
+<p>Footnote: thumbnail image credit: <a href="https://towardsdatascience.com/am-i-sure-or-unsure-talks-with-a-neural-network-fc0e14d31373" rel="external nofollow noopener" target="_blank">Purvanshi Mehta</a></p>
 
           </article>
 
