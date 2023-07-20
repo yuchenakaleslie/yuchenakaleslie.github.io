@@ -7,7 +7,7 @@ importance: 3
 category: collaboration
 ---
 
-> This study embodies the research efforts in automatically detecting out-of-distribution data outlier in real-time for autonomous decision making for complex systems. 
+> This study embodies research efforts in automatically detecting out-of-distribution data outlier in real-time for autonomous decision making for complex systems. 
 
 This an ungoing collaboration work with Isterre UGA, to propose an environment-informed approach to probabilistically detect the potential structural damage. Several environmental factors, shown below and three vibrational modes are considered in this anlysis. Each mode is associated with its natural frequancy $\omega$ and damping ratio. 
 
