@@ -7,7 +7,7 @@ nav: true
 nav_order: 5
 ---
 
->We have created an integrated web application for facilitating tunneling squeezing hazard analysis and uncertainty-informed engineering decision making. Currently, it is hosted by AWS (Amazon Web Service) at this [location]](18.169.51.60).
+>We have created an integrated web application for facilitating tunneling squeezing hazard analysis and uncertainty-informed engineering decision making. Currently, it is hosted by AWS (Amazon Web Service) at this [location](18.169.51.60).
 
 ### *front-end* for deploying Bayesian deep learning models
 

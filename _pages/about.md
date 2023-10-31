@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 
 I'm currently a <u>PhD candidate</u> at <a href='https://riskinstitute.uk'>Institute for Risk and Unceratinty, University of Liverpool</a>; and also an <u>ESR</u> funded by the EU-Horizon 2020 & Marie Skłodowska-Curie Actions project <a href="https://urbasis-eu.osug.fr">URBASIS</a>.
 
-During my PhD, I am dedicated to developing robust Deep Learning-based computational frameworks against **data problems** (imprecise, limited, scarce, imbalanced or OOD data), and propagate associated uncertainty through computational probabilistic models in an efficient way. My contribution revolves around two aspects: `(I)` equiping DL models with uncertainty awareness, allowing for **robustness**; `(II)` incorporating DL with prior (physical) domain knowledge, allowing for **fusion of knowledge**.
+During my PhD, I am dedicated to developing robust Deep Learning-based computational frameworks against **data problems** (imprecise, limited, scarce, imbalanced or OOD data), and propagating associated uncertainty through computational probabilistic models in an efficient way. My contribution revolves around two aspects: `(I)` equiping DL models with uncertainty awareness, allowing for **robustness**; `(II)` incorporating DL with prior (physical) domain knowledge, allowing for **fusion of knowledge**.
 
 *** 
 
