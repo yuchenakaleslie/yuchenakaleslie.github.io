@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>uncertainty decomposition | Yu  Chen</title>
     <meta name="author" content="Yu  Chen">
-    <meta name="description" content="an example of a blog post with some math">
+    <meta name="description" content="explain the language of uncertainty in Machine Learning">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -147,23 +147,121 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/" rel="external nofollow noopener" target="_blank">MathJax 3</a> engine. You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>. If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
+      <p>Advances in Deep Learning bring further investigation into credibility and robustness, especially for safety-critical applications. Trustworthy AI which aims to critically investigate the fairness (biasness), interpretability, and robustness of Deep Learning algorithms and applications, has attracted significant attention recently.</p>
 
-<p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph. Here is an example:</p>
+<blockquote>
+    *All models are wrong, but models that know when they don't know are useful.*
+</blockquote>
 
-\[\sum_{k=1}^\infty |\langle x, e_k \rangle|^2 \leq \|x\|^2\]
+<p>It is desired that Machine Leanring or Deep Learning models should know when they don’t know. In most cases, people create or use a neural network model in order to predict a certain quantify of interest (QoI). However, there is no gurrantee that the model prediction is correct, especially under the situations of generalization to out-of-distribution data. People would like to know the predictive distribution instead to understand the uncertainty of the prediction, and further the risks associated with the downstream decisions. This post will clarify the concepts and techniques proposed in recent years on how the Deep Learning models account for the different sources of uncertainty.</p>
 
-<p>You can also use <code class="language-plaintext highlighter-rouge">\begin{equation}...\end{equation}</code> instead of <code class="language-plaintext highlighter-rouge">$$</code> for display mode math.
-MathJax will automatically number equations:</p>
+<h3 id="sources-of-uncertainty">sources of uncertainty</h3>
+
+<p>Different sources of uncertainty are involved within the training pipeline, which are generally classified between two categories: aleatoric and epistemic uncertainty [37, 44]. aleatoric is the uncertainty inherent in the data and irreducible, which may comprise measurement error, noisy labels or inherent stochasticity in the data generating process. Depending on the assumption that whether the data noise is dependent on the input features, methods vary in accounting for heteroscedastic or homoscedastic variance. epistemic uncertainty, on the other hand, refers to the model uncertainty, which is reducible with more data. That is, it reflects the fact that there may exist a set of model configurations that can explain the observed data, hence we are probably uncertain about the model parameters given the limited data. Most Deep Learning models, despite being probabilistic in some sense, do not capture model uncertainty. For example, consider a classification task, a model can still be uncertain even with a high softmax output. An example of regression can be found at <a href="https://blog.tensorflow.org/2019/03/regression-with-probabilistic-layers-in.html" rel="external nofollow noopener" target="_blank">Probabilistic regression</a>.</p>
+
+<h3 id="probabilistic-noise-estimation">Probabilistic noise estimation</h3>
+
+<p>Most likely the real world data contain noise. Without losing generality, consider a regression problem with gaussian noise, it is desired to account for the variance of the conditional distribution given the feature vector, which represents the <em>aleatoric</em> uncertainty. 
+That is, to estimate the second moment (variance) of the target conditional distribution in addition to the usual estimation of the first moment (mean).
+Note that such uncertainty is irreducible even with increasing data samples as the underlying data collection/measurement process is still noisy, which merely leads to increased number of noisy data. 
+Especially, efforts are pursued for modelling the input-dependent variance <em>heteroscedastic noise</em>.
+A unified structure of a neural network model, where two output units are separately mapped to the mean and variance through independent sets of weights, is constructed to simutaneously estimate the conditional distribution. 
+Under the Gaussian noise assumption, the loss objective (<em>negative log likelihood NLL</em>) is given as:</p>
 
 <p>\begin{equation}
-\label{eq:cauchy-schwarz}
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+	- \log p(y_{i} | \mathbf{x}<em>{i}) = \frac{\log \sigma^2(\mathbf{x}</em>{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}<em>{i}))^2}{2 \sigma^2(\mathbf{x}</em>{i})} + \frac{\log 2 \pi}{2}
 \end{equation}</p>
 
-<p>and by adding <code class="language-plaintext highlighter-rouge">\label{...}</code> inside the equation environment, we can now refer to the equation using <code class="language-plaintext highlighter-rouge">\eqref</code>.</p>
+<h3 id="bayesian-inference-in-deep-learning">Bayesian inference in Deep Learning</h3>
 
-<p>Note that MathJax 3 is <a href="https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html" rel="external nofollow noopener" target="_blank">a major re-write of MathJax</a> that brought a significant improvement to the loading and rendering speed, which is now <a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php" rel="external nofollow noopener" target="_blank">on par with KaTeX</a>.</p>
+<p>Implicit in the above MLE procedure is the ignorance of model uncertainties (<em>epistemic</em> uncertainty). The model weights are themselves uncertain due to the imperfect training data. Significant uncertainties may exist on the model configurations that could have generated the data. Especially in the context of limited data, deterministic models, unless properly regularised, are prone to learn too much noise (overfitting) and become overconfident due to the unawareness of model uncertainties. Note that such uncertainty can be reduced with more data and hence referred to as <em>reducible uncertainty</em>.
+Probability theory provides a framework for reasoning with uncertainty. As such, in accounting for the model uncertainty  in neural network models, probability distributions are assigned to model parameters \(\boldsymbol{\omega}\), whereby <em>learning</em> is characterised with the transformation of the prior knowledge or belief, via the observed data \(\mathcal{D}:\{\mathbf{X}, \mathbf{Y}\}\), into the posterior knowledge.
+Particularly, by formulating such uncertainty, Bayesian models achieves a regularising effect against overfitting, which may otherwise be a serious problem in terms of limited and noisy data.</p>
+
+<p>In the training stage, given a dataset \(\mathbf{X}, \mathbf{Y}\), we then look for the <em>posterior distribution</em> over the parameter space:</p>
+
+<p>\begin{equation}
+p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) = \frac{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})p(\boldsymbol{\omega})}{p({\mathbf{Y}|\mathbf{X}})}
+\end{equation}</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>This distribution captures the most probable function parameters given our observed data. $$p(\mathbf{Y</td>
+      <td>\mathbf{X}, \boldsymbol{\omega}})\(is the *likelihood*, and the *evidence*,\)p({\mathbf{Y}</td>
+      <td>\mathbf{X}})$$, is given by:</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>\begin{equation}
+p({\mathbf{Y}|\mathbf{X}}) = \int{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}}) p(\boldsymbol{\omega}) \text{d}{\boldsymbol{\omega}}}
+\end{equation}</p>
+
+<p>In the testing stage, with the parameters the output given a new input \(\mathbf{x^*}\) can be predicted:</p>
+
+<p>\begin{equation}
+p(\mathbf{y^<em>}|\mathbf{x^</em>, \mathbf{X}, \mathbf{Y}}) = \int{p(\mathbf{y^<em>}|\mathbf{x^</em>, \boldsymbol{\omega}})p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) \text{d}{\boldsymbol{\omega}}}
+\end{equation}</p>
+
+<p>Compactly, for an i.i.d dataset of \(N\) observations \(\mathcal{D}\), the likelihood function, corresponding to Eq.~(\ref{eq:gaussian_likehood}) can be compactly rewritten as:</p>
+
+<p>\begin{equation}
+p(\mathcal{D}|\boldsymbol{\omega}, \beta) = \prod_{i=1}^{N} \mathcal{N} (y_{i}|f_{\boldsymbol{\omega}}(\mathbf{x}), \beta^{-1})
+\end{equation}</p>
+
+<p>Similarly, choose a prior distribution over the weights, for example Gaussian:</p>
+
+<p>\begin{equation}
+p(\boldsymbol{\omega}|\alpha) = \mathcal{N} (\boldsymbol{\omega}|\mathbf{0}, \alpha^{-1} \mathbf{I})
+\end{equation}</p>
+
+<p>the resulting posterior distribution is then:</p>
+
+<p>\begin{equation}
+p(\boldsymbol{\omega}| \mathcal{D}, \alpha, \beta)  \propto p(\boldsymbol{\omega}|\alpha) p(\mathcal{D}|\boldsymbol{\omega}, \beta)
+\end{equation}</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Despite conceptually straightforward, the above inference problem is practically challenging to solve. The integral $$p(\mathcal{D})=\int p(\mathcal{D}</td>
+      <td>\boldsymbol{\omega}) p(\boldsymbol{\omega}) d \boldsymbol{\omega}\(is intractable due to the high dimensionality of weights\)\boldsymbol{\omega}$$. –&gt;</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ### predictive distribution
+
+Predictive uncertainty can be propagated from the uncertain model given the input, which may be of out-of-sample distribution.
+Two sources of uncertainty can be combined to account for the predictive uncertainty.
+Assuming Gaussian noise $$p(\mathbf{y}|\mathbf{x}, \omega) = \mathcal{N}(f_{\omega}(\mathbf{x}), \tau^{-1} \mathbf{I})$$ where the model precision estimated as $$\tau^{-1} = g_{\boldsymbol{\omega}}(\mathbf{x}^{*})$$, the model's predictive variance given a new data point can be given as:
+
+\begin{equation}
+	\text{Var}(y^{*}) = \frac{1}{T} \sum_{t=1}^{T} g_{\boldsymbol{\omega}_{t}}(\mathbf{x}^{*}) \mathbf{I} + \frac{1}{T} \sum_{t=1}^{T} f_{\omega_{t}}(\mathbf{x}^{*})^{T} f_{\omega_{t}}(\mathbf{x}^{*}) - \mathbb{E} (\mathbf{y}^{*})^{T} \mathbb{E} (\mathbf{y}^{*})
+\end{equation}
+
+With the Gaussian assumption, the predictive distribution, the integral in Eq.~(\ref{eq:testing_inference}), is indeed approximated by an ensemble of conditional gaussians for $$y^{*}$$, with each gaussian represented by a neural network model parameterised by a sample from the variational posterior.
+On the basis of this ensemble of Gaussians, a mixture of Gaussian model further approximates the estimation of mean and variance of the considered predictive distribution:
+
+\begin{aligned}
+	\mu(\mathbf{x}^{*}) &= T^{-1} \sum_{t=1}^{T} \mu_{\omega_{t}}(\mathbf{x})  \\
+	\sigma(\mathbf{x}^{*}) &= T^{-1} \sum_{t=1}^{T} [\sigma^{2}_{\omega_{t}}(\mathbf{x}^{*}) + \mu^{2}_{\omega_{t}}(\mathbf{x}^{*})] - \mu^{2}(\mathbf{x}^{*})
+\end{aligned}
+
+In addition, a further approximation of considering homoscedastic noise could be simpler to estimate, by empirical estimation from the validation set, as given below:
+
+\begin{equation}
+	\text{Var}(\mathbf{y}^{*}) \approx \tau^{-1}\mathbf{I} + \frac{1}{T} \sum_{t=1}^{T} f_{\omega_{t}}(\mathbf{x}^{*})^{T} f_{\omega_{t}}(\mathbf{x}^{*}) - \mathbb{E} (\mathbf{y}^{*})^{T} \mathbb{E} (\mathbf{y}^{*})
+\end{equation}
+
+Assuming constant, the model imprecision can be estimated as:
+
+\begin{equation}
+	\tau = \frac{(1-p) l_{i}^{2}}{2N \lambda_{i}}
+\end{equation}
+
+where the weight decay $$\lambda_{i}$$ and prior length scale $$l_{i}$$ are hyperparameters tuned from the separate validation data set. Alternatively, a naive estimate based on the sample variance of the validation set is also sometimes employed. -->
 
     </div>
   </article>
