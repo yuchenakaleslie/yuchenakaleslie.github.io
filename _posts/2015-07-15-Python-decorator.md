@@ -7,7 +7,7 @@ tags: formatting code
 categories: sample-posts
 ---
 
-Decorator has always been my favorite feature of Python, not only because of the nice look of a colorful `@function` symbol, but more because of it as an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite use cases. I will also mention some real-world uses and leave interested reader to dig more.
+Decorator has always been my favorite feature of Python, not only because of the nice look of a colorful `@function` symbol, but more because of it as an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite use cases. I will also mention some real-world uses and leave interested reader to dig more. Some other common examples include the `@app.route()` decorator in Flask, etc.
 
 <hr>
 
@@ -52,6 +52,6 @@ plotting_function()
 
 <hr>
 
-### 3. Tensorflow Function
+### 3. Tensorflow **Function**
 
 This should be quite familiar with Tensorflow users.

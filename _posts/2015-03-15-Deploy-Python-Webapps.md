@@ -2,29 +2,44 @@
 layout: post
 title:  Deploy-Python-Webapps
 date:   2022-06-18 16:40:16
-description: march & april, looking forward to summer
+description: Best practices in deploying Deep Learning models 
 tags: formatting links
 categories: sample-posts
 ---
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
 
-#### Hipster list
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
+<blockquote>
+    Full-stack web application for deploying a Deep Learning model, with Flask and Docker.
+</blockquote>
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+What happens after having trained and validated your Deep Learinig model? It may be a simple MLP or the more trending Transformer, built by Tensorflow or Pytorch, for your research/application tasks. There will generally be interests for such model to be used by others, say collegues, clients, etc. The following content will give a concise overview about the best practices in deploying your model.
+
+### Deploy the *learnt* model as a REST API
+
+Simply, the model can run with a simple call such as `python inference.py`. But the main interests lay in serving the model to the general public, as opposed to runing it on your own laptop. In this spirit, we can deploy the model as a REST API, such that you can call `curl` to send request to the sever and obtain the response, which will be the results for inference. In doing so, you will probably do the following for an example of image classification task. (Note the host name will be the relevant IP address in real cases. The `localhost` shown below means your own machine for illustration purpose.)
+
+```shell
+curl -X POST -F image=@query_image.jpg 'http://localhost:5000/predict'
+```
+
+Well, while this works, the caveat is that the call signature seems unnecessarily arcane. Things could be more straightforward.
 
 <hr>
 
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
+### full-stack web application
 
-<blockquote>
-    We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-    —Anais Nin
-</blockquote>
+By contrast, a user-friendly, intuitive, web application sounds much more attracting. Build a front-end for the API can save a lot of trouble for the end users. Besides, you get to integrate a lot of relevant sources at the same page to enrich the experience.  
 
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+
+
+<hr>
+
+### Deploy in production 
+
+
+
+<ul>
+    <li>PythonAnywhere</li>
+    <li>AWS</li>
+    <li>Google Cloud</li>
+    <li>Azure</li>
+</ul>
