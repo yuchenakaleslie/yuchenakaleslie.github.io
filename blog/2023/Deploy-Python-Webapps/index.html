@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>2022 | Yu  Chen</title>
+    <title>Deploy-Python-Webapps | Yu  Chen</title>
     <meta name="author" content="Yu  Chen">
-    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-">
+    <meta name="description" content="Best practices in deploying Deep Learning models">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -39,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://yuchenakaleslie.github.io//blog/2022/">
+    <link rel="canonical" href="https://yuchenakaleslie.github.io//blog/2023/Deploy-Python-Webapps/">
 
     <!-- Dark Mode -->
     
@@ -122,27 +121,134 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- _layouts/post.html -->
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"> <i class="fas fa-calendar fa-sm"></i> 2022 </h1>
-    <p class="post-description"> an archive of posts from this year </p>
+    <h1 class="post-title">Deploy-Python-Webapps</h1>
+    <p class="post-meta">June 26, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+        ·  
+        <a href="/blog/tag/formatting">
+          <i class="fas fa-hashtag fa-sm"></i> formatting</a>  
+          <a href="/blog/tag/links">
+          <i class="fas fa-hashtag fa-sm"></i> links</a>  
+          
+        ·  
+        <a href="/blog/category/sample-posts">
+          <i class="fas fa-tag fa-sm"></i> sample-posts</a>  
+          
+
+    </p>
   </header>
 
-  <article>
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        
-        <tr>
-          <th scope="row">Jun 18, 2022</th>
-          <td>
-              <a class="post-link" href="/blog/2022/Deploy-Python-Webapps/">Deploy-Python-Webapps</a>
-          </td>
-        </tr>
-      
-      </table>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <blockquote>
+    Full-stack web application for deploying a Deep Learning model, with Flask and Docker.
+</blockquote>
+
+<p>What happens after having trained and validated your Deep Learinig model? It may be a simple MLP or the more trending Transformer, built by Tensorflow or Pytorch, for your research/application tasks. There will generally be interests for such model to be used by others, say collegues, clients, etc. The following content will give a concise overview about the best practices in deploying your model.</p>
+
+<h3 id="deploy-the-learnt-model-as-a-rest-api">Deploy the <em>learnt</em> model as a REST API</h3>
+
+<p>Simply, the model can run with a simple call such as <code class="language-plaintext highlighter-rouge">python inference.py</code>. But the main interests lay in serving the model to the general public, as opposed to running only on your own laptop. In this spirit, we can deploy the model as a REST API, such that you can call <code class="language-plaintext highlighter-rouge">curl</code> to send request to the sever and obtain the response, which will be the results for inference. In doing so, you will probably do the following in the terminal for an example of image classification task. (Note the host name will be the relevant IP address in real cases. The <strong>localhost</strong> shown below means your own machine for illustration purpose.)</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>curl <span class="nt">-X</span> POST <span class="nt">-F</span> <span class="nv">image</span><span class="o">=</span>@query_image.jpg <span class="s1">'http://localhost:5000/predict'</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>Well, while this works, the caveat is that the call signature seems unnecessarily arcane. Things could be more straightforward. You don’t expect everyone to be a mechanic to drive a car, right?</p>
+
+<hr>
+
+<h3 id="full-stack-web-application">Full-stack web application</h3>
+
+<p>By contrast, a user-friendly, intuitive, responsive, web application sounds much more attracting. Building a front-end for the API can save a lot of trouble for the end users. Besides, you get to integrate a lot of relevant sources at the same page to enrich the experience. The illustrative page below is taken from the <a href="http://18.169.51.60/" rel="external nofollow noopener" target="_blank">web application</a> I created and hosted by the AWS. Please refer to the <a href="/teaching/">page</a> for additional details.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/predict_page-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/predict_page-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/predict_page-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/predict_page.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Two types of prediction and 4 models to choose
+</div>
+
+<hr>
+
+<h3 id="deploy-to-production">Deploy to production</h3>
+
+<p>When deploying in production, the common practice is to use a dedicated combination of WSGI server, with a dedicated HTTP server in front of it (i.e. so-called reverse proxy). Typically, people will use <code class="language-plaintext highlighter-rouge">Gunicorn</code>, which is a pure Python WSGI server and <code class="language-plaintext highlighter-rouge">nginx</code>, which is production level HTTP server. How it works is: when serving your application with one of the WSGI servers, it’s often good practice to put a dedicated HTTP server in front of it, such that this “reverse proxy” can handle incoming requests, TLS etc. better than the WSGI server.</p>
+
+<p>More conveniently, there are a number of services (e.g. hosting platforms) to facilitate such process. Typical examples include:</p>
+
+<ul>
+    <li>PythonAnywhere</li>
+    <li>AWS Elastic Beanstalk</li>
+    <li>Google Cloud</li>
+    <li>Microsoft Azure</li>
+</ul>
+
+
     </div>
   </article>
+
+
+  
+    
+    <br>
+    <hr>
+    <br>
+    <ul class="list-disc pl-8"></ul>
+
+    <!-- Adds related posts to the end of an article -->
+    <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/uncertainty-decomposition/">uncertainty decomposition</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/Python-decorator/">Out of box Python decorators</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2015/3-VAE-implementations/">a post with code</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2015/images/">a post with images</a>
+  </li>
 
 </div>
 
