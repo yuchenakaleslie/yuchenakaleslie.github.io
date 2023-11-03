@@ -40,13 +40,6 @@ _styles: >
 
 ---
 
-### Teaching
-
-- Teaching Assistant (TA) for the module Geophysical Project (ENVS300) of Univ of Liverpool;
-- Supervised an undergraduate Stephen Guerin with dissertation "_Using machine learning to forecast induced seismicity_"
-
-***
-
 ### Secondment
 
 - 2022 Jan - June, <a href="https://www.isterre.fr/">Isterre</a>, <a href="https://www.univ-grenoble-alpes.fr/">Université Grenoble Alpes (UGA)</a>, France. 
@@ -95,6 +88,12 @@ During which I embarked on a collaboration work (underway) with Prof. Philippe G
 2. [Reliability Engineering and System Safety](https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety) (IF 8.1)
 3. [Earthquake Spectra](https://journals.sagepub.com/home/EQS) (IF 5.0)
 
+***
+
+### Teaching
+
+- Teaching Assistant (TA) for the module Geophysical Project (ENVS300) of Univ of Liverpool;
+- Supervised an undergraduate Stephen Guerin with dissertation "_Using machine learning to forecast induced seismicity_"
 
 
 
