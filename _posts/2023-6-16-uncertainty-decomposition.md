@@ -54,9 +54,9 @@ p({\mathbf{Y}|\mathbf{X}}) = \int{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}}) 
 
 In the testing stage, with the parameters the output given a new input $$\mathbf{x^*}$$ can be predicted:
 
-\begin{equation}
+$$
 p(\mathbf{y^*}|\mathbf{x^*, \mathbf{X}, \mathbf{Y}}) = \int{p(\mathbf{y^*}|\mathbf{x^*, \boldsymbol{\omega}})p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) \text{d}{\boldsymbol{\omega}}}
-\end{equation}
+$$
 
 Compactly, for an i.i.d dataset of $$N$$ observations $$\mathcal{D}$$, the likelihood function can be compactly rewritten as:
 
