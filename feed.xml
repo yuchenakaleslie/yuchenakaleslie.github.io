@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yuchenakaleslie.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yuchenakaleslie.github.io//" rel="alternate" type="text/html" hreflang="en" /><updated>2023-10-31T16:25:23+00:00</updated><id>https://yuchenakaleslie.github.io//feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yuchenakaleslie.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yuchenakaleslie.github.io//" rel="alternate" type="text/html" hreflang="en" /><updated>2023-11-03T10:14:28+00:00</updated><id>https://yuchenakaleslie.github.io//feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">uncertainty decomposition</title><link href="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/" rel="alternate" type="text/html" title="uncertainty decomposition" /><published>2023-06-26T15:12:00+00:00</published><updated>2023-06-26T15:12:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/"><![CDATA[<p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine. You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>. If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
 
 <p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph. Here is an example:</p>
@@ -15,7 +15,7 @@ MathJax will automatically number equations:</p>
 
 <p>and by adding <code class="language-plaintext highlighter-rouge">\label{...}</code> inside the equation environment, we can now refer to the equation using <code class="language-plaintext highlighter-rouge">\eqref</code>.</p>
 
-<p>Note that MathJax 3 is <a href="https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html">a major re-write of MathJax</a> that brought a significant improvement to the loading and rendering speed, which is now <a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php">on par with KaTeX</a>.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="math" /><summary type="html"><![CDATA[an example of a blog post with some math]]></summary></entry><entry><title type="html">Out of box Python decorators</title><link href="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/" rel="alternate" type="text/html" title="Out of box Python decorators" /><published>2023-05-19T15:09:00+00:00</published><updated>2023-05-19T15:09:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/Python-decorator</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/"><![CDATA[<p>Decorator has always been my favorite feature of Python, not only because of the nice look of a colorful <code class="language-plaintext highlighter-rouge">@function</code> symbol, but more because of it as an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite use cases. I will also mention some real-world uses and leave interested reader to dig more.</p>
+<p>Note that MathJax 3 is <a href="https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html">a major re-write of MathJax</a> that brought a significant improvement to the loading and rendering speed, which is now <a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php">on par with KaTeX</a>.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="math" /><summary type="html"><![CDATA[an example of a blog post with some math]]></summary></entry><entry><title type="html">Out of box Python decorators</title><link href="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/" rel="alternate" type="text/html" title="Out of box Python decorators" /><published>2023-05-19T15:09:00+00:00</published><updated>2023-05-19T15:09:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/Python-decorator</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/"><![CDATA[<p>Decorator has always been my favorite feature of Python, not only because of the nice look of a colorful <code class="language-plaintext highlighter-rouge">@function</code> symbol, but more because of it as an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite use cases. I will also mention some real-world uses and leave interested reader to dig more. Some other common examples include the <code class="language-plaintext highlighter-rouge">@app.route()</code> decorator in Flask, etc.</p>
 
 <hr />
 
@@ -79,30 +79,40 @@ MathJax will automatically number equations:</p>
 
 <hr />
 
-<h3 id="3-tensorflow-function">3. Tensorflow Function</h3>
+<h3 id="3-tensorflow-function">3. Tensorflow <strong>Function</strong></h3>
 
-<p>This should be quite familiar with Tensorflow users.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="code" /><summary type="html"><![CDATA[some go-to decorator examples]]></summary></entry><entry><title type="html">Deploy-Python-Webapps</title><link href="https://yuchenakaleslie.github.io//blog/2022/Deploy-Python-Webapps/" rel="alternate" type="text/html" title="Deploy-Python-Webapps" /><published>2022-06-18T16:40:16+00:00</published><updated>2022-06-18T16:40:16+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2022/Deploy-Python-Webapps</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2022/Deploy-Python-Webapps/"><![CDATA[<p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p>
+<p>This should be quite familiar with Tensorflow users.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="code" /><summary type="html"><![CDATA[some go-to decorator examples]]></summary></entry><entry><title type="html">Deploy-Python-Webapps</title><link href="https://yuchenakaleslie.github.io//blog/2022/Deploy-Python-Webapps/" rel="alternate" type="text/html" title="Deploy-Python-Webapps" /><published>2022-06-18T16:40:16+00:00</published><updated>2022-06-18T16:40:16+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2022/Deploy-Python-Webapps</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2022/Deploy-Python-Webapps/"><![CDATA[<blockquote>
+    Full-stack web application for deploying a Deep Learning model, with Flask and Docker.
+</blockquote>
 
-<h4 id="hipster-list">Hipster list</h4>
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
+<p>What happens after having trained and validated your Deep Learinig model? It may be a simple MLP or the more trending Transformer, built by Tensorflow or Pytorch, for your research/application tasks. There will generally be interests for such model to be used by others, say collegues, clients, etc. The following content will give a concise overview about the best practices in deploying your model.</p>
 
-<p>Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90’s yr typewriter selfies letterpress cardigan vegan.</p>
+<h3 id="deploy-the-learnt-model-as-a-rest-api">Deploy the <em>learnt</em> model as a REST API</h3>
+
+<p>Simply, the model can run with a simple call such as <code class="language-plaintext highlighter-rouge">python inference.py</code>. But the main interests lay in serving the model to the general public, as opposed to runing it on your own laptop. In this spirit, we can deploy the model as a REST API, such that you can call <code class="language-plaintext highlighter-rouge">curl</code> to send request to the sever and obtain the response, which will be the results for inference. In doing so, you will probably do the following for an example of image classification task. (Note the host name will be the relevant IP address in real cases. The <code class="language-plaintext highlighter-rouge">localhost</code> shown below means your own machine for illustration purpose.)</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">-X</span> POST <span class="nt">-F</span> <span class="nv">image</span><span class="o">=</span>@query_image.jpg <span class="s1">'http://localhost:5000/predict'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Well, while this works, the caveat is that the call signature seems unnecessarily arcane. Things could be more straightforward.</p>
 
 <hr />
 
-<p>Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.</p>
+<h3 id="full-stack-web-application">full-stack web application</h3>
 
-<blockquote>
-    We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-    —Anais Nin
-</blockquote>
+<p>By contrast, a user-friendly, intuitive, web application sounds much more attracting. Build a front-end for the API can save a lot of trouble for the end users. Besides, you get to integrate a lot of relevant sources at the same page to enrich the experience.</p>
 
-<p>Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="links" /><summary type="html"><![CDATA[march & april, looking forward to summer]]></summary></entry><entry><title type="html">a post with code</title><link href="https://yuchenakaleslie.github.io//blog/2015/3-VAE-implementations/" rel="alternate" type="text/html" title="a post with code" /><published>2015-07-15T15:09:00+00:00</published><updated>2015-07-15T15:09:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2015/3-VAE-implementations</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2015/3-VAE-implementations/"><![CDATA[<p>This theme implements a built-in Jekyll feature, the use of Rouge, for syntax highlighting.
+<hr />
+
+<h3 id="deploy-in-production">Deploy in production</h3>
+
+<ul>
+    <li>PythonAnywhere</li>
+    <li>AWS</li>
+    <li>Google Cloud</li>
+    <li>Azure</li>
+</ul>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="links" /><summary type="html"><![CDATA[Best practices in deploying Deep Learning models]]></summary></entry><entry><title type="html">a post with code</title><link href="https://yuchenakaleslie.github.io//blog/2015/3-VAE-implementations/" rel="alternate" type="text/html" title="a post with code" /><published>2015-07-15T15:09:00+00:00</published><updated>2015-07-15T15:09:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2015/3-VAE-implementations</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2015/3-VAE-implementations/"><![CDATA[<p>This theme implements a built-in Jekyll feature, the use of Rouge, for syntax highlighting.
 It supports more than 100 languages.
 This example is in C++.
 All you have to do is wrap your code in markdown code tags:</p>

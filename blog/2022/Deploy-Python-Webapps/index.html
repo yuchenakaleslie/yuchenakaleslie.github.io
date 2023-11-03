@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Deploy-Python-Webapps | Yu  Chen</title>
     <meta name="author" content="Yu  Chen">
-    <meta name="description" content="march &amp; april, looking forward to summer">
+    <meta name="description" content="Best practices in deploying Deep Learning models">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -147,28 +147,41 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com" rel="external nofollow noopener" target="_blank">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice" rel="external nofollow noopener" target="_blank">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p>
+      <blockquote>
+    Full-stack web application for deploying a Deep Learning model, with Flask and Docker.
+</blockquote>
 
-<h4 id="hipster-list">Hipster list</h4>
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
+<p>What happens after having trained and validated your Deep Learinig model? It may be a simple MLP or the more trending Transformer, built by Tensorflow or Pytorch, for your research/application tasks. There will generally be interests for such model to be used by others, say collegues, clients, etc. The following content will give a concise overview about the best practices in deploying your model.</p>
 
-<p>Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90’s yr typewriter selfies letterpress cardigan vegan.</p>
+<h3 id="deploy-the-learnt-model-as-a-rest-api">Deploy the <em>learnt</em> model as a REST API</h3>
+
+<p>Simply, the model can run with a simple call such as <code class="language-plaintext highlighter-rouge">python inference.py</code>. But the main interests lay in serving the model to the general public, as opposed to runing it on your own laptop. In this spirit, we can deploy the model as a REST API, such that you can call <code class="language-plaintext highlighter-rouge">curl</code> to send request to the sever and obtain the response, which will be the results for inference. In doing so, you will probably do the following for an example of image classification task. (Note the host name will be the relevant IP address in real cases. The <code class="language-plaintext highlighter-rouge">localhost</code> shown below means your own machine for illustration purpose.)</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>curl <span class="nt">-X</span> POST <span class="nt">-F</span> <span class="nv">image</span><span class="o">=</span>@query_image.jpg <span class="s1">'http://localhost:5000/predict'</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>Well, while this works, the caveat is that the call signature seems unnecessarily arcane. Things could be more straightforward.</p>
 
 <hr>
 
-<p>Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.</p>
+<h3 id="full-stack-web-application">full-stack web application</h3>
 
-<blockquote>
-    We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-    —Anais Nin
-</blockquote>
+<p>By contrast, a user-friendly, intuitive, web application sounds much more attracting. Build a front-end for the API can save a lot of trouble for the end users. Besides, you get to integrate a lot of relevant sources at the same page to enrich the experience.</p>
 
-<p>Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.</p>
+<hr>
+
+<h3 id="deploy-in-production">Deploy in production</h3>
+
+<ul>
+    <li>PythonAnywhere</li>
+    <li>AWS</li>
+    <li>Google Cloud</li>
+    <li>Azure</li>
+</ul>
 
     </div>
   </article>
