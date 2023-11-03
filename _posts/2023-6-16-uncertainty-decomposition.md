@@ -2,27 +2,83 @@
 layout: post
 title: uncertainty decomposition
 date: 2023-6-26 11:12:00-0400
-description: an example of a blog post with some math
+description: explain the language of uncertainty in Machine Learning
 tags: formatting math
 categories: sample-posts
 related_posts: false
 ---
-This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine. You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`. If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
 
-To use display mode, again surround your expression with `$$` and place it as a separate paragraph. Here is an example:
+Advances in Deep Learning bring further investigation into credibility and robustness, especially for safety-critical applications. Trustworthy AI which aims to critically investigate the fairness (biasness), interpretability, and robustness of Deep Learning algorithms and applications, has attracted significant attention recently. 
 
-$$
-\sum_{k=1}^\infty |\langle x, e_k \rangle|^2 \leq \|x\|^2
-$$
+<blockquote>
+    *All models are wrong, but models that know when they don't know are useful.*
+</blockquote>
 
-You can also use `\begin{equation}...\end{equation}` instead of `$$` for display mode math.
-MathJax will automatically number equations:
+It is desired that Machine Leanring or Deep Learning models should know when they don't know. In most cases, people create or use a neural network model in order to predict a certain quantify of interest (QoI). However, there is no gurrantee that the model prediction is correct, especially under the situations of generalization to out-of-distribution data. People would like to know the predictive distribution instead to understand the uncertainty of the prediction, and further the risks associated with the downstream decisions. This post will clarify the concepts and techniques proposed in recent years on how the Deep Learning models account for the different sources of uncertainty.
+
+### sources of uncertainty
+
+Different sources of uncertainty are involved within the training pipeline, which are generally classified between two categories: aleatoric and epistemic uncertainty [37, 44]. aleatoric is the uncertainty inherent in the data and irreducible, which may comprise measurement error, noisy labels or inherent stochasticity in the data generating process. Depending on the assumption that whether the data noise is dependent on the input features, methods vary in accounting for heteroscedastic or homoscedastic variance. epistemic uncertainty, on the other hand, refers to the model uncertainty, which is reducible with more data. That is, it reflects the fact that there may exist a set of model configurations that can explain the observed data, hence we are probably uncertain about the model parameters given the limited data. Most Deep Learning models, despite being probabilistic in some sense, do not capture model uncertainty. For example, consider a classification task, a model can still be uncertain even with a high softmax output. An example of regression can be found at [Probabilistic regression](https://blog.tensorflow.org/2019/03/regression-with-probabilistic-layers-in.html).
+
+
+### Probabilistic noise estimation
+
+Most likely the real world data contain noise. Without losing generality, consider a regression problem with gaussian noise, see Eq.~(\ref{eq:gaussian_likehood}), it is desired to account for the variance of the conditional distribution given the feature vector, which represents the \textit{aleatoric} uncertainty. 
+ That is, to estimate the second moment (variance) of the target conditional distribution in addition to the usual estimation of the first moment (mean).
+Note that such uncertainty is irreducible even with increasing data samples as the underlying data collection/measurement process is still noisy, which merely leads to increased number of noisy data. 
+Especially, efforts are pursued for modelling the input-dependent variance (\textit{\textit{i.e.}} heteroscedastic noise).
+A unified structure of a neural network model, where two output units are separately mapped to the mean and variance through independent sets of weights, is constructed to simutaneously estimate the conditional distribution. 
+Under the Gaussian noise assumption, the loss objective (\textit{\textit{i.e.}} negative log likelihood NLL) is given as \cite{nix1994estimating}:
 
 \begin{equation}
-\label{eq:cauchy-schwarz}
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+	- \log p(y_{i} | \mathbf{x}_{i}) = \frac{\log \sigma^2(\mathbf{x}_{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}_{i}))^2}{2 \sigma^2(\mathbf{x}_{i})} + \frac{\log 2 \pi}{2}
 \end{equation}
 
-and by adding `\label{...}` inside the equation environment, we can now refer to the equation using `\eqref`.
 
-Note that MathJax 3 is [a major re-write of MathJax](https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html) that brought a significant improvement to the loading and rendering speed, which is now [on par with KaTeX](http://www.intmath.com/cg5/katex-mathjax-comparison.php).
+### Bayesian inference in Deep Learning
+
+Implicit in the above MLE procedure is the ignorance of model uncertainties (\textit{epistemic} uncertainty). The model weights are themselves uncertain due to the imperfect training data. Significant uncertainties may exist on the model configurations that could have generated the data. Especially in the context of limited data, deterministic models, unless properly regularised, are prone to learn too much noise (overfitting) and become overconfident due to the unawareness of model uncertainties \cite{blundell2015weight, gal2016dropout}. Note that such uncertainty can be reduced with more data and hence referred to as \textit{reducible uncertainty}.
+Probability theory provides a framework for reasoning with uncertainty. As such, in accounting for the model uncertainty  in neural network models, probability distributions are assigned to model parameters $$\boldsymbol{\omega}$$ \cite{Murphy2012}, whereby \textit{learning} is characterised with the transformation of the prior knowledge or belief, via the observed data $$\mathcal{D}:\{\mathbf{X}, \mathbf{Y}\}$$, into the posterior knowledge \cite{ghahramani2015probabilistic}.
+Particularly, by formulating such uncertainty, Bayesian models achieves a regularising effect against overfitting \cite{blundell2015weight}, which may otherwise be a serious problem in terms of limited and noisy data.
+
+In the training stage, given a dataset $$\mathbf{X}, \mathbf{Y}$$, we then look for the \textit{posterior distribution} over the parameter space:
+
+\begin{equation}
+	p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) = \frac{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})p(\boldsymbol{\omega})}{p({\mathbf{Y}|\mathbf{X}})}
+	\label{eq:bayesian_inferenceDL}
+\end{equation}
+
+This distribution captures the most probable function parameters given our observed data. $$p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})$$ is the \textit{likelihood}, and the \textit{evidence}, $$p({\mathbf{Y}|\mathbf{X}})$$, is given by:
+
+\begin{equation}
+	p({\mathbf{Y}|\mathbf{X}}) = \int{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}}) p(\boldsymbol{\omega}) \text{d}{\boldsymbol{\omega}}}
+	\label{eq:testBNN}
+\end{equation}
+
+In the testing stage, with the parameters the output given a new input $$\mathbf{x^*}$$ can be predicted:
+
+\begin{equation}
+	p(\mathbf{y^*}|\mathbf{x^*, \mathbf{X}, \mathbf{Y}}) = \int{p(\mathbf{y^*}|\mathbf{x^*, \boldsymbol{\omega}})p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) \text{d}{\boldsymbol{\omega}}}
+	\label{eq:testing_inference}
+\end{equation}
+
+Compactly, for an i.i.d dataset of $$N$$ observations $$\mathcal{D}$$, the likelihood function, corresponding to Eq.~(\ref{eq:gaussian_likehood}) can be compactly rewritten as:
+
+\begin{equation}
+    p(\mathcal{D}|\boldsymbol{\omega}, \beta) = \prod_{i=1}^{N} \mathcal{N} (y_{i}|f_{\boldsymbol{\omega}}(\mathbf{x}), \beta^{-1})
+\end{equation}
+
+Similarly, choose a prior distribution over the weights, for example Gaussian:
+
+\begin{equation}
+    p(\boldsymbol{\omega}|\alpha) = \mathcal{N} (\boldsymbol{\omega}|\mathbf{0}, \alpha^{-1} \mathbf{I})
+\end{equation}
+
+the resulting posterior distribution is then:
+
+\begin{equation}
+    p(\boldsymbol{\omega}| \mathcal{D}, \alpha, \beta)  \propto p(\boldsymbol{\omega}|\alpha) p(\mathcal{D}|\boldsymbol{\omega}, \beta)
+\end{equation}
+
+Despite conceptually straightforward, the above inference problem is practically challenging to solve. The integral $$p(\mathcal{D})=\int p(\mathcal{D}|\boldsymbol{\omega}) p(\boldsymbol{\omega}) d \boldsymbol{\omega}$$ is intractable due to the high dimensionality of weights $$\boldsymbol{\omega}$$.
+

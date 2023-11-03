@@ -40,6 +40,12 @@ By contrast, a user-friendly, intuitive, responsive, web application sounds much
 
 <hr>
 
+### Dockerize it !
+
+A tool that can largely stremline the development process is `Docker`. 
+
+<hr>
+
 ### Deploy to production 
 
 When deploying in production, the common practice is to use a dedicated combination of WSGI server, with a dedicated HTTP server in front of it (i.e. so-called reverse proxy). Typically, people will use `Gunicorn`, which is a pure Python WSGI server and `nginx`, which is production level HTTP server. How it works is: when serving your application with one of the WSGI servers, it's often good practice to put a dedicated HTTP server in front of it, such that this "reverse proxy" can handle incoming requests, TLS etc. better than the WSGI server.
@@ -52,4 +58,3 @@ More conveniently, there are a number of services (e.g. hosting platforms) to fa
     <li>Google Cloud</li>
     <li>Microsoft Azure</li>
 </ul>
-
