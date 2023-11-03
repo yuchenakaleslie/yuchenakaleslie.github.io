@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>uncertainty decomposition | Yu  Chen</title>
+    <title>Uncertainty decomposition | Yu  Chen</title>
     <meta name="author" content="Yu  Chen">
     <meta name="description" content="explain the language of uncertainty in Machine Learning">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
@@ -126,7 +126,7 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">uncertainty decomposition</h1>
+    <h1 class="post-title">Uncertainty decomposition</h1>
     <p class="post-meta">June 26, 2023</p>
     <p class="post-tags">
       <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
@@ -168,11 +168,9 @@ Especially, efforts are pursued for modelling the input-dependent variance <em>h
 A unified structure of a neural network model, where two output units are separately mapped to the mean and variance through independent sets of weights, is constructed to simutaneously estimate the conditional distribution. 
 Under the Gaussian noise assumption, the loss objective (<em>negative log likelihood NLL</em>) is given as:</p>
 
-<p>\begin{equation}</p>
-<ul>
-  <li>\log p(y_{i} | \mathbf{x}<em>{i}) = \frac{\log \sigma^2(\mathbf{x}</em>{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}<em>{i}))^2}{2 \sigma^2(\mathbf{x}</em>{i})} + \frac{\log 2 \pi}{2}
-\end{equation}</li>
-</ul>
+<p>\begin{equation}
+-\log p(y_{i} | \mathbf{x}<em>{i}) = \frac{\log \sigma^2(\mathbf{x}</em>{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}<em>{i}))^2}{2 \sigma^2(\mathbf{x}</em>{i})} + \frac{\log 2 \pi}{2}
+\end{equation}</p>
 
 <h3 id="bayesian-inference-in-deep-learning">Bayesian inference in Deep Learning</h3>
 
