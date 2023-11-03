@@ -44,37 +44,37 @@ Particularly, by formulating such uncertainty, Bayesian models achieves a regula
 In the training stage, given a dataset $$\mathbf{X}, \mathbf{Y}$$, we then look for the *posterior distribution* over the parameter space:
 
 \begin{equation}
-	p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) = \frac{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})p(\boldsymbol{\omega})}{p({\mathbf{Y}|\mathbf{X}})}
+p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) = \frac{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})p(\boldsymbol{\omega})}{p({\mathbf{Y}|\mathbf{X}})}
 \end{equation}
 
 This distribution captures the most probable function parameters given our observed data. $$p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})$$ is the *likelihood*, and the *evidence*, $$p({\mathbf{Y}|\mathbf{X}})$$, is given by:
 
 \begin{equation}
-	p({\mathbf{Y}|\mathbf{X}}) = \int{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}}) p(\boldsymbol{\omega}) \text{d}{\boldsymbol{\omega}}}
+p({\mathbf{Y}|\mathbf{X}}) = \int{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}}) p(\boldsymbol{\omega}) \text{d}{\boldsymbol{\omega}}}
 \end{equation}
 
 In the testing stage, with the parameters the output given a new input $$\mathbf{x^*}$$ can be predicted:
 
 \begin{equation}
-	p(\mathbf{y^*}|\mathbf{x^*, \mathbf{X}, \mathbf{Y}}) = \int{p(\mathbf{y^*}|\mathbf{x^*, \boldsymbol{\omega}})p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) \text{d}{\boldsymbol{\omega}}}
+p(\mathbf{y^*}|\mathbf{x^*, \mathbf{X}, \mathbf{Y}}) = \int{p(\mathbf{y^*}|\mathbf{x^*, \boldsymbol{\omega}})p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) \text{d}{\boldsymbol{\omega}}}
 \end{equation}
 
 Compactly, for an i.i.d dataset of $$N$$ observations $$\mathcal{D}$$, the likelihood function, corresponding to Eq.~(\ref{eq:gaussian_likehood}) can be compactly rewritten as:
 
 \begin{equation}
-    p(\mathcal{D}|\boldsymbol{\omega}, \beta) = \prod_{i=1}^{N} \mathcal{N} (y_{i}|f_{\boldsymbol{\omega}}(\mathbf{x}), \beta^{-1})
+p(\mathcal{D}|\boldsymbol{\omega}, \beta) = \prod_{i=1}^{N} \mathcal{N} (y_{i}|f_{\boldsymbol{\omega}}(\mathbf{x}), \beta^{-1})
 \end{equation}
 
 Similarly, choose a prior distribution over the weights, for example Gaussian:
 
 \begin{equation}
-    p(\boldsymbol{\omega}|\alpha) = \mathcal{N} (\boldsymbol{\omega}|\mathbf{0}, \alpha^{-1} \mathbf{I})
+p(\boldsymbol{\omega}|\alpha) = \mathcal{N} (\boldsymbol{\omega}|\mathbf{0}, \alpha^{-1} \mathbf{I})
 \end{equation}
 
 the resulting posterior distribution is then:
 
 \begin{equation}
-    p(\boldsymbol{\omega}| \mathcal{D}, \alpha, \beta)  \propto p(\boldsymbol{\omega}|\alpha) p(\mathcal{D}|\boldsymbol{\omega}, \beta)
+p(\boldsymbol{\omega}| \mathcal{D}, \alpha, \beta)  \propto p(\boldsymbol{\omega}|\alpha) p(\mathcal{D}|\boldsymbol{\omega}, \beta)
 \end{equation}
 
 Despite conceptually straightforward, the above inference problem is practically challenging to solve. The integral $$p(\mathcal{D})=\int p(\mathcal{D}|\boldsymbol{\omega}) p(\boldsymbol{\omega}) d \boldsymbol{\omega}$$ is intractable due to the high dimensionality of weights $$\boldsymbol{\omega}$$.
