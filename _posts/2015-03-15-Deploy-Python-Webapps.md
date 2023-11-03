@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Deploy-Python-Webapps
+title:  Deploy Python Web apps
 date:   2023-06-26 16:40:16
 description: Best practices in deploying Deep Learning models 
 tags: formatting links

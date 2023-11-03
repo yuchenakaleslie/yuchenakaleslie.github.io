@@ -1,6 +1,6 @@
 ---
 layout: post
-title: uncertainty decomposition
+title: Uncertainty decomposition
 date: 2023-6-26 11:12:00-0400
 description: explain the language of uncertainty in Machine Learning
 tags: formatting math
@@ -31,7 +31,7 @@ A unified structure of a neural network model, where two output units are separa
 Under the Gaussian noise assumption, the loss objective (*negative log likelihood NLL*) is given as:
 
 \begin{equation}
-- \log p(y_{i} | \mathbf{x}_{i}) = \frac{\log \sigma^2(\mathbf{x}_{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}_{i}))^2}{2 \sigma^2(\mathbf{x}_{i})} + \frac{\log 2 \pi}{2}
+-\log p(y_{i} | \mathbf{x}_{i}) = \frac{\log \sigma^2(\mathbf{x}_{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}_{i}))^2}{2 \sigma^2(\mathbf{x}_{i})} + \frac{\log 2 \pi}{2}
 \end{equation}
 
 

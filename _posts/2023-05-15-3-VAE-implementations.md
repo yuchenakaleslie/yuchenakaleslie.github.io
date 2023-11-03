@@ -1,6 +1,6 @@
 ---
 layout: post
-title: a post with code
+title: Variational AutoEncoder: theory and implementation
 date: 2015-07-15 15:09:00
 description: 3 implementations of VAE
 tags: formatting code
