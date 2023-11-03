@@ -23,12 +23,12 @@ Different sources of uncertainty are involved within the training pipeline, whic
 
 ### Probabilistic noise estimation
 
-Most likely the real world data contain noise. Without losing generality, consider a regression problem with gaussian noise, see Eq.~(\ref{eq:gaussian_likehood}), it is desired to account for the variance of the conditional distribution given the feature vector, which represents the \textit{aleatoric} uncertainty. 
- That is, to estimate the second moment (variance) of the target conditional distribution in addition to the usual estimation of the first moment (mean).
+Most likely the real world data contain noise. Without losing generality, consider a regression problem with gaussian noise, it is desired to account for the variance of the conditional distribution given the feature vector, which represents the *aleatoric* uncertainty. 
+That is, to estimate the second moment (variance) of the target conditional distribution in addition to the usual estimation of the first moment (mean).
 Note that such uncertainty is irreducible even with increasing data samples as the underlying data collection/measurement process is still noisy, which merely leads to increased number of noisy data. 
-Especially, efforts are pursued for modelling the input-dependent variance (\textit{\textit{i.e.}} heteroscedastic noise).
+Especially, efforts are pursued for modelling the input-dependent variance *heteroscedastic noise*.
 A unified structure of a neural network model, where two output units are separately mapped to the mean and variance through independent sets of weights, is constructed to simutaneously estimate the conditional distribution. 
-Under the Gaussian noise assumption, the loss objective (\textit{\textit{i.e.}} negative log likelihood NLL) is given as \cite{nix1994estimating}:
+Under the Gaussian noise assumption, the loss objective (*negative log likelihood NLL*) is given as:
 
 \begin{equation}
 	- \log p(y_{i} | \mathbf{x}_{i}) = \frac{\log \sigma^2(\mathbf{x}_{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}_{i}))^2}{2 \sigma^2(\mathbf{x}_{i})} + \frac{\log 2 \pi}{2}
@@ -37,18 +37,18 @@ Under the Gaussian noise assumption, the loss objective (\textit{\textit{i.e.}} 
 
 ### Bayesian inference in Deep Learning
 
-Implicit in the above MLE procedure is the ignorance of model uncertainties (\textit{epistemic} uncertainty). The model weights are themselves uncertain due to the imperfect training data. Significant uncertainties may exist on the model configurations that could have generated the data. Especially in the context of limited data, deterministic models, unless properly regularised, are prone to learn too much noise (overfitting) and become overconfident due to the unawareness of model uncertainties \cite{blundell2015weight, gal2016dropout}. Note that such uncertainty can be reduced with more data and hence referred to as \textit{reducible uncertainty}.
-Probability theory provides a framework for reasoning with uncertainty. As such, in accounting for the model uncertainty  in neural network models, probability distributions are assigned to model parameters $$\boldsymbol{\omega}$$ \cite{Murphy2012}, whereby \textit{learning} is characterised with the transformation of the prior knowledge or belief, via the observed data $$\mathcal{D}:\{\mathbf{X}, \mathbf{Y}\}$$, into the posterior knowledge \cite{ghahramani2015probabilistic}.
-Particularly, by formulating such uncertainty, Bayesian models achieves a regularising effect against overfitting \cite{blundell2015weight}, which may otherwise be a serious problem in terms of limited and noisy data.
+Implicit in the above MLE procedure is the ignorance of model uncertainties (*epistemic* uncertainty). The model weights are themselves uncertain due to the imperfect training data. Significant uncertainties may exist on the model configurations that could have generated the data. Especially in the context of limited data, deterministic models, unless properly regularised, are prone to learn too much noise (overfitting) and become overconfident due to the unawareness of model uncertainties. Note that such uncertainty can be reduced with more data and hence referred to as *reducible uncertainty*.
+Probability theory provides a framework for reasoning with uncertainty. As such, in accounting for the model uncertainty  in neural network models, probability distributions are assigned to model parameters $$\boldsymbol{\omega}$$, whereby *learning* is characterised with the transformation of the prior knowledge or belief, via the observed data $$\mathcal{D}:\{\mathbf{X}, \mathbf{Y}\}$$, into the posterior knowledge.
+Particularly, by formulating such uncertainty, Bayesian models achieves a regularising effect against overfitting, which may otherwise be a serious problem in terms of limited and noisy data.
 
-In the training stage, given a dataset $$\mathbf{X}, \mathbf{Y}$$, we then look for the \textit{posterior distribution} over the parameter space:
+In the training stage, given a dataset $$\mathbf{X}, \mathbf{Y}$$, we then look for the *posterior distribution* over the parameter space:
 
 \begin{equation}
 	p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) = \frac{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})p(\boldsymbol{\omega})}{p({\mathbf{Y}|\mathbf{X}})}
 	\label{eq:bayesian_inferenceDL}
 \end{equation}
 
-This distribution captures the most probable function parameters given our observed data. $$p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})$$ is the \textit{likelihood}, and the \textit{evidence}, $$p({\mathbf{Y}|\mathbf{X}})$$, is given by:
+This distribution captures the most probable function parameters given our observed data. $$p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})$$ is the *likelihood*, and the *evidence*, $$p({\mathbf{Y}|\mathbf{X}})$$, is given by:
 
 \begin{equation}
 	p({\mathbf{Y}|\mathbf{X}}) = \int{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}}) p(\boldsymbol{\omega}) \text{d}{\boldsymbol{\omega}}}
@@ -82,3 +82,35 @@ the resulting posterior distribution is then:
 
 Despite conceptually straightforward, the above inference problem is practically challenging to solve. The integral $$p(\mathcal{D})=\int p(\mathcal{D}|\boldsymbol{\omega}) p(\boldsymbol{\omega}) d \boldsymbol{\omega}$$ is intractable due to the high dimensionality of weights $$\boldsymbol{\omega}$$.
 
+
+### predictive distribution
+
+Predictive uncertainty can be propagated from the uncertain model given the input, which may be of out-of-sample distribution.
+Two sources of uncertainty can be combined to account for the predictive uncertainty.
+Assuming Gaussian noise $$p(\mathbf{y}|\mathbf{x}, \omega) = \mathcal{N}(f_{\omega}(\mathbf{x}), \tau^{-1} \mathbf{I})$$ where the model precision estimated as $\tau^{-1} = g_{\boldsymbol{\omega}}(\mathbf{x}^{*})$, the model's predictive variance given a new data point can be given as:
+
+\begin{equation}
+	\text{Var}(y^{*}) = \frac{1}{T} \sum_{t=1}^{T} g_{\boldsymbol{\omega}_{t}}(\mathbf{x}^{*}) \mathbf{I} + \frac{1}{T} \sum_{t=1}^{T} f_{\omega_{t}}(\mathbf{x}^{*})^{T} f_{\omega_{t}}(\mathbf{x}^{*}) - \mathbb{E} (\mathbf{y}^{*})^{T} \mathbb{E} (\mathbf{y}^{*})
+\end{equation}
+
+With the Gaussian assumption, the predictive distribution, the integral in Eq.~(\ref{eq:testing_inference}), is indeed approximated by an ensemble of conditional gaussians for $y^{*}$, with each gaussian represented by a neural network model parameterised by a sample from the variational posterior.
+On the basis of this ensemble of Gaussians, a mixture of Gaussian model further approximates the estimation of mean and variance of the considered predictive distribution:
+
+\begin{align*}
+	\mu(\mathbf{x}^{*}) &= T^{-1} \sum_{t=1}^{T} \mu_{\omega_{t}}(\mathbf{x})  \\
+	\sigma(\mathbf{x}^{*}) &= T^{-1} \sum_{t=1}^{T} [\sigma^{2}_{\omega_{t}}(\mathbf{x}^{*}) + \mu^{2}_{\omega_{t}}(\mathbf{x}^{*})] - \mu^{2}(\mathbf{x}^{*})
+\end{align*}
+
+In addition, a further approximation of considering homoscedastic noise could be simpler to estimate, by empirical estimation from the validation set, as given below:
+
+\begin{equation}
+	\text{Var}(\mathbf{y}^{*}) \approx \tau^{-1}\mathbf{I} + \frac{1}{T} \sum_{t=1}^{T} f_{\omega_{t}}(\mathbf{x}^{*})^{T} f_{\omega_{t}}(\mathbf{x}^{*}) - \mathbb{E} (\mathbf{y}^{*})^{T} \mathbb{E} (\mathbf{y}^{*})
+\end{equation}
+
+Assuming constant, the model imprecision can be estimated as:
+
+\begin{equation}
+	\tau = \frac{(1-p) l_{i}^{2}}{2N \lambda_{i}}
+\end{equation}
+
+where the weight decay $$\lambda_{i}$$ and prior length scale $$l_{i}$$ are hyperparameters tuned from the separate validation data set. Alternatively, a naive estimate based on the sample variance of the validation set is also sometimes employed.
