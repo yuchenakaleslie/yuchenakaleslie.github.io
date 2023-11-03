@@ -45,21 +45,18 @@ In the training stage, given a dataset $$\mathbf{X}, \mathbf{Y}$$, we then look 
 
 \begin{equation}
 	p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) = \frac{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})p(\boldsymbol{\omega})}{p({\mathbf{Y}|\mathbf{X}})}
-	\label{eq:bayesian_inferenceDL}
 \end{equation}
 
 This distribution captures the most probable function parameters given our observed data. $$p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}})$$ is the *likelihood*, and the *evidence*, $$p({\mathbf{Y}|\mathbf{X}})$$, is given by:
 
 \begin{equation}
 	p({\mathbf{Y}|\mathbf{X}}) = \int{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}}) p(\boldsymbol{\omega}) \text{d}{\boldsymbol{\omega}}}
-	\label{eq:testBNN}
 \end{equation}
 
 In the testing stage, with the parameters the output given a new input $$\mathbf{x^*}$$ can be predicted:
 
 \begin{equation}
 	p(\mathbf{y^*}|\mathbf{x^*, \mathbf{X}, \mathbf{Y}}) = \int{p(\mathbf{y^*}|\mathbf{x^*, \boldsymbol{\omega}})p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) \text{d}{\boldsymbol{\omega}}}
-	\label{eq:testing_inference}
 \end{equation}
 
 Compactly, for an i.i.d dataset of $$N$$ observations $$\mathcal{D}$$, the likelihood function, corresponding to Eq.~(\ref{eq:gaussian_likehood}) can be compactly rewritten as:
@@ -83,23 +80,23 @@ the resulting posterior distribution is then:
 Despite conceptually straightforward, the above inference problem is practically challenging to solve. The integral $$p(\mathcal{D})=\int p(\mathcal{D}|\boldsymbol{\omega}) p(\boldsymbol{\omega}) d \boldsymbol{\omega}$$ is intractable due to the high dimensionality of weights $$\boldsymbol{\omega}$$.
 
 
-### predictive distribution
+<!-- ### predictive distribution
 
 Predictive uncertainty can be propagated from the uncertain model given the input, which may be of out-of-sample distribution.
 Two sources of uncertainty can be combined to account for the predictive uncertainty.
-Assuming Gaussian noise $$p(\mathbf{y}|\mathbf{x}, \omega) = \mathcal{N}(f_{\omega}(\mathbf{x}), \tau^{-1} \mathbf{I})$$ where the model precision estimated as $\tau^{-1} = g_{\boldsymbol{\omega}}(\mathbf{x}^{*})$, the model's predictive variance given a new data point can be given as:
+Assuming Gaussian noise $$p(\mathbf{y}|\mathbf{x}, \omega) = \mathcal{N}(f_{\omega}(\mathbf{x}), \tau^{-1} \mathbf{I})$$ where the model precision estimated as $$\tau^{-1} = g_{\boldsymbol{\omega}}(\mathbf{x}^{*})$$, the model's predictive variance given a new data point can be given as:
 
 \begin{equation}
 	\text{Var}(y^{*}) = \frac{1}{T} \sum_{t=1}^{T} g_{\boldsymbol{\omega}_{t}}(\mathbf{x}^{*}) \mathbf{I} + \frac{1}{T} \sum_{t=1}^{T} f_{\omega_{t}}(\mathbf{x}^{*})^{T} f_{\omega_{t}}(\mathbf{x}^{*}) - \mathbb{E} (\mathbf{y}^{*})^{T} \mathbb{E} (\mathbf{y}^{*})
 \end{equation}
 
-With the Gaussian assumption, the predictive distribution, the integral in Eq.~(\ref{eq:testing_inference}), is indeed approximated by an ensemble of conditional gaussians for $y^{*}$, with each gaussian represented by a neural network model parameterised by a sample from the variational posterior.
+With the Gaussian assumption, the predictive distribution, the integral in Eq.~(\ref{eq:testing_inference}), is indeed approximated by an ensemble of conditional gaussians for $$y^{*}$$, with each gaussian represented by a neural network model parameterised by a sample from the variational posterior.
 On the basis of this ensemble of Gaussians, a mixture of Gaussian model further approximates the estimation of mean and variance of the considered predictive distribution:
 
-<!-- \begin{align*}
+\begin{aligned}
 	\mu(\mathbf{x}^{*}) &= T^{-1} \sum_{t=1}^{T} \mu_{\omega_{t}}(\mathbf{x})  \\
 	\sigma(\mathbf{x}^{*}) &= T^{-1} \sum_{t=1}^{T} [\sigma^{2}_{\omega_{t}}(\mathbf{x}^{*}) + \mu^{2}_{\omega_{t}}(\mathbf{x}^{*})] - \mu^{2}(\mathbf{x}^{*})
-\end{align*} -->
+\end{aligned}
 
 In addition, a further approximation of considering homoscedastic noise could be simpler to estimate, by empirical estimation from the validation set, as given below:
 
@@ -113,4 +110,4 @@ Assuming constant, the model imprecision can be estimated as:
 	\tau = \frac{(1-p) l_{i}^{2}}{2N \lambda_{i}}
 \end{equation}
 
-where the weight decay $$\lambda_{i}$$ and prior length scale $$l_{i}$$ are hyperparameters tuned from the separate validation data set. Alternatively, a naive estimate based on the sample variance of the validation set is also sometimes employed.
+where the weight decay $$\lambda_{i}$$ and prior length scale $$l_{i}$$ are hyperparameters tuned from the separate validation data set. Alternatively, a naive estimate based on the sample variance of the validation set is also sometimes employed. -->
