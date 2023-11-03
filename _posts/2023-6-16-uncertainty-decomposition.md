@@ -77,7 +77,7 @@ the resulting posterior distribution is then:
 p(\boldsymbol{\omega}| \mathcal{D}, \alpha, \beta)  \propto p(\boldsymbol{\omega}|\alpha) p(\mathcal{D}|\boldsymbol{\omega}, \beta)
 \end{equation}
 
-Despite conceptually straightforward, the above inference problem is practically challenging to solve. The integral $$p(\mathcal{D})=\int p(\mathcal{D}|\boldsymbol{\omega}) p(\boldsymbol{\omega}) d \boldsymbol{\omega}$$ is intractable due to the high dimensionality of weights $$\boldsymbol{\omega}$$.
+Despite conceptually straightforward, the above inference problem is practically challenging to solve. The integral $$p(\mathcal{D})=\int p(\mathcal{D}|\boldsymbol{\omega}) p(\boldsymbol{\omega}) d \boldsymbol{\omega}$$ is intractable due to the high dimensionality of weights $$\boldsymbol{\omega}$$. -->
 
 
 <!-- ### predictive distribution
