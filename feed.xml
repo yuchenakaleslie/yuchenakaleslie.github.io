@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yuchenakaleslie.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yuchenakaleslie.github.io//" rel="alternate" type="text/html" hreflang="en" /><updated>2023-11-03T13:51:53+00:00</updated><id>https://yuchenakaleslie.github.io//feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yuchenakaleslie.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yuchenakaleslie.github.io//" rel="alternate" type="text/html" hreflang="en" /><updated>2023-11-03T14:01:34+00:00</updated><id>https://yuchenakaleslie.github.io//feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">Deploy-Python-Webapps</title><link href="https://yuchenakaleslie.github.io//blog/2023/Deploy-Python-Webapps/" rel="alternate" type="text/html" title="Deploy-Python-Webapps" /><published>2023-06-26T16:40:16+00:00</published><updated>2023-06-26T16:40:16+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/Deploy-Python-Webapps</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/Deploy-Python-Webapps/"><![CDATA[<blockquote>
     Full-stack web application for deploying a Deep Learning model, with Flask and Docker.
 </blockquote>
@@ -67,7 +67,7 @@
 </ul>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="links" /><summary type="html"><![CDATA[Best practices in deploying Deep Learning models]]></summary></entry><entry><title type="html">uncertainty decomposition</title><link href="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/" rel="alternate" type="text/html" title="uncertainty decomposition" /><published>2023-06-26T15:12:00+00:00</published><updated>2023-06-26T15:12:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/"><![CDATA[<p>Advances in Deep Learning bring further investigation into credibility and robustness, especially for safety-critical applications. Trustworthy AI which aims to critically investigate the fairness (biasness), interpretability, and robustness of Deep Learning algorithms and applications, has attracted significant attention recently.</p>
 
 <blockquote>
-    *All models are wrong, but models that know when they don't know are useful.*
+    All models are wrong, but models that know when they don't know are useful.
 </blockquote>
 
 <p>It is desired that Machine Leanring or Deep Learning models should know when they don’t know. In most cases, people create or use a neural network model in order to predict a certain quantify of interest (QoI). However, there is no gurrantee that the model prediction is correct, especially under the situations of generalization to out-of-distribution data. People would like to know the predictive distribution instead to understand the uncertainty of the prediction, and further the risks associated with the downstream decisions. This post will clarify the concepts and techniques proposed in recent years on how the Deep Learning models account for the different sources of uncertainty.</p>
@@ -85,9 +85,11 @@ Especially, efforts are pursued for modelling the input-dependent variance <em>h
 A unified structure of a neural network model, where two output units are separately mapped to the mean and variance through independent sets of weights, is constructed to simutaneously estimate the conditional distribution. 
 Under the Gaussian noise assumption, the loss objective (<em>negative log likelihood NLL</em>) is given as:</p>
 
-<p>\begin{equation}
-	- \log p(y_{i} | \mathbf{x}<em>{i}) = \frac{\log \sigma^2(\mathbf{x}</em>{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}<em>{i}))^2}{2 \sigma^2(\mathbf{x}</em>{i})} + \frac{\log 2 \pi}{2}
-\end{equation}</p>
+<p>\begin{equation}</p>
+<ul>
+  <li>\log p(y_{i} | \mathbf{x}<em>{i}) = \frac{\log \sigma^2(\mathbf{x}</em>{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}<em>{i}))^2}{2 \sigma^2(\mathbf{x}</em>{i})} + \frac{\log 2 \pi}{2}
+\end{equation}</li>
+</ul>
 
 <h3 id="bayesian-inference-in-deep-learning">Bayesian inference in Deep Learning</h3>
 
@@ -121,7 +123,7 @@ p({\mathbf{Y}|\mathbf{X}}) = \int{p(\mathbf{Y|\mathbf{X}, \boldsymbol{\omega}}) 
 p(\mathbf{y^<em>}|\mathbf{x^</em>, \mathbf{X}, \mathbf{Y}}) = \int{p(\mathbf{y^<em>}|\mathbf{x^</em>, \boldsymbol{\omega}})p(\boldsymbol{\omega}|\mathbf{X}, \mathbf{Y}) \text{d}{\boldsymbol{\omega}}}
 \end{equation}</p>
 
-<p>Compactly, for an i.i.d dataset of \(N\) observations \(\mathcal{D}\), the likelihood function, corresponding to Eq.~(\ref{eq:gaussian_likehood}) can be compactly rewritten as:</p>
+<p>Compactly, for an i.i.d dataset of \(N\) observations \(\mathcal{D}\), the likelihood function can be compactly rewritten as:</p>
 
 <p>\begin{equation}
 p(\mathcal{D}|\boldsymbol{\omega}, \beta) = \prod_{i=1}^{N} \mathcal{N} (y_{i}|f_{\boldsymbol{\omega}}(\mathbf{x}), \beta^{-1})
@@ -143,7 +145,7 @@ p(\boldsymbol{\omega}| \mathcal{D}, \alpha, \beta)  \propto p(\boldsymbol{\omega
   <tbody>
     <tr>
       <td>Despite conceptually straightforward, the above inference problem is practically challenging to solve. The integral $$p(\mathcal{D})=\int p(\mathcal{D}</td>
-      <td>\boldsymbol{\omega}) p(\boldsymbol{\omega}) d \boldsymbol{\omega}\(is intractable due to the high dimensionality of weights\)\boldsymbol{\omega}$$. –&gt;</td>
+      <td>\boldsymbol{\omega}) p(\boldsymbol{\omega}) d \boldsymbol{\omega}\(is intractable due to the high dimensionality of weights\)\boldsymbol{\omega}$$.</td>
     </tr>
   </tbody>
 </table>
