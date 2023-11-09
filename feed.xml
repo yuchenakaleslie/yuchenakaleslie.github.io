@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yuchenakaleslie.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yuchenakaleslie.github.io//" rel="alternate" type="text/html" hreflang="en" /><updated>2023-11-09T09:26:29+00:00</updated><id>https://yuchenakaleslie.github.io//feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html"></title><link href="https://yuchenakaleslie.github.io//blog/2023/2023-05-15-3-VAE-implementations/" rel="alternate" type="text/html" title="" /><published>2023-11-09T09:26:29+00:00</published><updated>2023-11-09T09:26:29+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/2023-05-15-3-VAE-implementations</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/2023-05-15-3-VAE-implementations/"><![CDATA[<p>This theme implements a built-in Jekyll feature, the use of Rouge, for syntax highlighting.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yuchenakaleslie.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yuchenakaleslie.github.io//" rel="alternate" type="text/html" hreflang="en" /><updated>2023-11-09T09:50:34+00:00</updated><id>https://yuchenakaleslie.github.io//feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html"></title><link href="https://yuchenakaleslie.github.io//blog/2023/2023-05-15-3-VAE-implementations/" rel="alternate" type="text/html" title="" /><published>2023-11-09T09:50:34+00:00</published><updated>2023-11-09T09:50:34+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/2023-05-15-3-VAE-implementations</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/2023-05-15-3-VAE-implementations/"><![CDATA[<p>This theme implements a built-in Jekyll feature, the use of Rouge, for syntax highlighting.
 It supports more than 100 languages.
 This example is in C++.
 All you have to do is wrap your code in markdown code tags:</p>
@@ -92,7 +92,7 @@ Produces something like this:</p>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></pre></figure>]]></content><author><name></name></author></entry><entry><title type="html">Deploy Python Web apps</title><link href="https://yuchenakaleslie.github.io//blog/2023/Deploy-Python-Webapps/" rel="alternate" type="text/html" title="Deploy Python Web apps" /><published>2023-06-26T16:40:16+00:00</published><updated>2023-06-26T16:40:16+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/Deploy-Python-Webapps</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/Deploy-Python-Webapps/"><![CDATA[<blockquote>
-    Full-stack web application for deploying a Deep Learning model, with Flask and Docker.
+    Full-stack web application for deploying a Deep Learning model, with Flask and Docker. Further discussion on operational management such as CI/CD will be added shortly.
 </blockquote>
 
 <p>What happens after having trained and validated your Deep Learinig model? It may be a simple MLP or the more trending Transformer, built by Tensorflow or Pytorch, for your research/application tasks. There will generally be interests for such model to be used by others, say collegues, clients, etc. The following content will give a concise overview about the best practices in deploying your model.</p>
@@ -141,7 +141,7 @@ Produces something like this:</p>
 
 <h3 id="dockerize-it-">Dockerize it !</h3>
 
-<p>A tool that can largely stremline the development process is <code class="language-plaintext highlighter-rouge">Docker</code>.</p>
+<p>A tool that can largely stremline the development process is <code class="language-plaintext highlighter-rouge">Docker</code>, which serves as a platform for building, running, and shipping applications. A very practical scenario is when you want to share the application (say, still in beta stage) with other team members. You want a one-stop solution for them to quickly set up, without worrying about the operating system, the dependencies etc. <code class="language-plaintext highlighter-rouge">Docker</code> comes to the rescue. All they need are: download and run the image to build the application on their own machine.</p>
 
 <hr />
 
@@ -156,7 +156,7 @@ Produces something like this:</p>
     <li>AWS Elastic Beanstalk</li>
     <li>Google Cloud</li>
     <li>Microsoft Azure</li>
-</ul>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="links" /><summary type="html"><![CDATA[Best practices in deploying Deep Learning models]]></summary></entry><entry><title type="html">Uncertainty decomposition in Deep Learning</title><link href="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/" rel="alternate" type="text/html" title="Uncertainty decomposition in Deep Learning" /><published>2023-06-26T15:12:00+00:00</published><updated>2023-06-26T15:12:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/"><![CDATA[<p>Advances in Deep Learning bring further investigation into credibility and robustness, especially for safety-critical applications. Trustworthy AI which aims to critically investigate the fairness (biasness), interpretability, and robustness of Deep Learning algorithms and applications, has attracted significant attention recently.</p>
+</ul>]]></content><author><name></name></author><category term="implementation" /><category term="web" /><category term="application" /><summary type="html"><![CDATA[Best practices in deploying Deep Learning models]]></summary></entry><entry><title type="html">Uncertainty decomposition in Deep Learning</title><link href="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/" rel="alternate" type="text/html" title="Uncertainty decomposition in Deep Learning" /><published>2023-06-26T15:12:00+00:00</published><updated>2023-06-26T15:12:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/uncertainty-decomposition/"><![CDATA[<p>Advances in Deep Learning bring further investigation into credibility and robustness, especially for safety-critical applications. Trustworthy AI which aims to critically investigate the fairness (biasness), interpretability, and robustness of Deep Learning algorithms and applications, has attracted significant attention recently.</p>
 
 <blockquote>
     All models are wrong, but models that know when they don't know are useful.
@@ -164,9 +164,13 @@ Produces something like this:</p>
 
 <p><code class="language-plaintext highlighter-rouge">It is desired that Machine Leanring or Deep Learning models should know when they don't know.</code> In most cases, people create or use a neural network model in order to predict a certain quantify of interest (QoI). However, there is no gurrantee that the model prediction is correct, especially under the situations of generalization to out-of-distribution data. People would like to know the predictive distribution instead to understand the uncertainty of the prediction, and further the risks associated with the downstream decisions. This post will clarify the concepts and techniques proposed in recent years on how the Deep Learning models account for the different sources of uncertainty.</p>
 
+<hr />
+
 <h3 id="sources-of-uncertainty">sources of uncertainty</h3>
 
 <p>Different sources of uncertainty are involved within the training pipeline, which are generally classified between two categories: aleatoric and epistemic uncertainty. <strong>aleatoric</strong> is the uncertainty inherent in the data and irreducible, which may comprise measurement error, noisy labels or inherent stochasticity in the data generating process. Depending on the assumption that whether the data noise is dependent on the input features, methods vary in accounting for heteroscedastic or homoscedastic variance. <strong>epistemic</strong> uncertainty, on the other hand, refers to the model uncertainty, which is reducible with more data. That is, it reflects the fact that there may exist a set of model configurations that can explain the observed data, hence we are probably uncertain about the model parameters given the limited data. Most Deep Learning models, despite being probabilistic in some sense, do not capture model uncertainty. For example, consider a classification task, a model can still be uncertain even with a high softmax output. An example of regression can be found at <a href="https://blog.tensorflow.org/2019/03/regression-with-probabilistic-layers-in.html">Probabilistic regression</a>.</p>
+
+<hr />
 
 <h3 id="probabilistic-noise-estimation">Probabilistic noise estimation</h3>
 
@@ -178,6 +182,8 @@ A unified structure of a neural network model, where two output units are separa
 Under the Gaussian noise assumption, the loss objective (<em>negative log likelihood NLL</em>) is given as:</p>
 
 \[-\log p(y_{i} | \mathbf{x}_{i}) = \frac{\log \sigma^2(\mathbf{x}_{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}_{i}))^2}{2 \sigma^2(\mathbf{x}_{i})} + \frac{\log 2 \pi}{2}\]
+
+<hr />
 
 <h3 id="bayesian-inference-in-deep-learning">Bayesian inference in Deep Learning</h3>
 
@@ -266,7 +272,7 @@ Assuming constant, the model imprecision can be estimated as:
 	\tau = \frac{(1-p) l_{i}^{2}}{2N \lambda_{i}}
 \end{equation}
 
-where the weight decay $$\lambda_{i}$$ and prior length scale $$l_{i}$$ are hyperparameters tuned from the separate validation data set. Alternatively, a naive estimate based on the sample variance of the validation set is also sometimes employed. -->]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="math" /><summary type="html"><![CDATA[explain the language of uncertainty in Machine Learning]]></summary></entry><entry><title type="html">Out-of-box Python decorators</title><link href="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/" rel="alternate" type="text/html" title="Out-of-box Python decorators" /><published>2023-05-19T15:09:00+00:00</published><updated>2023-05-19T15:09:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/Python-decorator</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/"><![CDATA[<p>Decorator has always been my favorite feature of Python, not only because of the nice look of a colorful <code class="language-plaintext highlighter-rouge">@function</code> symbol, but more because of it as an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite use cases. I will also mention some real-world uses and leave interested reader to dig more. Some other common examples include the <code class="language-plaintext highlighter-rouge">@app.route()</code> decorator in Flask, etc.</p>
+where the weight decay $$\lambda_{i}$$ and prior length scale $$l_{i}$$ are hyperparameters tuned from the separate validation data set. Alternatively, a naive estimate based on the sample variance of the validation set is also sometimes employed. -->]]></content><author><name></name></author><category term="theory" /><category term="uncertainty" /><category term="quantification" /><summary type="html"><![CDATA[explain the language of uncertainty in Machine Learning]]></summary></entry><entry><title type="html">Out-of-box Python decorators</title><link href="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/" rel="alternate" type="text/html" title="Out-of-box Python decorators" /><published>2023-05-19T15:09:00+00:00</published><updated>2023-05-19T15:09:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2023/Python-decorator</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2023/Python-decorator/"><![CDATA[<p>Decorator has always been my favorite feature of Python, not only because of the nice look of a colorful <code class="language-plaintext highlighter-rouge">@function</code> symbol, but more because of it as an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite use cases. I will also mention some real-world uses and leave interested reader to dig more. Some other common examples include the <code class="language-plaintext highlighter-rouge">@app.route()</code> decorator in Flask, etc.</p>
 
 <hr />
 
@@ -332,147 +338,4 @@ where the weight decay $$\lambda_{i}$$ and prior length scale $$l_{i}$$ are hype
 
 <h3 id="3-tensorflow-function">3. Tensorflow <strong>Function</strong></h3>
 
-<p>This should be quite familiar with Tensorflow users.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="code" /><summary type="html"><![CDATA[some go-to decorator examples]]></summary></entry><entry><title type="html">a post with images</title><link href="https://yuchenakaleslie.github.io//blog/2015/images/" rel="alternate" type="text/html" title="a post with images" /><published>2015-05-15T21:01:00+00:00</published><updated>2015-05-15T21:01:00+00:00</updated><id>https://yuchenakaleslie.github.io//blog/2015/images</id><content type="html" xml:base="https://yuchenakaleslie.github.io//blog/2015/images/"><![CDATA[<p>This is an example post with image galleries.</p>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/9-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/9-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/9-1400.webp" />
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/9.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/7-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/7-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/7-1400.webp" />
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/7.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    A simple, elegant caption looks good between image rows, after each row, or doesn't have to be there at all.
-</div>
-
-<p>Images can be made zoomable.
-Simply add <code class="language-plaintext highlighter-rouge">data-zoomable</code> to <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> tags that you want to make zoomable.</p>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/8-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/8-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/8-1400.webp" />
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/8.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/10-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/10-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/10-1400.webp" />
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/10.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-
-<p>The rest of the images in this post are all zoomable, arranged into different mini-galleries.</p>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/11-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/11-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/11-1400.webp" />
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/12-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/12-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/12-1400.webp" />
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/12.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/7-480.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/7-800.webp" />
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/7-1400.webp" />
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/7.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="images" /><summary type="html"><![CDATA[this is what included images could look like]]></summary></entry></feed>
+<p>This should be quite familiar with Tensorflow users.</p>]]></content><author><name></name></author><category term="implementation" /><category term="formatting" /><category term="code" /><summary type="html"><![CDATA[some go-to decorator examples]]></summary></entry></feed>

@@ -131,14 +131,14 @@
     <p class="post-tags">
       <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
         ·  
-        <a href="/blog/tag/formatting">
-          <i class="fas fa-hashtag fa-sm"></i> formatting</a>  
-          <a href="/blog/tag/math">
-          <i class="fas fa-hashtag fa-sm"></i> math</a>  
+        <a href="/blog/tag/uncertainty">
+          <i class="fas fa-hashtag fa-sm"></i> uncertainty</a>  
+          <a href="/blog/tag/quantification">
+          <i class="fas fa-hashtag fa-sm"></i> quantification</a>  
           
         ·  
-        <a href="/blog/category/sample-posts">
-          <i class="fas fa-tag fa-sm"></i> sample-posts</a>  
+        <a href="/blog/category/theory">
+          <i class="fas fa-tag fa-sm"></i> theory</a>  
           
 
     </p>
@@ -155,9 +155,13 @@
 
 <p><code class="language-plaintext highlighter-rouge">It is desired that Machine Leanring or Deep Learning models should know when they don't know.</code> In most cases, people create or use a neural network model in order to predict a certain quantify of interest (QoI). However, there is no gurrantee that the model prediction is correct, especially under the situations of generalization to out-of-distribution data. People would like to know the predictive distribution instead to understand the uncertainty of the prediction, and further the risks associated with the downstream decisions. This post will clarify the concepts and techniques proposed in recent years on how the Deep Learning models account for the different sources of uncertainty.</p>
 
+<hr>
+
 <h3 id="sources-of-uncertainty">sources of uncertainty</h3>
 
 <p>Different sources of uncertainty are involved within the training pipeline, which are generally classified between two categories: aleatoric and epistemic uncertainty. <strong>aleatoric</strong> is the uncertainty inherent in the data and irreducible, which may comprise measurement error, noisy labels or inherent stochasticity in the data generating process. Depending on the assumption that whether the data noise is dependent on the input features, methods vary in accounting for heteroscedastic or homoscedastic variance. <strong>epistemic</strong> uncertainty, on the other hand, refers to the model uncertainty, which is reducible with more data. That is, it reflects the fact that there may exist a set of model configurations that can explain the observed data, hence we are probably uncertain about the model parameters given the limited data. Most Deep Learning models, despite being probabilistic in some sense, do not capture model uncertainty. For example, consider a classification task, a model can still be uncertain even with a high softmax output. An example of regression can be found at <a href="https://blog.tensorflow.org/2019/03/regression-with-probabilistic-layers-in.html" rel="external nofollow noopener" target="_blank">Probabilistic regression</a>.</p>
+
+<hr>
 
 <h3 id="probabilistic-noise-estimation">Probabilistic noise estimation</h3>
 
@@ -169,6 +173,8 @@ A unified structure of a neural network model, where two output units are separa
 Under the Gaussian noise assumption, the loss objective (<em>negative log likelihood NLL</em>) is given as:</p>
 
 \[-\log p(y_{i} | \mathbf{x}_{i}) = \frac{\log \sigma^2(\mathbf{x}_{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}_{i}))^2}{2 \sigma^2(\mathbf{x}_{i})} + \frac{\log 2 \pi}{2}\]
+
+<hr>
 
 <h3 id="bayesian-inference-in-deep-learning">Bayesian inference in Deep Learning</h3>
 
