@@ -3,7 +3,7 @@ layout: post
 title: Out-of-box Python decorators
 date: 2023-05-19 15:09:00
 description: some go-to decorator examples
-tags: formatting code
+tags: code
 categories: implementation
 ---
 

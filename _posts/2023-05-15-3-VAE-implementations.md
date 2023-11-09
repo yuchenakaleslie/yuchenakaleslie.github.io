@@ -3,7 +3,7 @@ layout: post
 title: Variational AutoEncoder: theory and implementation
 date: 2015-07-15 15:09:00
 description: 3 implementations of VAE
-tags: formatting code
+tags: code
 categories: implementation
 ---
 This theme implements a built-in Jekyll feature, the use of Rouge, for syntax highlighting.
