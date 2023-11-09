@@ -3,8 +3,8 @@ layout: post
 title: Uncertainty decomposition in Deep Learning
 date: 2023-6-26 11:12:00-0400
 description: explain the language of uncertainty in Machine Learning
-tags: formatting math
-categories: sample-posts
+tags: uncertainty quantification
+categories: theory
 related_posts: false
 ---
 
@@ -16,10 +16,13 @@ Advances in Deep Learning bring further investigation into credibility and robus
 
 `It is desired that Machine Leanring or Deep Learning models should know when they don't know.` In most cases, people create or use a neural network model in order to predict a certain quantify of interest (QoI). However, there is no gurrantee that the model prediction is correct, especially under the situations of generalization to out-of-distribution data. People would like to know the predictive distribution instead to understand the uncertainty of the prediction, and further the risks associated with the downstream decisions. This post will clarify the concepts and techniques proposed in recent years on how the Deep Learning models account for the different sources of uncertainty.
 
+<hr>
+
 ### sources of uncertainty
 
 Different sources of uncertainty are involved within the training pipeline, which are generally classified between two categories: aleatoric and epistemic uncertainty. **aleatoric** is the uncertainty inherent in the data and irreducible, which may comprise measurement error, noisy labels or inherent stochasticity in the data generating process. Depending on the assumption that whether the data noise is dependent on the input features, methods vary in accounting for heteroscedastic or homoscedastic variance. **epistemic** uncertainty, on the other hand, refers to the model uncertainty, which is reducible with more data. That is, it reflects the fact that there may exist a set of model configurations that can explain the observed data, hence we are probably uncertain about the model parameters given the limited data. Most Deep Learning models, despite being probabilistic in some sense, do not capture model uncertainty. For example, consider a classification task, a model can still be uncertain even with a high softmax output. An example of regression can be found at [Probabilistic regression](https://blog.tensorflow.org/2019/03/regression-with-probabilistic-layers-in.html).
 
+<hr>
 
 ### Probabilistic noise estimation
 
@@ -33,6 +36,8 @@ Under the Gaussian noise assumption, the loss objective (*negative log likelihoo
 $$
 -\log p(y_{i} | \mathbf{x}_{i}) = \frac{\log \sigma^2(\mathbf{x}_{i})}{2} + \frac{(y_{i} - f_{\omega}(\mathbf{x}_{i}))^2}{2 \sigma^2(\mathbf{x}_{i})} + \frac{\log 2 \pi}{2}
 $$
+
+<hr>
 
 ### Bayesian inference in Deep Learning
 

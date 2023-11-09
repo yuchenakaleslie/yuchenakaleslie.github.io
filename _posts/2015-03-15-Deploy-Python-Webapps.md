@@ -3,12 +3,12 @@ layout: post
 title:  Deploy Python Web apps
 date:   2023-06-26 16:40:16
 description: Best practices in deploying Deep Learning models 
-tags: formatting links
-categories: sample-posts
+tags: web application
+categories: implementation
 ---
 
 <blockquote>
-    Full-stack web application for deploying a Deep Learning model, with Flask and Docker.
+    Full-stack web application for deploying a Deep Learning model, with Flask and Docker. Further discussion on operational management such as CI/CD will be added shortly.
 </blockquote>
 
 What happens after having trained and validated your Deep Learinig model? It may be a simple MLP or the more trending Transformer, built by Tensorflow or Pytorch, for your research/application tasks. There will generally be interests for such model to be used by others, say collegues, clients, etc. The following content will give a concise overview about the best practices in deploying your model.
@@ -42,7 +42,8 @@ By contrast, a user-friendly, intuitive, responsive, web application sounds much
 
 ### Dockerize it !
 
-A tool that can largely stremline the development process is `Docker`. 
+A tool that can largely stremline the development process is `Docker`, which serves as a platform for building, running, and shipping applications. A very practical scenario is when you want to share the application (say, still in beta stage) with other team members. You want a one-stop solution for them to quickly set up, without worrying about the operating system, the dependencies etc. `Docker` comes to the rescue. All they need are: download and run the image to build the application on their own machine.
+
 
 <hr>
 

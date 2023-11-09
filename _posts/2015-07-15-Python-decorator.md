@@ -4,7 +4,7 @@ title: Out-of-box Python decorators
 date: 2023-05-19 15:09:00
 description: some go-to decorator examples
 tags: formatting code
-categories: sample-posts
+categories: implementation
 ---
 
 Decorator has always been my favorite feature of Python, not only because of the nice look of a colorful `@function` symbol, but more because of it as an elegant construct to dynamically enrich the wrapped function. In this post I would like to share some of my favorite use cases. I will also mention some real-world uses and leave interested reader to dig more. Some other common examples include the `@app.route()` decorator in Flask, etc.
