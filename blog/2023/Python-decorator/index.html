@@ -194,7 +194,7 @@
 
 <hr>
 
-<h3 id="2-run-time-plot-style-change">2. Run time plot style change</h3>
+<h3 id="2-runtime-plot-style-change">2. Runtime plot style change</h3>
 
 <p>Customize the plotting styles when plotting with matplotlib at runtime. Note that this type of runtime changes takes precedance than stylesheets. I personally find it super useful when polishing your most fancy plot. It enables you to just focus on the style, without worrying about the data content part as it is all wrapped in the <code class="language-plaintext highlighter-rouge">plotting_function</code>.</p>
 
@@ -218,7 +218,25 @@
 <h3 id="3-tensorflow-function">3. Tensorflow <strong>Function</strong>
 </h3>
 
-<p>This should be quite familiar with Tensorflow users.</p>
+<p>This should be quite familiar with Tensorflow users. This allows the switch from <strong>eager excution</strong> to <strong>graph execution</strong>. In Tensorflow 2, computations are running eagerly by default, suggesting Tensorflow operations are executed by Python, one by one, and return results back to Python. By contrast, graph execution means the tensor computations are executed as a Tensorflow graph, represented by <code class="language-plaintext highlighter-rouge">tf.Graph</code>. Graphs are data structures that contain a set of tf.Operation objects, which represent units of computation; and tf.Tensor objects, which represent the units of data that flow between operations. They are defined in a <code class="language-plaintext highlighter-rouge">tf.Graph</code> context. Since these graphs are data structures, they can be saved, run, and restored all without the original Python code.</p>
+
+<p>Most commonly, you will use it when writing your own low-level training/test pipeline, such as</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="nd">@tf.function</span>
+<span class="k">def</span> <span class="nf">test_step</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">val_logits</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">val_acc_metric</span><span class="p">.</span><span class="nf">update_state</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">val_logits</span><span class="p">)</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<hr>
+
 
     </div>
   </article>
