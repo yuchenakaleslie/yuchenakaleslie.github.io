@@ -20,7 +20,7 @@ Importantly, a Bayesian Convnet, having considered model uncertainty, is trained
 
 <!--The plot below is NOT justfied. Fix the layout-->
 <div class="text-center">
-    {% include figure.html path="assets/img/separation2.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    {% include figure.html path="assets/img/db_patches.png" title="example image" class="img-fluid rounded z-depth-1" %}
 </div>
 <div class="caption">
     An automated probabilistic procedure in detecting seismic events
