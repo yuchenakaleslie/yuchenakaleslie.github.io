@@ -38,7 +38,7 @@ For Jupyter notebook users, you may be familiar with the `%%time` magic command,
 
 <hr>
 
-### 2. Run time plot style change
+### 2. Runtime plot style change
 
 Customize the plotting styles when plotting with matplotlib at runtime. Note that this type of runtime changes takes precedance than stylesheets. I personally find it super useful when polishing your most fancy plot. It enables you to just focus on the style, without worrying about the data content part as it is all wrapped in the `plotting_function`.
 
@@ -54,4 +54,15 @@ plotting_function()
 
 ### 3. Tensorflow **Function**
 
-This should be quite familiar with Tensorflow users.
+This should be quite familiar with Tensorflow users. This allows the switch from **eager excution** to **graph execution**. In Tensorflow 2, computations are running eagerly by default, suggesting Tensorflow operations are executed by Python, one by one, and return results back to Python. By contrast, graph execution means the tensor computations are executed as a Tensorflow graph, represented by `tf.Graph`. Graphs are data structures that contain a set of tf.Operation objects, which represent units of computation; and tf.Tensor objects, which represent the units of data that flow between operations. They are defined in a `tf.Graph` context. Since these graphs are data structures, they can be saved, run, and restored all without the original Python code.
+
+Most commonly, you will use it when writing your own low-level training/test pipeline, such as
+
+```python
+@tf.function
+def test_step(x, y):
+    val_logits = model(x, training=False)
+    val_acc_metric.update_state(y, val_logits)
+```
+
+<hr>
