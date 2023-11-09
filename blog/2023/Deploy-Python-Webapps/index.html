@@ -153,6 +153,8 @@
 
 <p>What happens after having trained and validated your Deep Learinig model? It may be a simple MLP or the more trending Transformer, built by Tensorflow or Pytorch, for your research/application tasks. There will generally be interests for such model to be used by others, say collegues, clients, etc. The following content will give a concise overview about the best practices in deploying your model.</p>
 
+<hr>
+
 <h3 id="deploy-the-learnt-model-as-a-rest-api">Deploy the <em>learnt</em> model as a REST API</h3>
 
 <p>Simply, the model can run with a simple call such as <code class="language-plaintext highlighter-rouge">python inference.py</code>. But the main interests lay in serving the model to the general public, as opposed to running only on your own laptop. In this spirit, we can deploy the model as a REST API, such that you can call <code class="language-plaintext highlighter-rouge">curl</code> to send request to the sever and obtain the response, which will be the results for inference. In doing so, you will probably do the following in the terminal for an example of image classification task. (Note the host name will be the relevant IP address in real cases. The <strong>localhost</strong> shown below means your own machine for illustration purpose.)</p>
