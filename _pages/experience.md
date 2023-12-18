@@ -86,7 +86,9 @@ During which I embarked on a collaboration work (underway) with Prof. Philippe G
 
 1. [Rock Mechanics and Rock Engineering](https://www.springer.com/journal/603) (5-year IF 7.049)
 2. [Reliability Engineering and System Safety](https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety) (IF 8.1)
-3. [Earthquake Spectra](https://journals.sagepub.com/home/EQS) (IF 5.0)
+3. [ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering](https://ascelibrary.org/journal/ajrua6)
+4. [ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B: Mechanical Engineering](https://ascelibrary.org/journal/ajrub7)
+5. [Earthquake Spectra](https://journals.sagepub.com/home/EQS) (IF 5.0)
 
 ***
 
