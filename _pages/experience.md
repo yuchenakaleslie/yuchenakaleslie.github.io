@@ -71,6 +71,7 @@ During which I embarked on a collaboration work (underway) with Prof. Philippe G
 
 | Year          | Conference           |
 | ------------- | --------------------:|
+| 2023          | *[Symoisum of European Safety and Reliability Association - Towards autonomous digital twin: uncertainty, computing, data, and ethics](https://sites.google.com/view/esra-digital-twins/home?authuser=0)*<br />Glasgow, UK |
 | 2023          | *[5th International Conference on Uncertainty Quantification in Computational Science and Engineering](https://2023.uncecomp.org/)*<br />Athens, Greece |
 | 2022          | *[32st European Safety and Reliability Conference](https://www.esrel2022.com/)*<br />Dublin, Ireland |
 | 2022          | *[8th The International Symposium on Reliability Engineering and Risk Management](https://isrerm.org/)*<br />Hanover, Germany |
