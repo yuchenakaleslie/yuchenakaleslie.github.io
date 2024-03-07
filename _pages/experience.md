@@ -95,6 +95,8 @@ During which I embarked on a collaboration work (underway) with Prof. Philippe G
 
 ### Teaching
 
+- Teacher for the [IJEP programme](https://www.strath.ac.uk/engineering/civilenvironmentalengineering/studywithus/internationaluniversitypartnerships/) between Uni. of Strathclyde and Yunnan University on the module Structural Engineering (CL340).
+- Teaching Assistant (TA) for the module Structural Engineering (CL313) of University of Strathclyde;
 - Teaching Assistant (TA) for the module Geophysical Project (ENVS300) of Univ of Liverpool;
 - Supervised an undergraduate Stephen Guerin with dissertation "_Using machine learning to forecast induced seismicity_"
 
