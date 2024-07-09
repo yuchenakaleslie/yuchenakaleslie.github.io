@@ -18,8 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm currently a <u>PhD candidate</u> at <a href='https://riskinstitute.uk'>Institute for Risk and Unceratinty, University of Liverpool</a>; and also an <u>ESR</u> funded by the EU-Horizon 2020 & Marie Skłodowska-Curie Actions project <a href="https://urbasis-eu.osug.fr">URBASIS</a>.
+I'm currently a <u>postdoctoral research associate </u> at <a href='https://riskinstitute.uk'>Institute for Risk and Unceratinty, University of Liverpool</a>, working at an intersection of uncertainty quantification and deep learning with a focus on probability bounds analysis.
 
+I've got my PhD on the subject of *Modeling and dealing with vague and sparse information using Machine Learning*, **funded by the EU-Horizon 2020 & Marie Skłodowska-Curie Actions project <a href="https://urbasis-eu.osug.fr">URBASIS</a> as an <u>ESR</u>. 
 During my PhD, I am dedicated to developing robust Deep Learning-based computational frameworks against **data problems** (imprecise, limited, scarce, imbalanced or OOD data), and propagating associated uncertainty through computational probabilistic models in an efficient way. My contribution revolves around two aspects: `(I)` equiping DL models with uncertainty awareness, allowing for **robustness**; `(II)` incorporating DL with prior (physical) domain knowledge, allowing for **fusion of knowledge**.
 
 *** 
@@ -30,5 +31,6 @@ During my PhD, I am dedicated to developing robust Deep Learning-based computati
 - Stochastic modeling of uncertainties in engineering
 - robustness of ML against data problems
 - Imprecise probability
+- probability bounds analysis
 - Risk-based optimal decision making and cost-benefit analysis
 ```
