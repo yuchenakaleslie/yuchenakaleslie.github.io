@@ -54,6 +54,7 @@ During which I embarked on a collaboration work (underway) with Prof. Philippe G
 
 | year          | training      | 
 | ------------- | -------------:| 
+| 2024          | [Summer School in Gaussian Processes and Uncertainty Quantification (GPSS)](https://gpss.cc) |
 | 2023          | [9th International School on Deep Learning (DeepLearn Spring)](https://deeplearn.irdta.eu/2023sp/)| 
 | 2022          | [6th International Gran Canaria School on Deep Learning (DeepLearn Summer)](https://deeplearn.irdta.eu/2022su/)| 
 | 2021          | [Nordic Probabilistic AI school: ProbAI](https://probabilistic.ai/) | 
@@ -71,6 +72,11 @@ During which I embarked on a collaboration work (underway) with Prof. Philippe G
 
 | Year          | Conference           |
 | ------------- | --------------------:|
+| 2025          | *[8th The International Symposium on Reliability Engineering and Risk Management](https://isrerm.org/)*<br />Hanover, US |
+| 2025          | *[35th European Safety and Reliability & the 33rd Society for Risk Analysis Europe Conference](https://isrerm.org/)*<br />Stavanger, Norway |
+| 2024          | *[8th The International Symposium on Reliability Engineering and Risk Management](https://isrerm.org/)*<br />Beijing, China |
+| 2024          | *[Probabilistic Safety Assessment and Management & Asian Symposium on Risk Assessment and Management](https://isrerm.org/)*<br />Sendai, Japan |
+*
 | 2023          | *[Symoisum of European Safety and Reliability Association - Towards autonomous digital twin: uncertainty, computing, data, and ethics](https://sites.google.com/view/esra-digital-twins/home?authuser=0)*<br />Glasgow, UK |
 | 2023          | *[5th International Conference on Uncertainty Quantification in Computational Science and Engineering](https://2023.uncecomp.org/)*<br />Athens, Greece |
 | 2022          | *[32st European Safety and Reliability Conference](https://www.esrel2022.com/)*<br />Dublin, Ireland |
@@ -85,11 +91,12 @@ During which I embarked on a collaboration work (underway) with Prof. Philippe G
 
 > I am invited as the reviewer for several esteemed journals and conferences.
 
-1. [Rock Mechanics and Rock Engineering](https://www.springer.com/journal/603) (5-year IF 7.049)
-2. [Reliability Engineering and System Safety](https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety) (IF 8.1)
-3. [ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering](https://ascelibrary.org/journal/ajrua6)
-4. [ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B: Mechanical Engineering](https://ascelibrary.org/journal/ajrub7)
-5. [Earthquake Spectra](https://journals.sagepub.com/home/EQS) (IF 5.0)
+1. [Applied Mathematical Modelling](https://www.sciencedirect.com/journal/applied-mathematical-modelling) (IF 5.1)
+2. [Rock Mechanics and Rock Engineering](https://www.springer.com/journal/603) (5-year IF 7.049)
+3. [Reliability Engineering and System Safety](https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety) (IF 8.1)
+4. [ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering](https://ascelibrary.org/journal/ajrua6)
+5. [ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B: Mechanical Engineering](https://ascelibrary.org/journal/ajrub7)
+6. [Earthquake Spectra](https://journals.sagepub.com/home/EQS) (IF 5.0)
 
 ***
 
